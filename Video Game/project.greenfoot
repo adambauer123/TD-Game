@@ -1,6 +1,7 @@
 #Greenfoot project file
 class.Huh.superclass=greenfoot.Actor
 class.MyWorld.superclass=greenfoot.World
+class.Walk.superclass=greenfoot.Actor
 class.move.superclass=greenfoot.Actor
 editor.fx.0.height=0
 editor.fx.0.width=0
@@ -19,7 +20,7 @@ readme.width=47
 readme.x=10
 readme.y=10
 target1.height=50
-target1.name=move
+target1.name=Walk
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
@@ -27,7 +28,7 @@ target1.width=80
 target1.x=0
 target1.y=0
 target2.height=50
-target2.name=Huh
+target2.name=move
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
