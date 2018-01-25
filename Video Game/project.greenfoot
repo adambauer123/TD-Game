@@ -1,6 +1,7 @@
 #Greenfoot properties
-#Thu Jan 25 11:04:48 EST 2018
+#Thu Jan 25 11:14:30 EST 2018
 readme.name=@README
+class.BasicTower.image=yeet.jpg
 target2.name=move
 <<<<<<<=HEAD
 target2.showInterface=false
@@ -29,12 +30,13 @@ target2.typeParameters=
 readme.y=10
 target3.name=MyWorld
 readme.x=10
-mainWindow.width=933
+class.BasicTower.superclass=greenfoot.Actor
+mainWindow.width=951
 target1.typeParameters=
 target2.width=80
 mainWindow.y=0
 target1.width=80
-mainWindow.height=860
+mainWindow.height=680
 mainWindow.x=282
 target3.width=80
 editor.fx.0.y=41
