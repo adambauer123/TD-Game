@@ -15,8 +15,6 @@ public class BasicTower extends Actor
     int count = 0;
     public void act() 
     {
-        move(1);
-        count++;
-        
+
 }
 }
