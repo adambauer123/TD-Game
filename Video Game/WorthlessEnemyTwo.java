@@ -1,17 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WorthlessEnemy here.
+ * Write a description of class WorthlessEnemyTwo here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WorthlessEnemy extends Actor
+public class WorthlessEnemyTwo extends Actor
 {
     /**
-     * Act - do whatever the WorthlessEnemy wants to do. This method is called whenever
+     * Act - do whatever the WorthlessEnemyTwo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
     private int speed = 1;
     
     public void act() 
