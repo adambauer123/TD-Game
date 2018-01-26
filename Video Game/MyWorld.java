@@ -6,6 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class MyWorld extends World
 {
 
@@ -15,6 +16,8 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        super(625, 500, 1); 
+        super(625, 500, 1);
+        WorthlessEnemy enemy = new WorthlessEnemy();
+        addObject(enemy, 20, 150);
     }
 }
