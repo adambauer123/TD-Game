@@ -17,9 +17,9 @@ public class MyWorld extends World
     private int count = 0;
     public MyWorld()
     {
-        super(625, 500, 1);
-        //background =  new Background();
-        //addObject(img1, getWidth()/2, getHeight()/2);
+        super(625, 700, 1);
+        GreenfootImage drawedImage = new GreenfootImage("lines.png");
+        getBackground().drawImage(drawedImage, 0, 0);
     }
     
     public void act(){
@@ -40,6 +40,4 @@ public class MyWorld extends World
         }
         System.out.println(count);
     }
-    
-
 }

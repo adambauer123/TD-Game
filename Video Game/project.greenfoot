@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
@@ -13,6 +14,32 @@ class.WorthlessEnemyTwo.image=zombie.png
 class.WorthlessEnemyTwo.superclass=greenfoot.Actor
 class.move.superclass=greenfoot.Actor
 dependency1.from=WorthlessEnemy
+=======
+#Greenfoot properties
+#Fri Jan 26 11:30:58 EST 2018
+target4.type=ClassTarget
+<<<<<<<=HEAD
+target3.height=50
+target5.height=50
+readme.y=10
+readme.x=10
+target4.name=MyWorld
+target4.typeParameters=
+readme.width=47
+editor.fx.0.width=816
+target1.height=50
+target5.type=ClassTarget
+target3.typeParameters=
+mainWindow.width=1166
+class.Menu.image=menu.png
+>>>>>>>=Adam'sBranch
+target2.width=100
+target5.name=MyWorld
+class.BasicTower.superclass=greenfoot.Actor
+class.BasicTower.image=yeet.jpg
+version=3.0.0
+class.Menu.superclass=greenfoot.Actor
+>>>>>>> Tylers-Branch
 dependency1.to=MyWorld
 dependency1.type=UsesDependency
 dependency2.from=MyWorld
