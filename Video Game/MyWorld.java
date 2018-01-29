@@ -55,7 +55,7 @@ public class MyWorld extends World
         waveNum = "Wave Number: ";
         showText(waveNum, 70, 575);
         
-        timeTillNextWave = "Time until next wave: ";
+        timeTillNextWave = "Next Wave: ";
         showText(timeTillNextWave, 70, 625);
         
         lives = "Lives: ";
