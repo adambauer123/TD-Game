@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Mon Jan 29 10:37:26 EST 2018
+=======
+#Mon Jan 29 10:37:07 EST 2018
+>>>>>>> Tylers-Branch
 target4.type=ClassTarget
 <<<<<<<=HEAD
 dependency3.from=MyWorld
@@ -11,12 +15,20 @@ readme.x=10
 target4.name=BasicTower
 target4.typeParameters=
 readme.width=47
+<<<<<<< HEAD
 editor.fx.0.width=0
+=======
+editor.fx.0.width=816
+>>>>>>> Tylers-Branch
 target1.height=50
 target5.type=ClassTarget
 target3.typeParameters=
 mainWindow.width=939
+<<<<<<< HEAD
 >>>>>>>=Tylers-Branch
+=======
+>>>>>>>=Adam'sBranch
+>>>>>>> Tylers-Branch
 class.Menu.image=menu.png
 target2.width=150
 target5.name=MyWorld
@@ -27,8 +39,13 @@ dependency1.to=MyWorld
 class.Menu.superclass=greenfoot.Actor
 dependency2.to=WorthlessEnemy
 target1.width=130
+<<<<<<< HEAD
 editor.fx.0.y=0
 editor.fx.0.x=0
+=======
+editor.fx.0.y=507
+editor.fx.0.x=936
+>>>>>>> Tylers-Branch
 target2.typeParameters=
 dependency3.to=WorthlessEnemyTwo
 target3.showInterface=false
@@ -60,7 +77,11 @@ mainWindow.x=449
 dependency1.from=WorthlessEnemy
 target5.width=80
 target1.y=0
+<<<<<<< HEAD
 editor.fx.0.height=0
+=======
+editor.fx.0.height=738
+>>>>>>> Tylers-Branch
 target1.x=0
 dependency1.type=UsesDependency
 readme.height=58
@@ -80,6 +101,9 @@ target3.name=Menu
 class.WorthlessEnemy.image=poop.png
 project.charset=UTF-8
 target3.width=80
+<<<<<<< HEAD
 class.MyWorld.image=lines.png
+=======
+>>>>>>> Tylers-Branch
 =\=\=\=\=\=\=
 target4.showInterface=false
