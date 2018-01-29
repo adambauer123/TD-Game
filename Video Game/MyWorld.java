@@ -30,8 +30,8 @@ public class MyWorld extends World
     
     public void SpawnEnemies(){
         count++;
-        WorthlessEnemy enemy = new WorthlessEnemy();
-        WorthlessEnemyTwo enemyTwo = new WorthlessEnemyTwo();
+        Enemy1 enemy = new Enemy1();
+        Enemy2 enemyTwo = new Enemy2();
         
         if(count % 100 == 0 && count <= 1000){
             addObject(enemy, 20, 150);

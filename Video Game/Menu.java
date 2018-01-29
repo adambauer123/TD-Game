@@ -13,10 +13,13 @@ public class Menu extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Menu(){
+        /*
         GreenfootImage image = new GreenfootImage(100, 100);
         image.setColor(Color.RED);
         image.drawRect(100, 100, 100, 100);
         //image.fill();
         setImage(image);
+        */
+        
     }    
 }

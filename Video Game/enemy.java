@@ -1,26 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WorthlessEnemyTwo here.
+ * Write a description of class enemy here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WorthlessEnemyTwo extends Actor
+public class enemy extends Actor
 {
+    
     /**
-     * Act - do whatever the WorthlessEnemyTwo wants to do. This method is called whenever
+     * Act - do whatever the enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
     private int speed = 1;
-    
     public void act() 
     {
-       MoveAroundMap();
-       System.out.println(getX() + ", " + getY());
+        // Add your action code here.
     }
-    
     public void MoveAroundMap(){
         if(getX() < 175){
             setLocation(getX() + speed, getY());
@@ -38,4 +35,12 @@ public class WorthlessEnemyTwo extends Actor
             setLocation(getX() + speed, getY());
         }
     }
+    
+    public boolean checkHp(int health) {
+        if(health <= 0) {
+            return true;
+        }
+        else
+        return false;
+}
 }
