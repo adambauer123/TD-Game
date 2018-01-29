@@ -1,13 +1,20 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
+<<<<<<< HEAD
 >>>>>>>=Tylers-Branch
+=======
+>>>>>>>=Adam'sBranch
+>>>>>>> Tylers-Branch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Huh.superclass=greenfoot.Actor
 class.Menu.image=menu.png
 class.Menu.superclass=greenfoot.Actor
+<<<<<<< HEAD
 class.MyWorld.image=lines.png
+=======
+>>>>>>> Tylers-Branch
 class.MyWorld.superclass=greenfoot.World
 class.WorthlessEnemy.image=poop.png
 class.WorthlessEnemy.superclass=greenfoot.Actor
@@ -23,6 +30,7 @@ dependency2.type=UsesDependency
 dependency3.from=MyWorld
 dependency3.to=WorthlessEnemyTwo
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
@@ -31,6 +39,16 @@ mainWindow.height=668
 mainWindow.width=1166
 mainWindow.x=83
 mainWindow.y=23
+=======
+editor.fx.0.height=738
+editor.fx.0.width=816
+editor.fx.0.x=936
+editor.fx.0.y=507
+mainWindow.height=848
+mainWindow.width=939
+mainWindow.x=449
+mainWindow.y=99
+>>>>>>> Tylers-Branch
 package.numDependencies=3
 package.numTargets=5
 project.charset=UTF-8
@@ -53,7 +71,11 @@ target2.name=WorthlessEnemyTwo
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
+<<<<<<< HEAD
 target2.width=130
+=======
+target2.width=150
+>>>>>>> Tylers-Branch
 target2.x=0
 target2.y=0
 target3.height=50
