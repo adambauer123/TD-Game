@@ -42,5 +42,5 @@ public class enemy extends Actor
         }
         else
         return false;
-}
+    }
 }
