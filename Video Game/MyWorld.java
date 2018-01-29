@@ -15,11 +15,13 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
+    private String coins, waveNum, timeTillNextWave, lives;
     public MyWorld()
     {
         super(625, 700, 1);
         GreenfootImage drawedImage = new GreenfootImage("lines.png");
         getBackground().drawImage(drawedImage, 0, 0);
+        menu();
     }
     
     public void act(){
@@ -39,5 +41,24 @@ public class MyWorld extends World
             addObject(enemyTwo, 20, 150);
         }
         System.out.println(count);
+    }
+    
+    
+    public void menu(){
+        GreenfootImage drawedImage = new GreenfootImage("menu.png");
+        getBackground().drawImage(drawedImage, 0, 500);
+        
+        //getWorld().showText("text", 10, 10);
+        coins = "Coins: ";
+        showText(coins, 70, 525);
+        
+        waveNum = "Wave Number: ";
+        showText(waveNum, 70, 575);
+        
+        timeTillNextWave = "Time until next wave: ";
+        showText(timeTillNextWave, 70, 625);
+        
+        lives = "Lives: ";
+        showText(lives, 70, 675);
     }
 }
