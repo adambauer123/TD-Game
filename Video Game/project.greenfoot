@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Thu Feb 01 10:54:41 EST 2018
+=======
+#Thu Feb 01 10:54:48 EST 2018
+>>>>>>> Tylers-Branch
 target4.type=ClassTarget
 <<<<<<<=HEAD
 target8.showInterface=false
@@ -9,7 +13,7 @@ target5.height=50
 readme.y=10
 dependency3.type=UsesDependency
 readme.x=10
-class.Tower1.image=pewpew.png
+class.Tower1.image=green_tower.png
 target4.name=enemy
 class.Tower3.superclass=Tower
 target8.width=80
@@ -18,13 +22,22 @@ readme.width=47
 editor.fx.0.width=816
 target1.height=50
 target5.type=ClassTarget
+<<<<<<< HEAD
 class.Bullet.superclass=greenfoot.Actor
+=======
+class.bullet.superclass=greenfoot.Actor
+>>>>>>> Tylers-Branch
 target3.typeParameters=
+dependency4.from=MyWorld
 mainWindow.width=1616
+dependency4.type=UsesDependency
 >>>>>>>=Adam'sBranch
 class.Menu.image=menu.png
 target2.width=80
-target5.name=Text
+target5.name=Menu
+class.bullet.image=bullet.png
+class.BasicTower.superclass=greenfoot.Actor
+class.BasicTower.image=yeet.jpg
 version=3.0.0
 target6.type=ClassTarget
 dependency1.to=Enemy1
@@ -39,17 +52,25 @@ target8.height=50
 dependency3.to=WorthlessEnemyTwo
 target3.showInterface=false
 class.move.superclass=greenfoot.Actor
-target6.name=Tower
+target6.name=BasicTower
+dependency4.to=Text
 target7.showInterface=false
 class.Enemy2.image=zombie.png
 class.Enemy1.superclass=enemy
 class.WorthlessEnemyTwo.superclass=greenfoot.Actor
 target1.showInterface=false
 target8.typeParameters=
+<<<<<<< HEAD
 target5.showInterface=false
 target6.width=80
+=======
+class.WorthlessEnemyTwo.image=zombie.png
+target5.showInterface=false
+target6.width=100
+>>>>>>> Tylers-Branch
 target7.type=ClassTarget
 target6.height=50
+class.WorthlessEnemy.superclass=greenfoot.Actor
 package.numTargets=8
 target8.y=0
 target8.x=0
@@ -58,7 +79,7 @@ target1.type=ClassTarget
 target7.y=0
 class.Huh.superclass=greenfoot.Actor
 target7.x=0
-target7.name=Menu
+target7.name=MyWorld
 target6.y=0
 target1.typeParameters=
 target6.x=0
@@ -71,8 +92,8 @@ target1.name=Tower1
 target8.type=ClassTarget
 target4.y=0
 target4.x=0
-target3.y=0
 class.Enemy1.image=poop.png
+target3.y=0
 target3.x=0
 class.Enemy2.superclass=enemy
 target2.type=ClassTarget
@@ -93,9 +114,14 @@ dependency1.type=UsesDependency
 readme.height=58
 readme.name=@README
 target2.name=Enemy1
+<<<<<<< HEAD
 simulation.speed=51
 package.numDependencies=2
 class.Tower2.superclass=Tower
+=======
+simulation.speed=81
+package.numDependencies=2
+>>>>>>> Tylers-Branch
 target3.type=ClassTarget
 target4.width=80
 class.Text.superclass=greenfoot.Actor
@@ -109,6 +135,11 @@ mainWindow.height=876
 target3.name=Enemy2
 target7.height=50
 target6.showInterface=false
+<<<<<<< HEAD
+=======
+class.WorthlessEnemy.image=poop.png
+project.charset=UTF-8
+>>>>>>> Tylers-Branch
 target3.width=80
 project.charset=UTF-8
 target4.showInterface=false

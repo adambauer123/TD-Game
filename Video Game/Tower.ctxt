@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Tower
+<<<<<<< HEAD
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tower\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=radius\ reloadSpeed\ damage\ bulletSpeed\ towerCosts\ attackFirstCreep
 comment1.target=Tower(double,\ double,\ double,\ double,\ int,\ boolean)
@@ -8,3 +9,10 @@ comment2.target=Enemy1\ getTarget()
 comment3.params=
 comment3.target=void\ act()
 numComments=4
+=======
+comment0.text=\n\ Write\ a\ description\ of\ class\ Tower\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Tower\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=2
+>>>>>>> Tylers-Branch
