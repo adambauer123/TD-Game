@@ -62,3 +62,4 @@ public class MyWorld extends World
         showText(lives, 70, 675);
     }
 }
+
