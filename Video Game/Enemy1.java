@@ -13,6 +13,7 @@ public class Enemy1 extends enemy
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int health = 750;
+    public int id;
     public void act() 
     {
         MoveAroundMap();
