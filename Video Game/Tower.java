@@ -23,6 +23,8 @@ public class Tower extends Actor
     int level = 1;
     Enemy1 target;
     
+    private int gunReloadTime = 15;
+    private int reloadDelayCount;
     
     
     public Tower(double radius, double reloadSpeed, double damage, double bulletSpeed, int towerCosts, boolean attackFirstCreep)
@@ -35,10 +37,27 @@ public class Tower extends Actor
         lastShot      = (int) RELOAD_SPEED;
         attackFirst   = attackFirstCreep;
     }
+<<<<<<< HEAD
     
    
     public void act() 
     {
         // Add your action code here.
     }    
+=======
+   
+    public void act() 
+    {
+        reloadDelayCount++;
+    }
+    
+    public void fire(){
+        if(reloadDelayCount >= gunReloadTime){
+            bullet b = new bullet();
+            getWorld().addObject(b, 50, 50);
+            reloadDelayCount = 0;
+            System.out.println("hiiiii");
+        }
+    }
+>>>>>>> Tylers-Branch
 }
