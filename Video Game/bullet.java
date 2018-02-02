@@ -14,6 +14,8 @@ public class bullet extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        this.turnTowards(50, 50);
+        move(7);
     }    
 }
+

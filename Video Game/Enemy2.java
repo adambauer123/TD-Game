@@ -14,12 +14,21 @@ public class Enemy2 extends enemy
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int health = 3;
+    public int id;
     public void act() 
     {
-        MoveAroundMap();
-        Actor hitByBullet = getOneIntersectingObject(bullet.class);
-        if(hitByBullet != null){
+        if (getWorld() != null){
+            MoveAroundMap();
+        }
+        if(getWorld() != null){
+            checkCollision();
+        }
+    }    
+    
+    public void checkCollision(){
+        if(isTouching(bullet.class)){
             health -= 1;
+            removeTouching(bullet.class);
         }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);

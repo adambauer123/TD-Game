@@ -31,10 +31,12 @@ public class enemy extends Actor
             setLocation(getX() + speed, getY());
         } else if (getX() == 510 && getY() < 465){
             setLocation(getX(), getY() + speed);
-        } else if (getY() == 465){
+        } else if (getY() == 465 && getX() != 624){
             setLocation(getX() + speed, getY());
+        } else {
+            getWorld().removeObject(this);
         }
-        
+        //System.out.println(this.getX());
     }
     
     public boolean checkHp(int health) {
@@ -44,4 +46,5 @@ public class enemy extends Actor
         else
         return false;
     }
+    
 }

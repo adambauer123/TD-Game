@@ -18,6 +18,8 @@ public class Enemy1 extends enemy
     {
         if (getWorld() != null){
             MoveAroundMap();
+        }
+        if(getWorld() != null){
             checkCollision();
         }
     }    
@@ -30,5 +32,13 @@ public class Enemy1 extends enemy
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
         }    
+    }
+    
+    public int giveX(){
+        return getX();
+    }
+    
+    public int giveY(){
+        return getY();
     }
 }

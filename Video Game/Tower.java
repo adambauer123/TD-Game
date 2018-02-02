@@ -23,6 +23,8 @@ public class Tower extends Actor
     int level = 1;
     Enemy1 target;
     
+    private int gunReloadTime = 15;
+    private int reloadDelayCount;
     
     
     public Tower(double radius, double reloadSpeed, double damage, double bulletSpeed, int towerCosts, boolean attackFirstCreep)
@@ -35,50 +37,18 @@ public class Tower extends Actor
         lastShot      = (int) RELOAD_SPEED;
         attackFirst   = attackFirstCreep;
     }
-    
-        public Enemy1 getTarget()
-    {
-        List objectsInRange = getObjectsInRange( (int) RADIUS, Enemy1.class );
-    
-        if( objectsInRange.size() > 0 )
-        {
-            int targetId = 0;
-            int targetCreepId;
-            
-            if( attackFirst )
-            {
-                targetCreepId = MAX_CREEPS;
-                
-                for( int i = 0; i < objectsInRange.size(); i++ )
-                {
-                    if( ((Enemy1) objectsInRange.get(i)).id < targetCreepId )
-                    {
-                        targetCreepId = ((Enemy1) objectsInRange.get(i)).id;
-                        targetId      = i;
-                    }
-                }
-            }
-            else
-            {
-                targetCreepId = 0;
-                
-                for( int i = 0; i < objectsInRange.size(); i++ )
-                {
-                    if( ((Enemy1) objectsInRange.get(i)).id > targetCreepId )
-                    {
-                        targetCreepId = ((Enemy1) objectsInRange.get(i)).id;
-                        targetId = i;
-                    }
-                }
-            }
-            
-            return (Enemy1) objectsInRange.get(targetId);
-        }
-        else return null;   
-    }
    
     public void act() 
     {
-        // Add your action code here.
-    }    
+        reloadDelayCount++;
+    }
+    
+    public void fire(){
+        if(reloadDelayCount >= gunReloadTime){
+            bullet b = new bullet();
+            getWorld().addObject(b, 50, 50);
+            reloadDelayCount = 0;
+            System.out.println("hiiiii");
+        }
+    }
 }
