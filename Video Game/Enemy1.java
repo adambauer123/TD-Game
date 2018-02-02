@@ -17,7 +17,6 @@ public class Enemy1 extends enemy
     public void act() 
     {
         MoveAroundMap();
-        health -= 1;
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
         

@@ -34,6 +34,7 @@ public class enemy extends Actor
         } else if (getY() == 465){
             setLocation(getX() + speed, getY());
         }
+        System.out.println(this.getX());
     }
     
     public boolean checkHp(int health) {

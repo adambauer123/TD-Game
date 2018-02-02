@@ -36,46 +36,6 @@ public class Tower extends Actor
         attackFirst   = attackFirstCreep;
     }
     
-        public Enemy1 getTarget()
-    {
-        List objectsInRange = getObjectsInRange( (int) RADIUS, Enemy1.class );
-    
-        if( objectsInRange.size() > 0 )
-        {
-            int targetId = 0;
-            int targetCreepId;
-            
-            if( attackFirst )
-            {
-                targetCreepId = MAX_CREEPS;
-                
-                for( int i = 0; i < objectsInRange.size(); i++ )
-                {
-                    if( ((Enemy1) objectsInRange.get(i)).id < targetCreepId )
-                    {
-                        targetCreepId = ((Enemy1) objectsInRange.get(i)).id;
-                        targetId      = i;
-                    }
-                }
-            }
-            else
-            {
-                targetCreepId = 0;
-                
-                for( int i = 0; i < objectsInRange.size(); i++ )
-                {
-                    if( ((Enemy1) objectsInRange.get(i)).id > targetCreepId )
-                    {
-                        targetCreepId = ((Enemy1) objectsInRange.get(i)).id;
-                        targetId = i;
-                    }
-                }
-            }
-            
-            return (Enemy1) objectsInRange.get(targetId);
-        }
-        else return null;   
-    }
    
     public void act() 
     {
