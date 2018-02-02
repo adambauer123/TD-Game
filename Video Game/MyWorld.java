@@ -40,7 +40,6 @@ public class MyWorld extends World
         if(count % 250 == 0 && count <= 1000){
             addObject(enemyTwo, 20, 150);
         }
-        System.out.println(count);
     }
     
     
