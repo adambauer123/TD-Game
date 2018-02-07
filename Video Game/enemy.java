@@ -36,11 +36,7 @@ public class enemy extends Actor
         } else {
             getWorld().removeObject(this);
         }
-<<<<<<< HEAD
-        System.out.println(this.getX());
-=======
         //System.out.println(this.getX());
->>>>>>> Tylers-Branch
     }
     
     public boolean checkHp(int health) {
