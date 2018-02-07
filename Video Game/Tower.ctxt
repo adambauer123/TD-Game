@@ -1,10 +1,18 @@
 #BlueJ class context
 comment0.target=Tower
+<<<<<<< HEAD
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tower\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+=======
 comment0.text=\n\ Write\ a\ description\ of\ class\ Tower\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+>>>>>>> Tylers-Branch
 comment1.params=radius\ reloadSpeed\ damage\ bulletSpeed\ towerCosts\ attackFirstCreep
 comment1.target=Tower(double,\ double,\ double,\ double,\ int,\ boolean)
 comment2.params=
 comment2.target=void\ act()
+<<<<<<< HEAD
+numComments=3
+=======
 comment3.params=
 comment3.target=void\ fire()
 numComments=4
+>>>>>>> Tylers-Branch

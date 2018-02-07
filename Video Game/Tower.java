@@ -37,6 +37,14 @@ public class Tower extends Actor
         lastShot      = (int) RELOAD_SPEED;
         attackFirst   = attackFirstCreep;
     }
+<<<<<<< HEAD
+    
+   
+    public void act() 
+    {
+        // Add your action code here.
+    }    
+=======
    
     public void act() 
     {
@@ -51,4 +59,5 @@ public class Tower extends Actor
             System.out.println("hiiiii");
         }
     }
+>>>>>>> Tylers-Branch
 }
