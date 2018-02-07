@@ -17,9 +17,6 @@ public class Enemy2 extends enemy
     public int id;
     public void act() 
     {
-<<<<<<< HEAD
-        MoveAroundMap();
-=======
         if (getWorld() != null){
             MoveAroundMap();
         }
@@ -33,7 +30,6 @@ public class Enemy2 extends enemy
             health -= 1;
             removeTouching(bullet.class);
         }
->>>>>>> Tylers-Branch
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
         }    
