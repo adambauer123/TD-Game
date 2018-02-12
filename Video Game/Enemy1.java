@@ -14,9 +14,16 @@ public class Enemy1 extends enemy
      */
     private int health = 3;
     public int id;
+    public static int E1X = 0;
+    public static int E1Y = 0;
+    
     public void act() 
     {
-        if (getWorld() != null){
+        E1X = getX();
+        E1Y = getY();
+        
+        
+        if(getWorld() != null){
             MoveAroundMap();
         }
         if(getWorld() != null){
@@ -31,7 +38,7 @@ public class Enemy1 extends enemy
         }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
-        }    
+        }
     }
     
     public int giveX(){

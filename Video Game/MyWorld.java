@@ -35,6 +35,7 @@ public class MyWorld extends World
         
         if(count % 100 == 0 && count <= 1000){
             addObject(enemy, 20, 150);
+            enemy1.getX()
         }
         
         if(count % 250 == 0 && count <= 1000){
