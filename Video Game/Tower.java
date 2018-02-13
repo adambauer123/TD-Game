@@ -46,12 +46,10 @@ public class Tower extends Actor
         reloadDelayCount++;
     }
     
-    public void fire(){
-        if(reloadDelayCount >= gunReloadTime){
+    public void fire(int x, int y){
             bullet b = new bullet();
-            getWorld().addObject(b, 50, 50);
-            reloadDelayCount = 0;
-            System.out.println("hiiiii");
-        }
+            getWorld().addObject(b,x,y);
     }
 }
+
+    

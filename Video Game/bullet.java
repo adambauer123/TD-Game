@@ -14,8 +14,9 @@ public class bullet extends Actor
      */
     public void act() 
     {
-        this.turnTowards(Enemy1.E1X, Enemy1.E1Y);
-        move(7);
+        
+        this.turnTowards(Tower1.targetX, Tower1.targetY);
+        move(9);
     }    
 }
 

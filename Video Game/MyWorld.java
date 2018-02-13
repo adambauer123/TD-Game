@@ -6,7 +6,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-
 public class MyWorld extends World
 {
 
@@ -38,7 +37,7 @@ public class MyWorld extends World
         }
         
         if(count % 250 == 0 && count <= 1000){
-            addObject(enemyTwo, 20, 150);
+            //addObject(enemyTwo, 20, 150);
         }
     }
     
