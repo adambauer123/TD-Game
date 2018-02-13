@@ -1,7 +1,11 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
+<<<<<<< HEAD
 >>>>>>>=Adam'sBranch
+=======
+>>>>>>>=Tylers-Branch
+>>>>>>> Adam'sBranch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Enemy1.image=poop.png
@@ -29,6 +33,7 @@ class.move.superclass=greenfoot.Actor
 dependency1.from=Tower1
 dependency1.to=bullet
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency2.from=Enemy1
 dependency2.to=bullet
 dependency2.type=UsesDependency
@@ -59,6 +64,53 @@ mainWindow.width=1644
 mainWindow.x=36
 mainWindow.y=162
 package.numDependencies=8
+=======
+dependency10.from=bullet
+dependency10.to=Tower
+dependency10.type=UsesDependency
+dependency11.from=bullet
+dependency11.to=Tower1
+dependency11.type=UsesDependency
+dependency12.from=MyWorld
+dependency12.to=Enemy1
+dependency12.type=UsesDependency
+dependency13.from=MyWorld
+dependency13.to=Enemy2
+dependency13.type=UsesDependency
+dependency2.from=Tower1
+dependency2.to=Enemy1
+dependency2.type=UsesDependency
+dependency3.from=Enemy1
+dependency3.to=bullet
+dependency3.type=UsesDependency
+dependency4.from=Enemy2
+dependency4.to=bullet
+dependency4.type=UsesDependency
+dependency5.from=Tower
+dependency5.to=Enemy1
+dependency5.type=UsesDependency
+dependency6.from=Tower
+dependency6.to=bullet
+dependency6.type=UsesDependency
+dependency7.from=Tower
+dependency7.to=Tower1
+dependency7.type=UsesDependency
+dependency8.from=Tower
+dependency8.to=Tower2
+dependency8.type=UsesDependency
+dependency9.from=bullet
+dependency9.to=Enemy1
+dependency9.type=UsesDependency
+editor.fx.0.height=738
+editor.fx.0.width=816
+editor.fx.0.x=392
+editor.fx.0.y=41
+mainWindow.height=876
+mainWindow.width=1616
+mainWindow.x=-8
+mainWindow.y=-8
+package.numDependencies=13
+>>>>>>> Adam'sBranch
 package.numTargets=11
 project.charset=UTF-8
 readme.height=58
@@ -66,7 +118,11 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=51
+=======
+simulation.speed=57
+>>>>>>> Adam'sBranch
 target1.height=50
 target1.name=Tower3
 target1.showInterface=false
@@ -124,7 +180,11 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=Tower
+=======
+target6.name=enemy
+>>>>>>> Adam'sBranch
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
@@ -140,7 +200,11 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=enemy
+=======
+target8.name=Tower
+>>>>>>> Adam'sBranch
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=

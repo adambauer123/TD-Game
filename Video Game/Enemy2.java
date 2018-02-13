@@ -17,6 +17,10 @@ public class Enemy2 extends enemy
     public int id;
     public void act() 
     {
+<<<<<<< HEAD
+=======
+        MoveAroundMap();
+>>>>>>> Adam'sBranch
         if (getWorld() != null){
             MoveAroundMap();
         }

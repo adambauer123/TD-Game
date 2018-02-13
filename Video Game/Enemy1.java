@@ -17,13 +17,22 @@ public class Enemy1 extends enemy
     public static int E1X = 0;
     public static int E1Y = 0;
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> Adam'sBranch
     public void act() 
     {
         E1X = getX();
         E1Y = getY();
+<<<<<<< HEAD
         
         
         if(getWorld() != null){
+=======
+        MoveAroundMap();
+        if (getWorld() != null){
+>>>>>>> Adam'sBranch
             MoveAroundMap();
         }
         if(getWorld() != null){
@@ -41,11 +50,4 @@ public class Enemy1 extends enemy
         }
     }
     
-    public int giveX(){
-        return getX();
-    }
-    
-    public int giveY(){
-        return getY();
-    }
 }

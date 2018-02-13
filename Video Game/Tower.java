@@ -37,19 +37,25 @@ public class Tower extends Actor
         lastShot      = (int) RELOAD_SPEED;
         attackFirst   = attackFirstCreep;
     }
+<<<<<<< HEAD
     
    
     public void act()
+=======
+
+    
+
+   
+    public void act() 
+>>>>>>> Adam'sBranch
     {
         reloadDelayCount++;
     }
     
-    public void fire(){
-        if(reloadDelayCount >= gunReloadTime){
+    public void fire(int x, int y){
             bullet b = new bullet();
-            getWorld().addObject(b, 50, 50);
-            reloadDelayCount = 0;
-            System.out.println("hiiiii");
-        }
+            getWorld().addObject(b,x,y);
     }
 }
+
+    

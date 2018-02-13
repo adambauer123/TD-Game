@@ -36,10 +36,13 @@ public class enemy extends Actor
         } else {
             getWorld().removeObject(this);
         }
+<<<<<<< HEAD
         System.out.println(this.getX());
+=======
+>>>>>>> Adam'sBranch
         //System.out.println(this.getX());
     }
-    
+   
     public boolean checkHp(int health) {
         if(health <= 0) {
             return true;
