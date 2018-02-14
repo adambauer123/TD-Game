@@ -33,11 +33,7 @@ public class Tower1 extends Tower
         {
             Enemy1 firstEnemy1 = (Enemy1)(Enemy1.get(0));
             for(int c = 1; c < Enemy1.size(); c++)
-            {
-                
-                    firstEnemy1 = Enemy1.get(c);
-                
-            }
+                firstEnemy1 = Enemy1.get(c);
             target = firstEnemy1;
             turnTowards(target.getX(), target.getY());
             targetX = target.getX();
