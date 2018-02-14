@@ -18,13 +18,6 @@ public class Enemy1 extends enemy
     public static int idNumber = 0;
     
     
-    public Enemy1(int id) {
-        id = idNumber;
-    }
-    public int returnID() {
-        return idNumber;
-    }
-    
     public void act() 
     {
         E1X = getX();
