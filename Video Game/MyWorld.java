@@ -14,6 +14,7 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
+    private int i = 1;
     private String coins, waveNum, timeTillNextWave, lives;
     public MyWorld()
     {
@@ -29,11 +30,12 @@ public class MyWorld extends World
     
     public void SpawnEnemies(){
         count++;
-        Enemy1 enemy = new Enemy1();
+        Enemy1 enemy = new Enemy1(i);
         Enemy2 enemyTwo = new Enemy2();
         
         if(count % 100 == 0 && count <= 1000){
             addObject(enemy, 20, 150);
+            i++;
         }
         
         if(count % 250 == 0 && count <= 1000){

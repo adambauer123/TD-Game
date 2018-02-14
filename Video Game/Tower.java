@@ -45,11 +45,12 @@ public class Tower extends Actor
     {
         reloadDelayCount++;
     }
-    
+    /*
     public void fire(int x, int y){
             bullet b = new bullet();
             getWorld().addObject(b,x,y);
     }
+    */
 }
 
     
