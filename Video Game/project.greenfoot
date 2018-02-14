@@ -1,8 +1,8 @@
 #Greenfoot properties
-#Tue Feb 13 11:09:06 EST 2018
+#Wed Feb 14 11:00:01 EST 2018
 editor.fx.0.height=738
 target2.width=80
-target8.name=Tower
+target8.name=enemy
 target11.y=0
 target11.x=0
 dependency12.type=UsesDependency
@@ -71,13 +71,13 @@ target11.type=ClassTarget
 class.move.superclass=greenfoot.Actor
 version=3.0.0
 editor.fx.0.y=41
-editor.fx.0.x=392
+editor.fx.0.x=391
 dependency6.to=bullet
 target2.showInterface=false
 dependency1.from=Tower1
 class.Enemy2.image=zombie.png
-mainWindow.y=-8
-mainWindow.x=-8
+mainWindow.y=546
+mainWindow.x=854
 target5.showInterface=false
 target8.showInterface=false
 dependency5.from=Tower
@@ -90,7 +90,7 @@ readme.name=@README
 class.Enemy1.superclass=enemy
 class.Enemy1.image=poop.png
 class.Menu.image=menu.png
-target6.name=enemy
+target6.name=Tower
 target9.height=50
 dependency10.type=UsesDependency
 editor.fx.0.width=816
