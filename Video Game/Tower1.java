@@ -13,7 +13,7 @@ public class Tower1 extends Tower
     
     private int gunReloadTime = 75;
     private int reloadDelayCount = 0;
-    private int targetX, targetY;
+    public static int targetX, targetY;
     private int i = 5;
     /**
      * Act - do whatever the Tower1 wants to do. This method is called whenever
