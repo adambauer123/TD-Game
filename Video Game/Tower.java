@@ -22,6 +22,9 @@ public class Tower extends Actor
     int MAX_CREEPS = 20;  // Number of spawned creeps in one wave
     int level = 1;
     Enemy1 target;
+    public static int targetX, targetY;
+
+    private int i = 5;
     
     private int gunReloadTime = 15;
     private int reloadDelayCount;
@@ -38,30 +41,34 @@ public class Tower extends Actor
         attackFirst   = attackFirstCreep;
     }
     
-<<<<<<< HEAD
 
    
-    public void act() 
-    {
+    public void act() {
         reloadDelayCount++;
+
+        i++;
+        if(i > 50) {
+        i = 0;
     }
-    /*
-    public void fire(int x, int y){
-            bullet b = new bullet();
-            getWorld().addObject(b,x,y);
     }
-    */
-=======
-   public void act() 
-   {
-       reloadDelayCount++;
-   }
-    
+
+    public void getTarget() {
+        List l = getWorld().getObjects(Enemy1.class);
+        if(!l.isEmpty()) {
+        target = (Enemy1)(l.get(0));
+        System.out.println(l);
+        System.out.println(target);
+        targetX = target.getX();
+        targetY = target.getY();
+        turnTowards(targetX, targetY);
+        bullet Bullet = new bullet();
+       }
+    }
+        
    public void fire(int x, int y){
            bullet b = new bullet();
            getWorld().addObject(b,x,y);
-   }
->>>>>>> Tylers-Branch
+    }
 }
 
     
