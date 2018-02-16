@@ -29,7 +29,7 @@ public class MyWorld extends World
     
     public void act(){
         SpawnEnemies();
-        //dragNDrop();
+        menuTowers();
     }
     
     public void SpawnEnemies(){
@@ -65,20 +65,15 @@ public class MyWorld extends World
         showText(lives, 70, 675);
         
         
-        
-        
         GreenfootImage red_tower_Image = new GreenfootImage("green_tower.png");
-        getBackground().drawImage(red_tower_Image, 150, 500);
-        
-        Tower tower = new Tower1();
-        addObject(tower, 225, 550);
+        getBackground().drawImage(red_tower_Image, 149+50, 501);
         
     }
     
-    public void dragNDrop(){
-        if(tower.getX() != 225 && tower.getY() != 550){
-            Tower newTower = new Tower1();
-            addObject(newTower, 225, 550);
+    public void menuTowers(){
+        if (getObjectsAt(225, 550, Tower1.class).isEmpty()){
+            Tower tower = new Tower1();
+            addObject(tower, 225+50, 550);
         }
     }
 }

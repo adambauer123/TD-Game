@@ -24,9 +24,20 @@ public class Tower1 extends Tower
         super(75, 50, 18, 7.0, 59, true);
         
     }
+    
     public void act() 
     {
         if(activated == true){
+            List l = getWorld().getObjects(Enemy1.class);
+            
+            if(!l.isEmpty()){
+                target = (Enemy1)(l.get(0));
+                targetX = target.getX();
+                targetY = target.getY();
+                turnTowards(targetX, targetY);
+                bullet Bullet = new bullet();
+            }
+            
             reloadDelayCount++;
             //this.turnTowards(Enemy1.E1X, Enemy1.E1Y);
             move ((int)(0.01));     
@@ -52,14 +63,15 @@ public class Tower1 extends Tower
     }
     
     public void dragAndActivate(){
-
         if (Greenfoot.mouseDragged(this) && placed == false){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             setLocation(mouse.getX(), mouse.getY());
         }
         if (Greenfoot.mouseClicked(null)){
-            activated = true;
-            placed = true;
+            if(getY() < 500){
+                activated = true;
+                placed = true;
+            }
         }
     }
     
