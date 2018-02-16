@@ -15,6 +15,10 @@ public class MyWorld extends World
      */
     private int count = 0;
     private String coins, waveNum, timeTillNextWave, lives;
+    int x = 0;
+    int y = 0;
+    boolean towerSpawned = false;
+    Tower tower;
     public MyWorld()
     {
         super(625, 700, 1);
@@ -25,6 +29,7 @@ public class MyWorld extends World
     
     public void act(){
         SpawnEnemies();
+        //dragNDrop();
     }
     
     public void SpawnEnemies(){
@@ -59,6 +64,23 @@ public class MyWorld extends World
         
         lives = "Lives: ";
         showText(lives, 70, 675);
+        
+        
+        
+        
+        GreenfootImage red_tower_Image = new GreenfootImage("green_tower.png");
+        getBackground().drawImage(red_tower_Image, 150, 500);
+        
+        Tower tower = new Tower1();
+        addObject(tower, 225, 550);
+        
+    }
+    
+    public void dragNDrop(){
+        if(tower.getX() != 225 && tower.getY() != 550){
+            Tower newTower = new Tower1();
+            addObject(newTower, 225, 550);
+        }
     }
 }
 

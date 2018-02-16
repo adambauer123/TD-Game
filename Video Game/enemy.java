@@ -36,7 +36,6 @@ public class enemy extends Actor
         } else {
             getWorld().removeObject(this);
         }
-        //System.out.println(this.getX());
     }
    
     public boolean checkHp(int health) {
@@ -44,7 +43,7 @@ public class enemy extends Actor
             return true;
         }
         else
-        return false;
+            return false;
     }
     
 }

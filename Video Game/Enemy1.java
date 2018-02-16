@@ -17,20 +17,23 @@ public class Enemy1 extends enemy
     public static int E1Y = 0;
     public static int idNumber = 0;
     
-    
     public void act() 
     {
         E1X = getX();
         E1Y = getY();
-        MoveAroundMap();
-        if (getWorld() != null){
-            MoveAroundMap();
-        }
+        
+        
         if(getWorld() != null){
-            checkCollision();
+            MoveAroundMap();
+            if (getWorld() != null){
+                MoveAroundMap();
+            }
+            if(getWorld() != null){
+                checkCollision();
+            }
         }
-    }    
-    
+    }
+        
     public void checkCollision(){
         if(isTouching(bullet.class)){
             health -= 1;
@@ -38,7 +41,7 @@ public class Enemy1 extends enemy
         }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
-        }    
+        }
     }
 }
     
