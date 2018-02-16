@@ -74,6 +74,7 @@ dependency8.type=UsesDependency
 dependency9.from=bullet
 dependency9.to=Enemy1
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=738
 editor.fx.0.width=816
 editor.fx.0.x=392
@@ -82,6 +83,16 @@ mainWindow.height=876
 mainWindow.width=1616
 mainWindow.x=-8
 mainWindow.y=-8
+=======
+editor.fx.0.height=717
+editor.fx.0.width=951
+editor.fx.0.x=792
+editor.fx.0.y=23
+mainWindow.height=876
+mainWindow.width=1616
+mainWindow.x=129
+mainWindow.y=112
+>>>>>>> Tylers-Branch
 package.numDependencies=16
 package.numTargets=11
 project.charset=UTF-8
@@ -90,7 +101,11 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=57
+=======
+simulation.speed=49
+>>>>>>> Tylers-Branch
 target1.height=50
 target1.name=Tower3
 target1.showInterface=false
@@ -148,7 +163,11 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=enemy
+=======
+target6.name=Tower
+>>>>>>> Tylers-Branch
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
@@ -164,7 +183,11 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=Tower
+=======
+target8.name=enemy
+>>>>>>> Tylers-Branch
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
