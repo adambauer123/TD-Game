@@ -14,6 +14,8 @@ public class Tower1 extends Tower
     private int gunReloadTime = 75;
     private int reloadDelayCount = 0;
     public static int targetX, targetY;
+    boolean activated = false;
+    boolean placed = false;
     /**
      * Act - do whatever the Tower1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,27 +26,45 @@ public class Tower1 extends Tower
     }
     public void act() 
     {
-        reloadDelayCount++;
-        //this.turnTowards(Enemy1.E1X, Enemy1.E1Y);
-        move ((int)(0.01));     
-        List<Enemy1> Enemy1 = getObjectsInRange(10000, Enemy1.class);
-        System.out.println(Enemy1);
-        if(Enemy1.size() != 0)
-        {
-            Enemy1 firstEnemy1 = (Enemy1)(Enemy1.get(0));
-            for(int c = 1; c < Enemy1.size(); c++)
-                firstEnemy1 = Enemy1.get(c);
-            target = firstEnemy1;
-            turnTowards(target.getX(), target.getY());
-            targetX = target.getX();
-            targetY = target.getY();
+        if(activated == true){
+            reloadDelayCount++;
+            //this.turnTowards(Enemy1.E1X, Enemy1.E1Y);
+            move ((int)(0.01));     
+            List<Enemy1> Enemy1 = getObjectsInRange(10000, Enemy1.class);
+            System.out.println(Enemy1);
+            if(Enemy1.size() != 0)
+            {
+                Enemy1 firstEnemy1 = (Enemy1)(Enemy1.get(0));
+                for(int c = 1; c < Enemy1.size(); c++)
+                    firstEnemy1 = Enemy1.get(c);
+                target = firstEnemy1;
+                turnTowards(target.getX(), target.getY());
+                targetX = target.getX();
+                targetY = target.getY();
+            }
+            if(reloadDelayCount >= gunReloadTime && Enemy1 != null) {
+                fire(getX(), getY());
+                reloadDelayCount = 1;
+            }
         }
-        if(reloadDelayCount >= gunReloadTime && Enemy1 != null) {
-            fire(getX(), getY());
-            reloadDelayCount = 1;
-        }
+        
+        dragAndActivate();
     }
     
+    public void dragAndActivate(){
+        //if(getY() > 500){
+        //    activated = false;
+        //}
+        
+        if (Greenfoot.mouseDragged(this) && placed == false){
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            setLocation(mouse.getX(), mouse.getY());
+        }
+        if (Greenfoot.mouseClicked(null)){
+            activated = true;
+            placed = true;
+        }
+    }
     
     public static int getTargetX() {
         return targetX;
