@@ -52,10 +52,7 @@ public class Tower1 extends Tower
     }
     
     public void dragAndActivate(){
-        //if(getY() > 500){
-        //    activated = false;
-        //}
-        
+
         if (Greenfoot.mouseDragged(this) && placed == false){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             setLocation(mouse.getX(), mouse.getY());
