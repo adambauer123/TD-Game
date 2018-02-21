@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -14,8 +15,7 @@ public class MyWorld extends World
      */
     private int count = 0;
     private String coins, waveNum, timeTillNextWave, lives;
-    int x = 0;
-    int y = 0;
+    int i = 1;
     boolean towerSpawned = false;
     Tower tower;
     public MyWorld()
@@ -29,6 +29,12 @@ public class MyWorld extends World
     public void act(){
         SpawnEnemies();
         menuTowers();
+        if(i == 1) {
+        Tower tower = new Tower(.5,.5,.5,.5,5,true);
+        addObject(tower,50,50);
+        i++;
+    }
+
     }
     
     public void SpawnEnemies(){
@@ -72,9 +78,12 @@ public class MyWorld extends World
     
     public void menuTowers(){
         if (getObjectsAt(225, 550, Tower1.class).isEmpty()){
-            Tower tower = new Tower1();
+            Tower1 tower = new Tower1();
             addObject(tower, 225+50, 550);
         }
     }
+ 
+    
+        
 }
 
