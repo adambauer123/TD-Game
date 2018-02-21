@@ -1,7 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=Tylers-Branch
+>>>>>>>=Adam'sBranch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Enemy1.image=poop.png
@@ -10,11 +10,8 @@ class.Enemy2.image=zombie.png
 class.Enemy2.superclass=enemy
 class.Huh.superclass=greenfoot.Actor
 class.MyWorld.superclass=greenfoot.World
-<<<<<<< HEAD
-=======
 class.Text.superclass=greenfoot.Actor
 class.Tower.image=cell.jpg
->>>>>>> Adam'sBranch
 class.Tower.superclass=greenfoot.Actor
 class.Tower1.image=green_tower.png
 class.Tower1.superclass=Tower
@@ -79,29 +76,16 @@ dependency8.type=UsesDependency
 dependency9.from=Tower
 dependency9.to=MyWorld
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=717
-editor.fx.0.width=944
-editor.fx.0.x=460
-editor.fx.0.y=23
-mainWindow.height=876
-mainWindow.width=1616
-mainWindow.x=555
-mainWindow.y=539
-package.numDependencies=16
-package.numTargets=9
-=======
 editor.fx.0.height=860
 editor.fx.0.width=800
-editor.fx.0.x=0
-editor.fx.0.y=0
-mainWindow.height=860
-mainWindow.width=1601
-mainWindow.x=0
-mainWindow.y=0
+editor.fx.0.x=537
+editor.fx.0.y=23
+mainWindow.height=970
+mainWindow.width=1680
+mainWindow.x=-18
+mainWindow.y=23
 package.numDependencies=17
-package.numTargets=11
->>>>>>> Adam'sBranch
+package.numTargets=9
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -166,7 +150,7 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
-target6.name=enemy
+target6.name=Tower
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
@@ -182,11 +166,7 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
-<<<<<<< HEAD
 target8.name=bullet
-=======
-target8.name=Tower
->>>>>>> Adam'sBranch
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=

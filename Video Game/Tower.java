@@ -42,13 +42,13 @@ public class Tower extends Actor
         List l = getWorld().getObjects(Enemy1.class);
         
         if(l != null && l.size() > 0) {
-        System.out.println(l);
-        target = (Enemy1) (l.get(0));
-        targetX = target.getX();
-        targetY = target.getY();
-        
-        System.out.println(targetX);
-    }
+            System.out.println(l);
+            target = (Enemy1) (l.get(0));
+            targetX = target.getX();
+            targetY = target.getY();
+            
+            System.out.println(targetX);
+        }
     }
     
     
