@@ -1,4 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+//import java.awt.Color;
+//import java.awt.Font;
+
 
 /**
  * Write a description of class MyWorld here.
@@ -55,8 +58,18 @@ public class MyWorld extends World
         coins = "Coins: ";
         showText(coins, 70, 525);
         
-        waveNum = "Wave Number: ";
-        showText(waveNum, 70, 575);
+        //waveNum = "Wave Number: ";
+        //showText(waveNum, 70, 575);
+        
+        /*
+        GreenfootImage img = new GreenfootImage(400, 400);      
+        Font font = img.getFont().deriveFont(36f);
+        img.setFont(font);
+        img.setColor(Color.BLUE);    
+        img.drawString("hello", 60, 100);
+        getBackground().setImage(img);
+        */
+        
         
         timeTillNextWave = "Next Wave: ";
         showText(timeTillNextWave, 70, 625);
