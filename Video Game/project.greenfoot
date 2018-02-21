@@ -1,7 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=Adam'sBranch
+>>>>>>>=Tylers-Branch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Enemy1.image=poop.png
@@ -10,6 +10,11 @@ class.Enemy2.image=zombie.png
 class.Enemy2.superclass=enemy
 class.Huh.superclass=greenfoot.Actor
 class.MyWorld.superclass=greenfoot.World
+<<<<<<< HEAD
+=======
+class.Text.superclass=greenfoot.Actor
+class.Tower.image=cell.jpg
+>>>>>>> Adam'sBranch
 class.Tower.superclass=greenfoot.Actor
 class.Tower1.image=green_tower.png
 class.Tower1.superclass=Tower
@@ -27,26 +32,29 @@ dependency1.from=Tower1
 dependency1.to=bullet
 dependency1.type=UsesDependency
 dependency10.from=bullet
-dependency10.to=Tower
+dependency10.to=Enemy1
 dependency10.type=UsesDependency
 dependency11.from=bullet
-dependency11.to=Tower1
+dependency11.to=Tower
 dependency11.type=UsesDependency
-dependency12.from=MyWorld
-dependency12.to=Enemy1
+dependency12.from=bullet
+dependency12.to=Tower1
 dependency12.type=UsesDependency
 dependency13.from=MyWorld
-dependency13.to=Enemy2
+dependency13.to=Enemy1
 dependency13.type=UsesDependency
 dependency14.from=MyWorld
-dependency14.to=Tower1
+dependency14.to=Enemy2
 dependency14.type=UsesDependency
 dependency15.from=MyWorld
-dependency15.to=enemy
+dependency15.to=Tower1
 dependency15.type=UsesDependency
 dependency16.from=MyWorld
-dependency16.to=Tower
+dependency16.to=enemy
 dependency16.type=UsesDependency
+dependency17.from=MyWorld
+dependency17.to=Tower
+dependency17.type=UsesDependency
 dependency2.from=Tower1
 dependency2.to=Enemy1
 dependency2.type=UsesDependency
@@ -68,9 +76,10 @@ dependency7.type=UsesDependency
 dependency8.from=Tower
 dependency8.to=Tower2
 dependency8.type=UsesDependency
-dependency9.from=bullet
-dependency9.to=Enemy1
+dependency9.from=Tower
+dependency9.to=MyWorld
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=717
 editor.fx.0.width=944
 editor.fx.0.x=460
@@ -81,13 +90,25 @@ mainWindow.x=555
 mainWindow.y=539
 package.numDependencies=16
 package.numTargets=9
+=======
+editor.fx.0.height=860
+editor.fx.0.width=800
+editor.fx.0.x=0
+editor.fx.0.y=0
+mainWindow.height=860
+mainWindow.width=1601
+mainWindow.x=0
+mainWindow.y=0
+package.numDependencies=17
+package.numTargets=11
+>>>>>>> Adam'sBranch
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
-simulation.speed=49
+simulation.speed=50
 target1.height=50
 target1.name=Tower3
 target1.showInterface=false
@@ -145,7 +166,7 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
-target6.name=Tower
+target6.name=enemy
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
@@ -161,7 +182,11 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=bullet
+=======
+target8.name=Tower
+>>>>>>> Adam'sBranch
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=

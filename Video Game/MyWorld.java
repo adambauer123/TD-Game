@@ -1,8 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+<<<<<<< HEAD
 //import java.awt.Color;
 //import java.awt.Font;
 
 
+=======
+import java.util.List;
+>>>>>>> Adam'sBranch
 /**
  * Write a description of class MyWorld here.
  * 
@@ -18,8 +22,7 @@ public class MyWorld extends World
      */
     private int count = 0;
     private String coins, waveNum, timeTillNextWave, lives;
-    int x = 0;
-    int y = 0;
+    int i = 1;
     boolean towerSpawned = false;
     Tower tower;
     public MyWorld()
@@ -33,6 +36,12 @@ public class MyWorld extends World
     public void act(){
         SpawnEnemies();
         menuTowers();
+        if(i == 1) {
+        Tower tower = new Tower(.5,.5,.5,.5,5,true);
+        addObject(tower,50,50);
+        i++;
+    }
+
     }
     
     public void SpawnEnemies(){
@@ -40,11 +49,12 @@ public class MyWorld extends World
         Enemy1 enemy = new Enemy1();
         Enemy2 enemyTwo = new Enemy2();
         
-        if(count % 100 == 0 && count <= 1000){
+        if(count % 100 == 0){
             addObject(enemy, 20, 150);
+  
         }
         
-        if(count % 250 == 0 && count <= 1000){
+        if(count % 250 == 0){
             //addObject(enemyTwo, 20, 150);
         }
     }
@@ -85,9 +95,12 @@ public class MyWorld extends World
     
     public void menuTowers(){
         if (getObjectsAt(225, 550, Tower1.class).isEmpty()){
-            Tower tower = new Tower1();
+            Tower1 tower = new Tower1();
             addObject(tower, 225+50, 550);
         }
     }
+ 
+    
+        
 }
 

@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Enemy1 here.
  * 
@@ -16,6 +15,7 @@ public class Enemy1 extends enemy
     public int id;
     public static int E1X = 0;
     public static int E1Y = 0;
+    public static int idNumber = 0;
     
     public void act() 
     {
@@ -44,3 +44,5 @@ public class Enemy1 extends enemy
         }
     }
 }
+    
+ 
