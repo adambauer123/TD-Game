@@ -53,15 +53,13 @@ public class Tower extends Actor
     
     
     
-    public void turnToEnemy() {
-        this.turnTowards(targetX, targetY);
-    }
+}
 
 
     
 
 
     
-    }
+
 
     

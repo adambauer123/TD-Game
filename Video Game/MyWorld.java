@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-<<<<<<< HEAD
+
 //import java.awt.Color;
 //import java.awt.Font;
 
 
-=======
+
 import java.util.List;
->>>>>>> Adam'sBranch
+
 /**
  * Write a description of class MyWorld here.
  * 
