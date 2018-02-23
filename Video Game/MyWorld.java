@@ -1,12 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-<<<<<<< HEAD
-//import java.awt.Color;
-//import java.awt.Font;
-
-
-=======
+import java.awt.Color;
+import java.awt.Font;
 import java.util.List;
->>>>>>> Adam'sBranch
 /**
  * Write a description of class MyWorld here.
  * 
@@ -21,13 +16,16 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
-    private String coins, waveNum, timeTillNextWave, lives;
+    public int coins, waveNum, lives;
+    public int timeTillNextWave = 60;
+    private int time = 50;
     int i = 1;
     boolean towerSpawned = false;
     Tower tower;
     public MyWorld()
     {
         super(625, 700, 1);
+        Greenfoot.setSpeed(50);
         GreenfootImage drawedImage = new GreenfootImage("lines.png");
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
@@ -35,13 +33,17 @@ public class MyWorld extends World
     
     public void act(){
         SpawnEnemies();
-        menuTowers();
+        menuUpdate();
         if(i == 1) {
-        Tower tower = new Tower(.5,.5,.5,.5,5,true);
-        addObject(tower,50,50);
-        i++;
-    }
-
+            Tower tower = new Tower(.5,.5,.5,.5,5,true);
+            addObject(tower,50,50);
+            i++;
+        }
+        time--;
+        if(time == 0){
+            timeTillNextWave--;
+            time = 50;
+        }
     }
     
     public void SpawnEnemies(){
@@ -64,40 +66,25 @@ public class MyWorld extends World
         GreenfootImage drawedImage = new GreenfootImage("menu.png");
         getBackground().drawImage(drawedImage, 0, 500);
         
-        //getWorld().showText("text", 10, 10);
-        coins = "Coins: ";
-        showText(coins, 70, 525);
-        
-        //waveNum = "Wave Number: ";
-        //showText(waveNum, 70, 575);
-        
-        /*
-        GreenfootImage img = new GreenfootImage(400, 400);      
-        Font font = img.getFont().deriveFont(36f);
-        img.setFont(font);
-        img.setColor(Color.BLUE);    
-        img.drawString("hello", 60, 100);
-        getBackground().setImage(img);
-        */
-        
-        
-        timeTillNextWave = "Next Wave: ";
-        showText(timeTillNextWave, 70, 625);
-        
-        lives = "Lives: ";
-        showText(lives, 70, 675);
-        
-        
         GreenfootImage red_tower_Image = new GreenfootImage("green_tower.png");
         getBackground().drawImage(red_tower_Image, 149+50, 501);
         
+        showText("Coins: " + coins, 70, 525);
+        showText("Wave Number: " + waveNum, 115, 575);
+        showText("Next Wave: " + timeTillNextWave, 97, 625);
+        showText("Lives: " + lives, 70, 675);
     }
     
-    public void menuTowers(){
+    public void menuUpdate(){
         if (getObjectsAt(225, 550, Tower1.class).isEmpty()){
             Tower1 tower = new Tower1();
             addObject(tower, 225+50, 550);
         }
+        
+        showText("Coins: " + coins, 70, 525);
+        showText("Wave Number: " + waveNum, 115, 575);
+        showText("Next Wave: " + timeTillNextWave, 97, 625);
+        showText("Lives: " + lives, 70, 675);
     }
  
     
