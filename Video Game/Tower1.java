@@ -14,7 +14,7 @@ public class Tower1 extends Tower {
     private int reloadDelayCount = 0;
     public static int targetX, targetY;
     private int count = 1;
-
+    private boolean isPayed = false;
     boolean activated = false;
     boolean placed = false;
 
@@ -31,37 +31,39 @@ public class Tower1 extends Tower {
 
 
     public void act() {
-     if(activated == true) {
-        turnTowards(Tower.targetX, Tower.targetY);
-     reloadDelayCount++;
-     if(gunReloadTime <= reloadDelayCount) {
-         fire();
-         reloadDelayCount = 0;
+        if(activated == true) {
+            turnTowards(Tower.targetX, Tower.targetY);
+            reloadDelayCount++;
+            if(gunReloadTime <= reloadDelayCount) {
+                fire();
+                reloadDelayCount = 0;
+            }
         }
+        dragAndActivate();
     }
-    
-     dragAndActivate();
-    }
-
-    
-
     
     public void dragAndActivate(){
-        if (Greenfoot.mouseDragged(this) && placed == false){
+        if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 10){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             setLocation(mouse.getX(), mouse.getY());
         }
         if (Greenfoot.mouseClicked(null)){
-            if(getY() < 500){
+            if(getY() < 473 && MyWorld.coins >= 10){
                 activated = true;
                 placed = true;
-            }
+                if(isPayed != true){
+                    MyWorld.coins -= 10;
+                    isPayed = true;
+                }
+           } else if(getY() >= 473){
+               getWorld().removeObject(this);
+           }
         }
     }
     
     public void fire() {
         bullet Bullet = new bullet();
-        getWorld().addObject(Bullet,this.getX(), this.getY());
+        getWorld().addObject(Bullet, this.getX(), this.getY());
     }
 }
     

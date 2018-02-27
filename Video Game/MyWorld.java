@@ -16,7 +16,8 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
-    public int coins, waveNum, lives;
+    public static int coins = 100, lives = 3;
+    private int waveNum;
     public int timeTillNextWave = 60;
     private int time = 50;
     int i = 1;
@@ -29,6 +30,7 @@ public class MyWorld extends World
         GreenfootImage drawedImage = new GreenfootImage("lines.png");
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
+        coins = 100;
     }
     
     public void act(){
@@ -51,7 +53,7 @@ public class MyWorld extends World
         Enemy1 enemy = new Enemy1();
         Enemy2 enemyTwo = new Enemy2();
         
-        if(count % 100 == 0){
+        if(count % 50 == 0){
             addObject(enemy, 20, 150);
   
         }
@@ -87,7 +89,7 @@ public class MyWorld extends World
         showText("Lives: " + lives, 70, 675);
     }
  
-    
+
         
 }
 
