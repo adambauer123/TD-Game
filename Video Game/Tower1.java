@@ -17,6 +17,7 @@ public class Tower1 extends Tower {
     private boolean isPayed = false;
     boolean activated = false;
     boolean placed = false;
+    
 
     /**
      * Act - do whatever the Tower1 wants to do. This method is called whenever
@@ -34,7 +35,11 @@ public class Tower1 extends Tower {
         if(activated == true) {
             turnTowards(Tower.targetX, Tower.targetY);
             reloadDelayCount++;
+<<<<<<< HEAD
      	if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
+=======
+            if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
+>>>>>>> master
                 fire();
                 reloadDelayCount = 0;
             }
@@ -48,6 +53,7 @@ public class Tower1 extends Tower {
             setLocation(mouse.getX(), mouse.getY());
         }
         if (Greenfoot.mouseClicked(null)){
+<<<<<<< HEAD
             if(getY() < 500 && MyWorld.coins >= 10){
                 activated = true;
                 placed = true;
@@ -56,6 +62,17 @@ public class Tower1 extends Tower {
                     isPayed = true;
                 }
                 
+=======
+            if(getY() < 473 && MyWorld.coins >= 10){
+                activated = true;
+                placed = true;
+                if(isPayed != true){
+                    MyWorld.coins -= 10;
+                    isPayed = true;
+                }
+           } else if(getY() >= 473){
+               getWorld().removeObject(this);
+>>>>>>> master
            }
         }
     }

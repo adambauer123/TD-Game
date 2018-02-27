@@ -1,14 +1,27 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
+<<<<<<< HEAD
 >>>>>>>=Tylers-Branch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
+=======
+>>>>>>>=Adam'sBranch
+class.BasicTower.image=yeet.jpg
+class.BasicTower.superclass=greenfoot.Actor
+class.Defeat.image=Defeat.png
+class.Defeat.superclass=greenfoot.World
+>>>>>>> master
 class.Enemy1.image=poop.png
 class.Enemy1.superclass=enemy
 class.Enemy2.image=zombie.png
 class.Enemy2.superclass=enemy
 class.Huh.superclass=greenfoot.Actor
+<<<<<<< HEAD
+=======
+class.Intro.image=intro.png
+class.Intro.superclass=greenfoot.World
+>>>>>>> master
 class.MyWorld.superclass=greenfoot.World
 class.Text.superclass=greenfoot.Actor
 class.Tower.image=cell.jpg
@@ -29,6 +42,7 @@ dependency1.from=Tower1
 dependency1.to=bullet
 dependency1.type=UsesDependency
 dependency10.from=Tower
+<<<<<<< HEAD
 dependency10.to=Tower2
 dependency10.type=UsesDependency
 dependency11.from=Tower
@@ -57,10 +71,41 @@ dependency18.to=enemy
 dependency18.type=UsesDependency
 dependency19.from=MyWorld
 dependency19.to=Tower
+=======
+dependency10.to=Tower1
+dependency10.type=UsesDependency
+dependency11.from=Tower
+dependency11.to=Tower2
+dependency11.type=UsesDependency
+dependency12.from=Tower
+dependency12.to=MyWorld
+dependency12.type=UsesDependency
+dependency13.from=enemy
+dependency13.to=MyWorld
+dependency13.type=UsesDependency
+dependency14.from=bullet
+dependency14.to=Enemy1
+dependency14.type=UsesDependency
+dependency15.from=bullet
+dependency15.to=Tower
+dependency15.type=UsesDependency
+dependency16.from=bullet
+dependency16.to=Tower1
+dependency16.type=UsesDependency
+dependency17.from=MyWorld
+dependency17.to=Enemy1
+dependency17.type=UsesDependency
+dependency18.from=MyWorld
+dependency18.to=Enemy2
+dependency18.type=UsesDependency
+dependency19.from=MyWorld
+dependency19.to=Tower1
+>>>>>>> master
 dependency19.type=UsesDependency
 dependency2.from=Tower1
 dependency2.to=Enemy1
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency3.from=Tower1
 dependency3.to=MyWorld
 dependency3.type=UsesDependency
@@ -92,6 +137,45 @@ mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=19
 package.numTargets=9
+=======
+dependency20.from=MyWorld
+dependency20.to=enemy
+dependency20.type=UsesDependency
+dependency21.from=MyWorld
+dependency21.to=Tower
+dependency21.type=UsesDependency
+dependency3.from=Tower1
+dependency3.to=MyWorld
+dependency3.type=UsesDependency
+dependency4.from=Intro
+dependency4.to=MyWorld
+dependency4.type=UsesDependency
+dependency5.from=Enemy1
+dependency5.to=bullet
+dependency5.type=UsesDependency
+dependency6.from=Enemy1
+dependency6.to=MyWorld
+dependency6.type=UsesDependency
+dependency7.from=Enemy2
+dependency7.to=bullet
+dependency7.type=UsesDependency
+dependency8.from=Tower
+dependency8.to=Enemy1
+dependency8.type=UsesDependency
+dependency9.from=Tower
+dependency9.to=bullet
+dependency9.type=UsesDependency
+editor.fx.0.height=722
+editor.fx.0.width=800
+editor.fx.0.x=719
+editor.fx.0.y=23
+mainWindow.height=971
+mainWindow.width=1598
+mainWindow.x=248
+mainWindow.y=71
+package.numDependencies=21
+package.numTargets=11
+>>>>>>> master
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -140,7 +224,11 @@ target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
+<<<<<<< HEAD
 target4.name=Enemy1
+=======
+target4.name=Intro
+>>>>>>> master
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
@@ -148,7 +236,11 @@ target4.width=80
 target4.x=0
 target4.y=0
 target5.height=50
+<<<<<<< HEAD
 target5.name=Enemy2
+=======
+target5.name=Enemy1
+>>>>>>> master
 target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
@@ -156,7 +248,11 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=enemy
+=======
+target6.name=Enemy2
+>>>>>>> master
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
@@ -172,7 +268,11 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=bullet
+=======
+target8.name=enemy
+>>>>>>> master
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
@@ -180,7 +280,11 @@ target8.width=80
 target8.x=0
 target8.y=0
 target9.height=50
+<<<<<<< HEAD
 target9.name=MyWorld
+=======
+target9.name=Defeat
+>>>>>>> master
 target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
@@ -188,4 +292,8 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 world.lastInstantiated=MyWorld
+=======
+world.lastInstantiated=Intro
+>>>>>>> master

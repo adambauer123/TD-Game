@@ -40,17 +40,28 @@ public class Tower extends Actor
    
     public void act() {
         List l = getWorld().getObjects(Enemy1.class);
+<<<<<<< HEAD
         if(l.size() >= 1) {
+=======
+        if(l.size() >= 1){
+>>>>>>> master
             canFire = true;
         }else {
             canFire = false;
         }
+<<<<<<< HEAD
         if(l != null && l.size() >= 1) {
             System.out.println(l);
             target = (Enemy1) (l.get(0));
             targetX = target.getX();
             targetY = target.getY();
             
+=======
+        if(l != null && l.size() > 0) {
+            target = (Enemy1) (l.get(0));
+            targetX = target.getX();
+            targetY = target.getY();
+>>>>>>> master
         }
     }
     

@@ -26,7 +26,12 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
+<<<<<<< HEAD
     public int  waveNum, lives;
+=======
+    public static int coins = 100, lives = 3;
+    private int waveNum;
+>>>>>>> master
     public int timeTillNextWave = 60;
     private int time = 50;
     public static int coins = 100;
@@ -34,6 +39,8 @@ public class MyWorld extends World
     int i = 1;
     boolean towerSpawned = false;
     Tower tower;
+    public static int playerLives = 5;
+    
     public MyWorld()
     {
         super(625, 700, 1);
@@ -42,8 +49,11 @@ public class MyWorld extends World
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
         coins = 100;
+<<<<<<< HEAD
         playerLives = 5;
 
+=======
+>>>>>>> master
     }
     
     public void act(){
@@ -106,7 +116,7 @@ public class MyWorld extends World
         showText("Lives: " + playerLives, 70, 675);
     }
  
-    
+
         
 }
 
