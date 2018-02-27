@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-<<<<<<< HEAD
+
 
 //import java.awt.Color;
 //import java.awt.Font;
@@ -8,11 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 import java.util.List;
 
-=======
 import java.awt.Color;
 import java.awt.Font;
 import java.util.List;
->>>>>>> Tylers-Branch
+
 /**
  * Write a description of class MyWorld here.
  * 
@@ -27,9 +26,11 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
-    public int coins, waveNum, lives;
+    public int  waveNum, lives;
     public int timeTillNextWave = 60;
     private int time = 50;
+    public static int coins = 100;
+    public static int playerLives = 5;
     int i = 1;
     boolean towerSpawned = false;
     Tower tower;
@@ -40,9 +41,16 @@ public class MyWorld extends World
         GreenfootImage drawedImage = new GreenfootImage("lines.png");
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
+        coins = 100;
+        playerLives = 5;
+
     }
     
     public void act(){
+        if(playerLives <= 0) {
+            System.out.println("ur a loser kiddo");
+            removeObjects(getObjects(null)); //removes all the objects in the world
+        }
         SpawnEnemies();
         menuUpdate();
         if(i == 1) {
@@ -62,7 +70,7 @@ public class MyWorld extends World
         Enemy1 enemy = new Enemy1();
         Enemy2 enemyTwo = new Enemy2();
         
-        if(count % 100 == 0){
+        if(count % 50 == 0){
             addObject(enemy, 20, 150);
   
         }
@@ -95,7 +103,7 @@ public class MyWorld extends World
         showText("Coins: " + coins, 70, 525);
         showText("Wave Number: " + waveNum, 115, 575);
         showText("Next Wave: " + timeTillNextWave, 97, 625);
-        showText("Lives: " + lives, 70, 675);
+        showText("Lives: " + playerLives, 70, 675);
     }
  
     

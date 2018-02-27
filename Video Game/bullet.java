@@ -16,9 +16,11 @@ public class bullet extends Actor
     {
         turnTowards(Tower.targetX,Tower.targetY);
         move(7);
-       
-   
+        if(this.getX() < 30){
+            getWorld().removeObject(this);}
+      
         
+            }
     }
-}
+
 
