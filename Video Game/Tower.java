@@ -22,7 +22,7 @@ public class Tower extends Actor
     int MAX_CREEPS = 20;  // Number of spawned creeps in one wave
     int level = 1;
     public static Enemy1 target;
-
+    public static boolean canFire = false;
     public static int targetX = 0;
     public static int targetY = 0;
     public Tower(double radius, double reloadSpeed, double damage, double bulletSpeed, int towerCosts, boolean attackFirstCreep)
@@ -40,7 +40,11 @@ public class Tower extends Actor
    
     public void act() {
         List l = getWorld().getObjects(Enemy1.class);
-        
+        if(l.size() >= 1){
+            canFire = true;
+        }else {
+            canFire = false;
+        }
         if(l != null && l.size() > 0) {
             target = (Enemy1) (l.get(0));
             targetX = target.getX();

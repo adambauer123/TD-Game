@@ -17,6 +17,7 @@ public class Tower1 extends Tower {
     private boolean isPayed = false;
     boolean activated = false;
     boolean placed = false;
+    
 
     /**
      * Act - do whatever the Tower1 wants to do. This method is called whenever
@@ -34,7 +35,7 @@ public class Tower1 extends Tower {
         if(activated == true) {
             turnTowards(Tower.targetX, Tower.targetY);
             reloadDelayCount++;
-            if(gunReloadTime <= reloadDelayCount) {
+            if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
                 fire();
                 reloadDelayCount = 0;
             }

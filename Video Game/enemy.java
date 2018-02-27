@@ -35,6 +35,7 @@ public class enemy extends Actor
             setLocation(getX() + speed, getY());
         } else {
             getWorld().removeObject(this);
+            MyWorld.playerLives -= 1;
         }
     }
    

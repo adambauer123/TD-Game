@@ -23,6 +23,8 @@ public class MyWorld extends World
     int i = 1;
     boolean towerSpawned = false;
     Tower tower;
+    public static int playerLives = 5;
+    
     public MyWorld()
     {
         super(625, 700, 1);
