@@ -11,10 +11,14 @@ class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Defeat.image=Defeat.png
 class.Defeat.superclass=greenfoot.World
+<<<<<<< HEAD
 >>>>>>> Adam'sBranch
 class.Enemy1.image=poop.png
+=======
+class.Enemy1.image=stick.png
+>>>>>>> Tylers-Branch
 class.Enemy1.superclass=enemy
-class.Enemy2.image=zombie.png
+class.Enemy2.image=enemy2.png
 class.Enemy2.superclass=enemy
 class.Huh.superclass=greenfoot.Actor
 <<<<<<< HEAD
@@ -132,11 +136,16 @@ dependency21.from=MyWorld
 dependency21.to=enemy
 dependency21.type=UsesDependency
 dependency22.from=MyWorld
+<<<<<<< HEAD
 dependency22.to=Tower
 dependency22.type=UsesDependency
 dependency23.from=MyWorld
 dependency23.to=Defeat
 dependency23.type=UsesDependency
+=======
+dependency22.to=Defeat
+dependency22.type=UsesDependency
+>>>>>>> Tylers-Branch
 dependency3.from=Tower1
 dependency3.to=MyWorld
 dependency3.type=UsesDependency
@@ -162,12 +171,20 @@ editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 mainWindow.height=876
 mainWindow.width=1616
 mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=23
 >>>>>>> Adam'sBranch
+=======
+mainWindow.height=848
+mainWindow.width=881
+mainWindow.x=776
+mainWindow.y=23
+package.numDependencies=22
+>>>>>>> Tylers-Branch
 package.numTargets=11
 project.charset=UTF-8
 readme.height=58

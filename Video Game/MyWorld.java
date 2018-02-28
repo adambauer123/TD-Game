@@ -26,11 +26,17 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
+<<<<<<< HEAD
     public int  waveNum, lives;
 
     public static int coins = 100;
     private int i = 1;
     public int timeTillNextWave = 60;
+=======
+    public static int coins = 100;
+    private int waveNum;
+    public int timeTillNextWave = 10;
+>>>>>>> Tylers-Branch
     private int time = 50;
 
     public static int playerLives = 5;
@@ -46,6 +52,7 @@ public class MyWorld extends World
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
         coins = 100;
+<<<<<<< HEAD
 
         playerLives = 5;
 
@@ -57,6 +64,15 @@ public class MyWorld extends World
             Greenfoot.setWorld(new Defeat());
         }
         SpawnEnemies();
+=======
+        playerLives = 5;
+    }
+    
+    public void act(){
+        if(timeTillNextWave <= 0){
+            SpawnEnemies();
+        }
+>>>>>>> Tylers-Branch
         menuUpdate();
         if(i == 1) {
             Tower tower = new Tower(.5,.5,.5,.5,5,true);
@@ -65,8 +81,14 @@ public class MyWorld extends World
         }
         time--;
         if(time == 0){
-            timeTillNextWave--;
+            if(timeTillNextWave > 0){
+                timeTillNextWave--;
+            }
             time = 50;
+        }
+        
+        if(playerLives <= 0){
+            Greenfoot.setWorld(new Defeat());
         }
     }
     
@@ -96,7 +118,7 @@ public class MyWorld extends World
         showText("Coins: " + coins, 70, 525);
         showText("Wave Number: " + waveNum, 115, 575);
         showText("Next Wave: " + timeTillNextWave, 97, 625);
-        showText("Lives: " + lives, 70, 675);
+        showText("Lives: " + playerLives, 70, 675);
     }
     
     public void menuUpdate(){
