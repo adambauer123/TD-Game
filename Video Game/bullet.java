@@ -13,9 +13,8 @@ public class bullet extends Actor
     private int firstY = 0;
     public void act() 
     {
-<<<<<<< HEAD
         turnTowards(Tower1.targetX,Tower1.targetY);
-=======
+
         if(Tower.targetX > Tower.targetX2) {
                 firstX = Tower.targetX;
                 firstY = Tower.targetY;
@@ -24,7 +23,7 @@ public class bullet extends Actor
                 firstY = Tower.targetY2;
             }
         turnTowards(firstX,firstY);
->>>>>>> Adam'sBranch
+
         move(7);
         if(this.getX() < 30){
             getWorld().removeObject(this);}

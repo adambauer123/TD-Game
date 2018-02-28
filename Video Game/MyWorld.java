@@ -1,11 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-
-//import java.awt.Color;
-//import java.awt.Font;
-
-
-
 import java.util.List;
 
 import java.awt.Color;
@@ -26,17 +19,14 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
-<<<<<<< HEAD
-    public int  waveNum, lives;
+
 
     public static int coins = 100;
     private int i = 1;
-    public int timeTillNextWave = 60;
-=======
-    public static int coins = 100;
+
     private int waveNum;
     public int timeTillNextWave = 10;
->>>>>>> Tylers-Branch
+
     private int time = 50;
 
     public static int playerLives = 5;
@@ -52,30 +42,21 @@ public class MyWorld extends World
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
         coins = 100;
-<<<<<<< HEAD
+
 
         playerLives = 5;
 
 
-    }
-    
-    public void act(){
-        if(playerLives <= 0) {
-            Greenfoot.setWorld(new Defeat());
-        }
-        SpawnEnemies();
-=======
-        playerLives = 5;
     }
     
     public void act(){
         if(timeTillNextWave <= 0){
             SpawnEnemies();
         }
->>>>>>> Tylers-Branch
+
         menuUpdate();
         if(i == 1) {
-            Tower tower = new Tower(.5,.5,.5,.5,5,true);
+            Tower tower = new Tower();
             addObject(tower,50,50);
             i++;
         }

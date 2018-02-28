@@ -1,38 +1,23 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
-<<<<<<< HEAD
->>>>>>>=Tylers-Branch
-class.BasicTower.image=yeet.jpg
-class.BasicTower.superclass=greenfoot.Actor
-=======
->>>>>>>=master
+>>>>>>>=Adam'sBranch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Defeat.image=Defeat.png
 class.Defeat.superclass=greenfoot.World
-<<<<<<< HEAD
->>>>>>> Adam'sBranch
-class.Enemy1.image=poop.png
-=======
 class.Enemy1.image=stick.png
->>>>>>> Tylers-Branch
 class.Enemy1.superclass=enemy
 class.Enemy2.image=enemy2.png
 class.Enemy2.superclass=enemy
 class.Huh.superclass=greenfoot.Actor
-<<<<<<< HEAD
+class.Intro.image=intro.png
+class.Intro.superclass=greenfoot.World
 class.Menu.image=menu.png
 class.Menu.superclass=greenfoot.Actor
 class.MyWorld.superclass=greenfoot.World
 class.Text.superclass=greenfoot.Actor
-=======
-class.Intro.image=intro.png
-class.Intro.superclass=greenfoot.World
-class.MyWorld.superclass=greenfoot.World
-class.Text.superclass=greenfoot.Actor
 class.Tower.image=cell.jpg
->>>>>>> Adam'sBranch
 class.Tower.superclass=greenfoot.Actor
 class.Tower1.image=green_tower.png
 class.Tower1.superclass=Tower
@@ -49,103 +34,54 @@ class.move.superclass=greenfoot.Actor
 dependency1.from=Tower1
 dependency1.to=bullet
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-dependency10.from=bullet
-dependency10.to=Tower
-dependency10.type=UsesDependency
-dependency11.from=bullet
-dependency11.to=Tower1
-dependency11.type=UsesDependency
-dependency12.from=MyWorld
-dependency12.to=Enemy1
-dependency12.type=UsesDependency
-dependency13.from=MyWorld
-dependency13.to=Enemy2
-dependency13.type=UsesDependency
-dependency2.from=Tower1
-dependency2.to=Enemy1
-dependency2.type=UsesDependency
-dependency3.from=Enemy1
-dependency3.to=bullet
-dependency3.type=UsesDependency
-dependency4.from=Enemy2
-dependency4.to=bullet
-dependency4.type=UsesDependency
-dependency5.from=Tower
-dependency5.to=Enemy1
-dependency5.type=UsesDependency
-dependency6.from=Tower
-dependency6.to=bullet
-dependency6.type=UsesDependency
-dependency7.from=Tower
-dependency7.to=Tower1
-dependency7.type=UsesDependency
-dependency8.from=Tower
-dependency8.to=Tower2
-dependency8.type=UsesDependency
-dependency9.from=bullet
-dependency9.to=Enemy1
-dependency9.type=UsesDependency
-editor.fx.0.height=722
-editor.fx.0.width=800
-editor.fx.0.x=440
-editor.fx.0.y=105
-mainWindow.height=876
-mainWindow.width=1616
-mainWindow.x=49
-mainWindow.y=23
-package.numDependencies=13
-=======
 dependency10.from=Tower
-dependency10.to=bullet
+dependency10.to=Enemy1
 dependency10.type=UsesDependency
 dependency11.from=Tower
-dependency11.to=Tower1
+dependency11.to=bullet
 dependency11.type=UsesDependency
 dependency12.from=Tower
-dependency12.to=Tower2
+dependency12.to=Tower1
 dependency12.type=UsesDependency
 dependency13.from=Tower
-dependency13.to=MyWorld
+dependency13.to=Tower2
 dependency13.type=UsesDependency
 dependency14.from=Tower
-dependency14.to=Enemy2
+dependency14.to=MyWorld
 dependency14.type=UsesDependency
-dependency15.from=bullet
-dependency15.to=Enemy1
+dependency15.from=Tower
+dependency15.to=Enemy2
 dependency15.type=UsesDependency
 dependency16.from=bullet
-dependency16.to=Tower
+dependency16.to=Enemy1
 dependency16.type=UsesDependency
 dependency17.from=bullet
-dependency17.to=Tower1
+dependency17.to=Tower
 dependency17.type=UsesDependency
-dependency18.from=MyWorld
-dependency18.to=Enemy1
+dependency18.from=bullet
+dependency18.to=Tower1
 dependency18.type=UsesDependency
 dependency19.from=MyWorld
-dependency19.to=Enemy2
+dependency19.to=Enemy1
 dependency19.type=UsesDependency
 dependency2.from=Tower1
 dependency2.to=Enemy1
 dependency2.type=UsesDependency
 dependency20.from=MyWorld
-dependency20.to=Tower1
+dependency20.to=Enemy2
 dependency20.type=UsesDependency
 dependency21.from=MyWorld
-dependency21.to=enemy
+dependency21.to=Tower1
 dependency21.type=UsesDependency
 dependency22.from=MyWorld
-<<<<<<< HEAD
-dependency22.to=Tower
+dependency22.to=enemy
 dependency22.type=UsesDependency
 dependency23.from=MyWorld
 dependency23.to=Defeat
 dependency23.type=UsesDependency
-=======
-dependency22.to=Defeat
-dependency22.type=UsesDependency
->>>>>>> Tylers-Branch
+dependency24.from=MyWorld
+dependency24.to=Tower
+dependency24.type=UsesDependency
 dependency3.from=Tower1
 dependency3.to=MyWorld
 dependency3.type=UsesDependency
@@ -161,30 +97,21 @@ dependency6.type=UsesDependency
 dependency7.from=Enemy2
 dependency7.to=bullet
 dependency7.type=UsesDependency
-dependency8.from=enemy
+dependency8.from=Enemy2
 dependency8.to=MyWorld
 dependency8.type=UsesDependency
-dependency9.from=Tower
-dependency9.to=Enemy1
+dependency9.from=enemy
+dependency9.to=MyWorld
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-<<<<<<< HEAD
+editor.fx.0.height=738
+editor.fx.0.width=816
+editor.fx.0.x=392
+editor.fx.0.y=41
 mainWindow.height=876
 mainWindow.width=1616
 mainWindow.x=-8
 mainWindow.y=-8
-package.numDependencies=23
->>>>>>> Adam'sBranch
-=======
-mainWindow.height=848
-mainWindow.width=881
-mainWindow.x=776
-mainWindow.y=23
-package.numDependencies=22
->>>>>>> Tylers-Branch
+package.numDependencies=24
 package.numTargets=11
 project.charset=UTF-8
 readme.height=58
@@ -192,11 +119,7 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
-<<<<<<< HEAD
-simulation.speed=49
-=======
 simulation.speed=50
->>>>>>> Adam'sBranch
 target1.height=50
 target1.name=Tower3
 target1.showInterface=false
@@ -238,11 +161,7 @@ target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
-<<<<<<< HEAD
-target4.name=Enemy1
-=======
 target4.name=Intro
->>>>>>> Adam'sBranch
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
@@ -250,11 +169,7 @@ target4.width=80
 target4.x=0
 target4.y=0
 target5.height=50
-<<<<<<< HEAD
-target5.name=Enemy2
-=======
 target5.name=Enemy1
->>>>>>> Adam'sBranch
 target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
@@ -262,11 +177,7 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
-<<<<<<< HEAD
-target6.name=Tower
-=======
 target6.name=Enemy2
->>>>>>> Adam'sBranch
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
@@ -274,11 +185,7 @@ target6.width=80
 target6.x=0
 target6.y=0
 target7.height=50
-<<<<<<< HEAD
-target7.name=Text
-=======
 target7.name=enemy
->>>>>>> Adam'sBranch
 target7.showInterface=false
 target7.type=ClassTarget
 target7.typeParameters=
@@ -286,11 +193,7 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
-<<<<<<< HEAD
-target8.name=enemy
-=======
 target8.name=Tower
->>>>>>> Adam'sBranch
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
@@ -298,11 +201,7 @@ target8.width=80
 target8.x=0
 target8.y=0
 target9.height=50
-<<<<<<< HEAD
-target9.name=Menu
-=======
 target9.name=Defeat
->>>>>>> Adam'sBranch
 target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
@@ -310,8 +209,4 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
-<<<<<<< HEAD
-world.lastInstantiated=MyWorld
-=======
 world.lastInstantiated=Intro
->>>>>>> Adam'sBranch
