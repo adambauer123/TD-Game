@@ -6,15 +6,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class bullet extends Actor
 {
-    /**
-     * Act - do whatever the bullet wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int firstX = 0;
+    private int firstY = 0;
     public void act() 
     {
-        turnTowards(Tower.targetX,Tower.targetY);
+        if(Tower.targetX > Tower.targetX2) {
+                firstX = Tower.targetX;
+                firstY = Tower.targetY;
+            } else {
+                firstX = Tower.targetX2;
+                firstY = Tower.targetY2;
+            }
+        turnTowards(firstX,firstY);
         move(7);
         if(this.getX() < 30){
             getWorld().removeObject(this);}

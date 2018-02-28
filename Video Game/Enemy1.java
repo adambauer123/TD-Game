@@ -41,11 +41,9 @@ public class Enemy1 extends enemy
         }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
-<<<<<<< HEAD
             MyWorld.coins += 1;
-=======
-            MyWorld.coins++;
->>>>>>> master
+
+
         }
     }
 }

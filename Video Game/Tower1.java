@@ -17,6 +17,8 @@ public class Tower1 extends Tower {
     private boolean isPayed = false;
     boolean activated = false;
     boolean placed = false;
+    private int firstX = 0;
+    private int firstY = 0;
     
 
     /**
@@ -33,19 +35,29 @@ public class Tower1 extends Tower {
 
     public void act() {
         if(activated == true) {
-            turnTowards(Tower.targetX, Tower.targetY);
+
+            if(Tower.targetX > Tower.targetX2) {
+                firstX = Tower.targetX;
+                firstY = Tower.targetY;
+            } else {
+                firstX = Tower.targetX2;
+                firstY = Tower.targetY2;
+            }
+            turnTowards(firstX, firstY);
+        
             reloadDelayCount++;
-<<<<<<< HEAD
-     	if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
-=======
+
+
             if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
->>>>>>> master
+
                 fire();
                 reloadDelayCount = 0;
             }
         }
         dragAndActivate();
-    }
+     }
+     
+    
     
     public void dragAndActivate(){
         if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 10){
@@ -53,16 +65,6 @@ public class Tower1 extends Tower {
             setLocation(mouse.getX(), mouse.getY());
         }
         if (Greenfoot.mouseClicked(null)){
-<<<<<<< HEAD
-            if(getY() < 500 && MyWorld.coins >= 10){
-                activated = true;
-                placed = true;
-                if(isPayed != true) {
-                    MyWorld.coins -= 10;
-                    isPayed = true;
-                }
-                
-=======
             if(getY() < 473 && MyWorld.coins >= 10){
                 activated = true;
                 placed = true;
@@ -72,13 +74,16 @@ public class Tower1 extends Tower {
                 }
            } else if(getY() >= 473){
                getWorld().removeObject(this);
->>>>>>> master
+
            }
         }
     }
+    
+     
     
     public void fire() {
         bullet Bullet = new bullet();
         getWorld().addObject(Bullet, this.getX(), this.getY());
     }
-}
+   }
+

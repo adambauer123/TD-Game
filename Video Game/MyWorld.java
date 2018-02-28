@@ -26,20 +26,17 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
-<<<<<<< HEAD
     public int  waveNum, lives;
-=======
-    public static int coins = 100, lives = 3;
-    private int waveNum;
->>>>>>> master
+
+    public static int coins = 100;
+    private int i = 1;
     public int timeTillNextWave = 60;
     private int time = 50;
-    public static int coins = 100;
+
     public static int playerLives = 5;
-    int i = 1;
+
     boolean towerSpawned = false;
     Tower tower;
-    public static int playerLives = 5;
     
     public MyWorld()
     {
@@ -49,17 +46,15 @@ public class MyWorld extends World
         getBackground().drawImage(drawedImage, 0, 0);
         menu();
         coins = 100;
-<<<<<<< HEAD
+
         playerLives = 5;
 
-=======
->>>>>>> master
+
     }
     
     public void act(){
         if(playerLives <= 0) {
-            System.out.println("ur a loser kiddo");
-            removeObjects(getObjects(null)); //removes all the objects in the world
+            Greenfoot.setWorld(new Defeat());
         }
         SpawnEnemies();
         menuUpdate();
@@ -85,8 +80,8 @@ public class MyWorld extends World
   
         }
         
-        if(count % 250 == 0){
-            //addObject(enemyTwo, 20, 150);
+        if(count % 125 == 0){
+           addObject(enemyTwo, 20, 150);
         }
     }
     
