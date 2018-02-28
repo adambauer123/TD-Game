@@ -21,12 +21,13 @@ public class Tower extends Actor
     int upgradeCosts;
     int MAX_CREEPS = 20;  // Number of spawned creeps in one wave
     int level = 1;
-    Enemy1 target;
-    
-    private int gunReloadTime = 15;
-    private int reloadDelayCount;
-    
-    
+    public static Enemy1 target;
+    public static Enemy2 target2;
+    public static boolean canFire = false;
+    public static int targetX = 0;
+    public static int targetY = 0;
+    public static int targetX2 = 0;
+    public static int targetY2 = 0;
     public Tower(double radius, double reloadSpeed, double damage, double bulletSpeed, int towerCosts, boolean attackFirstCreep)
     {
         RADIUS        = radius;
@@ -37,20 +38,37 @@ public class Tower extends Actor
         lastShot      = (int) RELOAD_SPEED;
         attackFirst   = attackFirstCreep;
     }
-
     
 
    
-    public void act() 
-    {
-        reloadDelayCount++;
+    public void act() {
+        List l = getWorld().getObjects(Enemy1.class);
+        List z = getWorld().getObjects(Enemy2.class);
+
+
+        if(l.size() >= 1){
+            canFire = true;
+        }else {
+            canFire = false;
+        }
+
+        if (l != null && l.size() >= 1)  {
+            
+            target = (Enemy1) (l.get(0));
+            targetX = target.getX();
+            targetY = target.getY();
+        }
+        if(z != null && z.size() >= 1) {
+            target2 = (Enemy2) (z.get(0));
+            targetX2 = target2.getX();
+            targetY2 = target2.getY();            
+        }
     }
-    /*
-    public void fire(int x, int y){
-            bullet b = new bullet();
-            getWorld().addObject(b,x,y);
-    }
-    */
+    
+    
 }
+
+
+
 
     

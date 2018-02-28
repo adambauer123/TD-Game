@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.target=Enemy1
+<<<<<<< HEAD
 comment0.text=\n\ Write\ a\ description\ of\ class\ Enemy1\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=id
 comment1.target=Enemy1(int)
+=======
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemy1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+>>>>>>> Adam'sBranch
 comment2.params=
-comment2.target=int\ returnID()
-comment3.params=
-comment3.target=void\ act()
-comment4.params=
-comment4.target=void\ checkCollision()
-numComments=5
+comment2.target=void\ checkCollision()
+numComments=3

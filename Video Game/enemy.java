@@ -35,8 +35,8 @@ public class enemy extends Actor
             setLocation(getX() + speed, getY());
         } else {
             getWorld().removeObject(this);
+            MyWorld.playerLives -= 1;
         }
-        //System.out.println(this.getX());
     }
    
     public boolean checkHp(int health) {
@@ -44,7 +44,7 @@ public class enemy extends Actor
             return true;
         }
         else
-        return false;
+            return false;
     }
     
 }
