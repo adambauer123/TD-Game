@@ -41,7 +41,9 @@ public class Enemy1 extends enemy
         }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
-            MyWorld.coins++;
+            MyWorld.coins += 1;
+
+
         }
     }
 }

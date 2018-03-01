@@ -13,7 +13,7 @@ public class Tower3 extends Tower
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Tower3() {
-        super(75, 50, 18, 7.0, 59, true);
+        super();
     }
     public void act() 
     {

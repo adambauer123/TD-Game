@@ -13,7 +13,7 @@ public class Enemy2 extends enemy
      * Act - do whatever the Enemy2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int health = 3;
+    private int health = 5;
     public int id;
     public void act() 
     {
@@ -33,6 +33,7 @@ public class Enemy2 extends enemy
         }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
+            MyWorld.coins += 2;
         }    
     }
 }
