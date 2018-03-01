@@ -39,6 +39,10 @@ public class Enemy1 extends enemy
             health -= 1;
             removeTouching(bullet.class);
         }
+        if(isTouching(FastBullet.class)){
+            health -= 1;
+            removeTouching(FastBullet.class);
+        }
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
             MyWorld.coins += 1;
