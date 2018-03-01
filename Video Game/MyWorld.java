@@ -91,15 +91,19 @@ public class MyWorld extends World
     
     public void menu(){
         GreenfootImage drawedImage = new GreenfootImage("menu.png");
+<<<<<<< HEAD
         getBackground().drawImage(drawedImage, 0, 485);
+=======
+        getBackground().drawImage(drawedImage, 0, 480);
+>>>>>>> Tylers-Branch
         
         GreenfootImage red_tower_Image = new GreenfootImage("green_tower.png");
         getBackground().drawImage(red_tower_Image, 149+50, 501);
         
-        showText("Coins: " + coins, 70, 525);
-        showText("Wave Number: " + waveNum, 115, 575);
-        showText("Next Wave: " + timeTillNextWave, 97, 625);
-        showText("Lives: " + playerLives, 70, 675);
+        showText("Coins: " + coins, 70, 540);
+        showText("Wave Number: " + waveNum, 115, 580);
+        showText("Next Wave: " + timeTillNextWave, 97, 620);
+        showText("Lives: " + playerLives, 70, 660);
     }
     
     public void menuUpdate(){
@@ -108,10 +112,10 @@ public class MyWorld extends World
             addObject(tower, 225+50, 550);
         }
         
-        showText("Coins: " + coins, 70, 525);
-        showText("Wave Number: " + waveNum, 115, 575);
-        showText("Next Wave: " + timeTillNextWave, 97, 625);
-        showText("Lives: " + playerLives, 70, 675);
+        showText("Coins: " + coins, 70, 540);
+        showText("Wave Number: " + waveNum, 115, 580);
+        showText("Next Wave: " + timeTillNextWave, 97, 620);
+        showText("Lives: " + playerLives, 70, 660);
     }
  
 
