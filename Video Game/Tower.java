@@ -41,6 +41,12 @@ public class Tower extends Actor
         }else {
             canFire = false;
         }
+        if(z.size() >= 1){
+            canFire = true;
+        }else {
+            canFire = false;
+        }
+        
 
         if (l != null && l.size() >= 1)  {
             

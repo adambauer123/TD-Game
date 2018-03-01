@@ -91,7 +91,7 @@ public class MyWorld extends World
     
     public void menu(){
         GreenfootImage drawedImage = new GreenfootImage("menu.png");
-        getBackground().drawImage(drawedImage, 0, 500);
+        getBackground().drawImage(drawedImage, 0, 485);
         
         GreenfootImage red_tower_Image = new GreenfootImage("green_tower.png");
         getBackground().drawImage(red_tower_Image, 149+50, 501);
