@@ -11,8 +11,8 @@ public class Tower extends Actor
     /**
      * Act - do whatever the Tower wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */double RADIUS;
-
+     */
+    double RADIUS;
     boolean attackFirst;
     int upgradeCosts;
 

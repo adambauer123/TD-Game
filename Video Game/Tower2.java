@@ -88,5 +88,5 @@ public class Tower2 extends Tower {
         FastBullet bullet = new FastBullet();
         getWorld().addObject(bullet, this.getX(), this.getY());
     }
-   }
+}
 
