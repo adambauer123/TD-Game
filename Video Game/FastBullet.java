@@ -17,20 +17,19 @@ public class FastBullet extends Actor
         turnTowards(Tower2.targetX,Tower2.targetY);
 
         if(Tower.targetX > Tower.targetX2) {
-                firstX = Tower.targetX;
-                firstY = Tower.targetY;
-            } else {
-                firstX = Tower.targetX2;
-                firstY = Tower.targetY2;
-            }
+            firstX = Tower.targetX;
+            firstY = Tower.targetY;
+        } else {
+            firstX = Tower.targetX2;
+            firstY = Tower.targetY2;
+        }
         turnTowards(firstX,firstY);
 
         move(7);
-        if(this.getX() < 30){
-            getWorld().removeObject(this);}
-      
-            }
+        if(getWorld().getObjects(null).contains(Enemy1.class) || getWorld().getObjects(null).contains(Enemy2.class)){
+            getWorld().removeObject(this);
         }
-    
+    }
+}
 
 

@@ -124,12 +124,12 @@ public class MyWorld extends World
     }
     
     public void menuUpdate(){
-        if (getObjectsAt(225, 550, Tower1.class).isEmpty()){
+        if (getObjectsAt(225+50, 550, Tower1.class).isEmpty()){
             Tower1 tower = new Tower1();
             addObject(tower, 225+50, 550);
         }
         
-        if (getObjectsAt(225, 550, Tower2.class).isEmpty()){
+        if (getObjectsAt(225+200, 550, Tower2.class).isEmpty()){
             Tower2 tower = new Tower2();
             addObject(tower, 225+200, 550);
         }
