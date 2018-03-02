@@ -25,11 +25,10 @@ public class bullet extends Actor
         turnTowards(firstX,firstY);
 
         move(7);
-        if(this.getX() < 30){
-            getWorld().removeObject(this);}
-      
-        
-            }
+       // if (getWorld().getObjects(Enemy1.class).isEmpty()){
+           // getWorld().removeObject(this);
+       // }
     }
+}
 
 

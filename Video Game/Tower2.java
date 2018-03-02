@@ -12,8 +12,6 @@ public class Tower2 extends Tower {
     
     private int gunReloadTime = 2;
     private int reloadDelayCount = 0;
-    public static int targetX = 0;
-    public static int targetY = 0;
 
     private int i = 5;
 

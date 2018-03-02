@@ -11,7 +11,7 @@ public class Enemy1 extends enemy
      * Act - do whatever the Enemy1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int health = 3;
+    private int Enemy1health = 3;
     public int id;
     public static int E1X = 0;
     public static int E1Y = 0;
@@ -36,14 +36,14 @@ public class Enemy1 extends enemy
         
     public void checkCollision(){
         if(isTouching(bullet.class)){
-            health -= 1;
+            Enemy1health -= 1;
             removeTouching(bullet.class);
         }
         if(isTouching(FastBullet.class)){
-            health -= 1;
+            Enemy1health -= 1;
             removeTouching(FastBullet.class);
         }
-        if(checkHp(health) == true) {
+        if(checkHp(Enemy1health) == true) {
             getWorld().removeObject(this);
             MyWorld.coins += 1;
 

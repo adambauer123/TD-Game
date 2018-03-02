@@ -33,7 +33,8 @@ public class MyWorld extends World
 
     boolean towerSpawned = false;
     Tower tower;
-    
+    int[] waves = {5,6,7,8,9,10,11,12,13,14};
+    int[] waves2 = {3,4,5,6,7,7,7,8,9,10};
     public MyWorld()
     {
         super(625, 700, 1);
@@ -84,18 +85,19 @@ public class MyWorld extends World
         }
         
         if(count % 125 == 0){
-           addObject(enemyTwo, 20, 150);
+          // addObject(enemyTwo, 20, 150);
+           //Enemy2.Enemy2health += 1;
         }
     }
     
     
     public void menu(){
         GreenfootImage drawedImage = new GreenfootImage("menu.png");
-<<<<<<< HEAD
+
         getBackground().drawImage(drawedImage, 0, 485);
-=======
+
         getBackground().drawImage(drawedImage, 0, 480);
->>>>>>> Tylers-Branch
+
         
         GreenfootImage red_tower_Image = new GreenfootImage("green_tower.png");
         getBackground().drawImage(red_tower_Image, 149+50, 501);
