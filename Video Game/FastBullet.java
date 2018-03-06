@@ -9,12 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class FastBullet extends Actor
 {
-    
+    private int i = 1;
     private int firstX = 0;
     private int firstY = 0;
     public void act() 
     {
-        turnTowards(Tower2.targetX,Tower2.targetY);
 
         if(Tower.targetX > Tower.targetX2) {
                 firstX = Tower.targetX;
@@ -23,14 +22,21 @@ public class FastBullet extends Actor
                 firstX = Tower.targetX2;
                 firstY = Tower.targetY2;
             }
+            move(7);
+        if(i == 1) {
         turnTowards(firstX,firstY);
-
-        move(7);
-        if(this.getX() < 30){
-            getWorld().removeObject(this);}
-      
-            }
+        i++;
+    }
+    /*
+        if(Tower.enemyOnScreen == false) {
+            move(5);
+            move(5);
+            move(5);
+            move(5);
         }
+        */
+    }
+}
    
 
 

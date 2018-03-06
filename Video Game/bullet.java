@@ -23,11 +23,11 @@ public class bullet extends Actor
                 firstY = Tower.targetY2;
             }
         turnTowards(firstX,firstY);
-
         move(7);
-       // if (getWorld().getObjects(Enemy1.class).isEmpty()){
-           // getWorld().removeObject(this);
-       // }
+        if(Tower.enemyOnScreen == false) {
+            move(500);
+
+        }
     }
 }
 

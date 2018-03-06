@@ -55,13 +55,15 @@ public class Tower1 extends Tower {
 
 
             if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
-
+                if(this.getX() - firstX > 30) {
+                System.out.println("xD");
                 fire();
                 reloadDelayCount = 0;
             }
         }
+        }
         dragAndActivate();
-     }
+    }
      
     
     
@@ -88,6 +90,7 @@ public class Tower1 extends Tower {
      
     
     public void fire() {
+       
         bullet Bullet = new bullet();
         getWorld().addObject(Bullet, this.getX(), this.getY());
     }

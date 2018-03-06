@@ -12,14 +12,13 @@ public class Tower extends Actor
      * Act - do whatever the Tower wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    double RADIUS;
-    boolean attackFirst;
-    int upgradeCosts;
 
-    int level = 1;
+
+
     public static Enemy1 target;
     public static Enemy2 target2;
-    public static boolean canFire = false;
+    public static boolean canFire = true;
+    public static boolean enemyOnScreen = true;
     public static int targetX = 0;
     public static int targetY = 0;
     public static int targetX2 = 0;
@@ -38,13 +37,14 @@ public class Tower extends Actor
 
         if(l.size() >= 1){
             canFire = true;
+            enemyOnScreen = true;
         }else {
             canFire = false;
+            enemyOnScreen = false;
         }
         if(z.size() >= 1){
             canFire = true;
-        }else {
-            canFire = false;
+            enemyOnScreen = true;
         }
         
 
@@ -59,8 +59,7 @@ public class Tower extends Actor
             targetX2 = target2.getX();
             targetY2 = target2.getY();            
         }
-    }
-    
+    }    
     
 }
 

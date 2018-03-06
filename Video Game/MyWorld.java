@@ -33,15 +33,14 @@ public class MyWorld extends World
 
     boolean towerSpawned = false;
     Tower tower;
-<<<<<<< HEAD
+
     int[] waves = {5,6,7,8,9,10,11,12,13,14};
     int[] waves2 = {3,4,5,6,7,7,7,8,9,10};
-=======
-    
+
     GreenfootImage savedBG = null;
     int oldCoins, oldWaveNum, oldTimeTillNextWave, oldPlayerLives;
     
->>>>>>> master
+
     public MyWorld()
     {
         super(625, 700, 1);
@@ -94,7 +93,7 @@ public class MyWorld extends World
         }
         
         if(count % 125 == 0){
-          // addObject(enemyTwo, 20, 150);
+          addObject(enemyTwo, 20, 150);
            //Enemy2.Enemy2health += 1;
         }
     }
@@ -102,17 +101,16 @@ public class MyWorld extends World
     
     public void menu(){
         GreenfootImage drawedImage = new GreenfootImage("menu.png");
-<<<<<<< HEAD
+
 
         getBackground().drawImage(drawedImage, 0, 485);
 
         getBackground().drawImage(drawedImage, 0, 480);
 
-=======
+
         getBackground().drawImage(drawedImage, 0, 485);
         getBackground().drawImage(drawedImage, 0, 480);
->>>>>>> master
-        
+
         GreenfootImage tower1menu = new GreenfootImage("green_tower.png");
         getBackground().drawImage(tower1menu, 149+50, 501);
         
@@ -141,11 +139,13 @@ public class MyWorld extends World
         if (getObjectsAt(225, 550, Tower1.class).isEmpty()){
             Tower1 tower = new Tower1();
             addObject(tower, 225+50, 550);
+            System.out.println("Tyler Broke the Code");
         }
         
-        if (getObjectsAt(225, 550, Tower2.class).isEmpty()){
+        if (getObjectsAt(375, 550, Tower2.class).isEmpty()){
             Tower2 tower = new Tower2();
             addObject(tower, 225+200, 550);
+            System.out.println("Tyler Broke the Code 2");
         }
         
         //drawString("hello", 1, 12);
