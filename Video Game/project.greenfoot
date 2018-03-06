@@ -25,7 +25,10 @@ class.Tower1.image=green_tower.png
 class.Tower1.superclass=Tower
 class.Tower2.image=blue_tower.png
 class.Tower2.superclass=Tower
+<<<<<<< HEAD
 class.Tower3.image=yellow_tower.png
+=======
+>>>>>>> master
 class.Tower3.superclass=Tower
 class.WorthlessEnemy.image=poop.png
 class.WorthlessEnemy.superclass=greenfoot.Actor
@@ -39,6 +42,7 @@ dependency1.from=Tower1
 dependency1.to=bullet
 dependency1.type=UsesDependency
 dependency10.from=Enemy1
+<<<<<<< HEAD
 dependency10.to=bullet
 dependency10.type=UsesDependency
 dependency11.from=Enemy1
@@ -67,10 +71,41 @@ dependency18.to=Tower1
 dependency18.type=UsesDependency
 dependency19.from=Tower
 dependency19.to=Tower
+=======
+dependency10.to=MyWorld
+dependency10.type=UsesDependency
+dependency11.from=Enemy2
+dependency11.to=bullet
+dependency11.type=UsesDependency
+dependency12.from=Enemy2
+dependency12.to=MyWorld
+dependency12.type=UsesDependency
+dependency13.from=Tower
+dependency13.to=MyWorld
+dependency13.type=UsesDependency
+dependency14.from=Tower
+dependency14.to=bullet
+dependency14.type=UsesDependency
+dependency15.from=Tower
+dependency15.to=Tower1
+dependency15.type=UsesDependency
+dependency16.from=Tower
+dependency16.to=FastBullet
+dependency16.type=UsesDependency
+dependency17.from=Tower
+dependency17.to=Enemy1
+dependency17.type=UsesDependency
+dependency18.from=Tower
+dependency18.to=Enemy2
+dependency18.type=UsesDependency
+dependency19.from=bullet
+dependency19.to=Tower2
+>>>>>>> master
 dependency19.type=UsesDependency
 dependency2.from=Tower1
 dependency2.to=Enemy1
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Tower
 dependency20.to=Tower2
 dependency20.type=UsesDependency
@@ -100,11 +135,43 @@ dependency28.to=Defeat
 dependency28.type=UsesDependency
 dependency29.from=FastBullet
 dependency29.to=Tower
+=======
+dependency20.from=bullet
+dependency20.to=Enemy1
+dependency20.type=UsesDependency
+dependency21.from=bullet
+dependency21.to=Tower
+dependency21.type=UsesDependency
+dependency22.from=bullet
+dependency22.to=Tower1
+dependency22.type=UsesDependency
+dependency23.from=MyWorld
+dependency23.to=Enemy2
+dependency23.type=UsesDependency
+dependency24.from=MyWorld
+dependency24.to=Enemy1
+dependency24.type=UsesDependency
+dependency25.from=MyWorld
+dependency25.to=Tower1
+dependency25.type=UsesDependency
+dependency26.from=MyWorld
+dependency26.to=enemy
+dependency26.type=UsesDependency
+dependency27.from=MyWorld
+dependency27.to=Defeat
+dependency27.type=UsesDependency
+dependency28.from=MyWorld
+dependency28.to=Tower
+dependency28.type=UsesDependency
+dependency29.from=MyWorld
+dependency29.to=Tower2
+>>>>>>> master
 dependency29.type=UsesDependency
 dependency3.from=Tower1
 dependency3.to=MyWorld
 dependency3.type=UsesDependency
 dependency30.from=FastBullet
+<<<<<<< HEAD
 dependency30.to=Enemy1
 dependency30.type=UsesDependency
 dependency31.from=FastBullet
@@ -128,6 +195,22 @@ dependency36.type=UsesDependency
 dependency37.from=MyWorld
 dependency37.to=Tower2
 dependency37.type=UsesDependency
+=======
+dependency30.to=Tower2
+dependency30.type=UsesDependency
+dependency31.from=FastBullet
+dependency31.to=Tower
+dependency31.type=UsesDependency
+dependency32.from=FastBullet
+dependency32.to=Tower1
+dependency32.type=UsesDependency
+dependency33.from=FastBullet
+dependency33.to=Enemy1
+dependency33.type=UsesDependency
+dependency34.from=FastBullet
+dependency34.to=Enemy2
+dependency34.type=UsesDependency
+>>>>>>> master
 dependency4.from=Tower2
 dependency4.to=bullet
 dependency4.type=UsesDependency
@@ -140,6 +223,7 @@ dependency6.type=UsesDependency
 dependency7.from=enemy
 dependency7.to=MyWorld
 dependency7.type=UsesDependency
+<<<<<<< HEAD
 dependency8.from=Intro
 dependency8.to=bullet
 dependency8.type=UsesDependency
@@ -155,6 +239,23 @@ mainWindow.width=1616
 mainWindow.x=-14
 mainWindow.y=0
 package.numDependencies=37
+=======
+dependency8.from=Enemy1
+dependency8.to=bullet
+dependency8.type=UsesDependency
+dependency9.from=Enemy1
+dependency9.to=FastBullet
+dependency9.type=UsesDependency
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+mainWindow.height=973
+mainWindow.width=1680
+mainWindow.x=0
+mainWindow.y=23
+package.numDependencies=34
+>>>>>>> master
 package.numTargets=12
 project.charset=UTF-8
 readme.height=58
@@ -180,7 +281,11 @@ target10.width=80
 target10.x=0
 target10.y=0
 target11.height=50
+<<<<<<< HEAD
 target11.name=FastBullet
+=======
+target11.name=MyWorld
+>>>>>>> master
 target11.showInterface=false
 target11.type=ClassTarget
 target11.typeParameters=
@@ -188,7 +293,11 @@ target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=MyWorld
+=======
+target12.name=FastBullet
+>>>>>>> master
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=

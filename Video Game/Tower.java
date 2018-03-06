@@ -44,7 +44,10 @@ public class Tower extends Actor
         }
         if(z.size() >= 1){
             canFire = true;
+<<<<<<< HEAD
             enemyOnScreen = true;
+=======
+>>>>>>> master
         }
         
 

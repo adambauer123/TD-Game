@@ -55,8 +55,11 @@ public class Tower1 extends Tower {
 
 
             if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
+<<<<<<< HEAD
                 if(this.getX() - firstX > 30) {
                 System.out.println("xD");
+=======
+>>>>>>> master
                 fire();
                 reloadDelayCount = 0;
             }
