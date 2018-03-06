@@ -43,8 +43,6 @@ public class Tower extends Actor
         }
         if(z.size() >= 1){
             canFire = true;
-        }else {
-            canFire = false;
         }
         
 

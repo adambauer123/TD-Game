@@ -11,9 +11,9 @@ public class bullet extends Actor
 {
     private int firstX = 0;
     private int firstY = 0;
+    private int count2 = 0;
     public void act() 
     {
-        turnTowards(Tower1.targetX,Tower1.targetY);
 
         if(Tower.targetX > Tower.targetX2) {
                 firstX = Tower.targetX;
@@ -22,14 +22,18 @@ public class bullet extends Actor
                 firstX = Tower.targetX2;
                 firstY = Tower.targetY2;
             }
-        turnTowards(firstX,firstY);
-
+        if(getX() <= firstX+10 && getX() >= firstX-10 && getY() <= firstY+10 && getY() >= firstY-10){
+            count2++;
+        }
+        if(count2 == 0){
+            turnTowards(firstX,firstY);
+        }
         move(7);
-        if(this.getX() < 30){
-            getWorld().removeObject(this);}
-      
         
-            }
+        if(getX() == 0 || getY() == 0){
+            getWorld().removeObject(this);
+        }
     }
+}
 
 
