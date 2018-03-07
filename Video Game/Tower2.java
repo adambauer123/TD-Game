@@ -54,7 +54,7 @@ public class Tower2 extends Tower {
 
 
             if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
-                if(getX() <= firstX+115 && getX() >= firstX-115 && getY() <= firstY+115 && getY() >= firstY-115){
+                if(getX() <= firstX+215 && getX() >= firstX-215 && getY() <= firstY+215 && getY() >= firstY-215){
                     fire();
                 }
     

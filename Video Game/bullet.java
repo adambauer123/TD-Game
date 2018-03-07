@@ -33,7 +33,7 @@ public class bullet extends Actor
         }
         move(7);
         
-        if(getX() == 0 || getY() == 0){
+        if(getX() == 0 || getY() == 0 || getX() == 624 || getY() == 699){
             getWorld().removeObject(this);
 
         }

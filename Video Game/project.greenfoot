@@ -152,6 +152,7 @@ dependency8.type=UsesDependency
 dependency9.from=Tower2
 dependency9.to=Enemy2
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=738
 editor.fx.0.width=816
 editor.fx.0.x=392
@@ -161,6 +162,17 @@ mainWindow.width=1616
 mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=39
+=======
+editor.fx.0.height=722
+editor.fx.0.width=800
+editor.fx.0.x=759
+editor.fx.0.y=23
+mainWindow.height=972
+mainWindow.width=1545
+mainWindow.x=100
+mainWindow.y=23
+package.numDependencies=34
+>>>>>>> master
 package.numTargets=12
 project.charset=UTF-8
 readme.height=58
