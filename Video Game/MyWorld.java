@@ -35,8 +35,7 @@ public class MyWorld extends World
     Tower tower;
     private int count3 = 1;
 
-    int[] waves = {5,6,7,8,9,10,11,12,13,14};
-    int[] waves2 = {3,4,5,6,7,7,7,8,9,10};
+ 
 
     GreenfootImage savedBG = null;
     int oldCoins, oldWaveNum, oldTimeTillNextWave, oldPlayerLives;
