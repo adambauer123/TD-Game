@@ -13,7 +13,7 @@ public class Enemy2 extends enemy
      * Act - do whatever the Enemy2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int Enemy2health = 5;
+    private double Enemy2health = 5;
     public int id;
     public void act() 
     {
@@ -32,7 +32,7 @@ public class Enemy2 extends enemy
             removeTouching(bullet.class);
         }
         if(isTouching(FastBullet.class)){
-            Enemy2health -= 1;
+            Enemy2health -= .1;
             removeTouching(FastBullet.class);
         }
         if(checkHp(Enemy2health) == true) {

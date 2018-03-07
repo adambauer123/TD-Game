@@ -31,8 +31,7 @@ public class Tower extends Actor
 
    
     public void act() {
-        List l = getWorld().getObjects(Enemy1.class);
-        List z = getWorld().getObjects(Enemy2.class);
+        List l = getWorld().getObjects(enemy.class); 
 
 
         if(l.size() >= 1){
@@ -42,29 +41,29 @@ public class Tower extends Actor
             canFire = false;
             enemyOnScreen = false;
         }
-        if(z.size() >= 1){
-            canFire = true;
-<<<<<<< HEAD
-            enemyOnScreen = true;
-=======
->>>>>>> master
-        }
-        
 
+        
+        
         if (l != null && l.size() >= 1)  {
-            
-            target = (Enemy1) (l.get(0));
-            targetX = target.getX();
-            targetY = target.getY();
-        }
-        if(z != null && z.size() >= 1) {
-            target2 = (Enemy2) (z.get(0));
-            targetX2 = target2.getX();
-            targetY2 = target2.getY();            
-        }
+            if(l.get(0) instanceof Enemy1) {
+                target = (Enemy1) (l.get(0));
+                targetX = target.getX();
+                targetY = target.getY();
+            }
+            else {
+                target2 = (Enemy2) (l.get(0));
+                targetX2 = target2.getX();
+                targetY2 = target2.getY(); 
+            }
+                
+                     
+        
     }    
     
-}
+     }
+     
+
+    }
 
 
 

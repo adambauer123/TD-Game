@@ -21,6 +21,7 @@ public class Tower2 extends Tower {
     private boolean placed = false;
     private int firstX = 0;
     private int firstY = 0;
+    private int count2 = 0;
     
 
 
@@ -37,6 +38,7 @@ public class Tower2 extends Tower {
 
 
     public void act() {
+        List l = getWorld().getObjects(enemy.class); 
         if(activated == true) {
 
             if(Tower.targetX > Tower.targetX2) {
@@ -55,12 +57,15 @@ public class Tower2 extends Tower {
                 if(getX() <= firstX+115 && getX() >= firstX-115 && getY() <= firstY+115 && getY() >= firstY-115){
                     fire();
                 }
+    
                 reloadDelayCount = 0;
             }
         }
-        dragAndActivate();
-     } 
-     
+
+    dragAndActivate(); 
+    }
+    
+ 
     
     
     public void dragAndActivate(){
@@ -82,6 +87,7 @@ public class Tower2 extends Tower {
            }
         }
     }
+
     
      
     
@@ -89,5 +95,5 @@ public class Tower2 extends Tower {
         FastBullet bullet = new FastBullet();
         getWorld().addObject(bullet, this.getX(), this.getY());
     }
-}
+    }
 

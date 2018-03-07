@@ -42,12 +42,12 @@ public class Tower1 extends Tower {
     public void act() {
         if(activated == true) {
 
-            if(Tower.targetX > Tower.targetX2) {
-                firstX = Tower.targetX;
-                firstY = Tower.targetY;
-            } else {
+            if(Tower.targetX == 0) {
                 firstX = Tower.targetX2;
                 firstY = Tower.targetY2;
+            } else {
+                firstX = Tower.targetX;
+                firstY = Tower.targetY;
             }
             turnTowards(firstX, firstY);
         
@@ -55,18 +55,14 @@ public class Tower1 extends Tower {
 
 
             if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
-<<<<<<< HEAD
-                if(this.getX() - firstX > 30) {
-                System.out.println("xD");
-=======
->>>>>>> master
                 fire();
                 reloadDelayCount = 0;
             }
         }
-        }
+        
         dragAndActivate();
     }
+    
      
     
     

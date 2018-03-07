@@ -15,20 +15,16 @@ public class bullet extends Actor
     public void act() 
     {
 
-        if(Tower.targetX > Tower.targetX2) {
-                firstX = Tower.targetX;
-                firstY = Tower.targetY;
-            } else {
+        if(Tower.targetX == 0) {
+
                 firstX = Tower.targetX2;
                 firstY = Tower.targetY2;
+            } else {
+                firstX = Tower.targetX;
+                firstY = Tower.targetY;
             }
-<<<<<<< HEAD
-        turnTowards(firstX,firstY);
-        move(7);
-        if(Tower.enemyOnScreen == false) {
-            move(500);
 
-=======
+
         if(getX() <= firstX+10 && getX() >= firstX-10 && getY() <= firstY+10 && getY() >= firstY-10){
             count2++;
         }
@@ -39,9 +35,11 @@ public class bullet extends Actor
         
         if(getX() == 0 || getY() == 0){
             getWorld().removeObject(this);
->>>>>>> master
+
         }
     }
 }
+
+
 
 

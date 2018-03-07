@@ -17,39 +17,30 @@ public class FastBullet extends Actor
 
     public void act() 
     {
-<<<<<<< HEAD
 
         if(Tower.targetX > Tower.targetX2) {
-=======
+
         if(count == 0){
-            if(Tower.targetX > Tower.targetX2) {
->>>>>>> master
-                firstX = Tower.targetX;
-                firstY = Tower.targetY;
-            } else {
+            if(Tower.targetX == 0) {
+
                 firstX = Tower.targetX2;
                 firstY = Tower.targetY2;
+            } else {
+                firstX = Tower.targetX;
+                firstY = Tower.targetY;
             }
-<<<<<<< HEAD
+
             move(7);
         if(i == 1) {
         turnTowards(firstX,firstY);
         i++;
     }
-    /*
-        if(Tower.enemyOnScreen == false) {
-            move(5);
-            move(5);
-            move(5);
-            move(5);
-        }
-        */
     }
-}
+      }
    
-=======
+
             count++;
-        }
+        
         
         if(getX() <= firstX+10 && getX() >= firstX-10 && getY() <= firstY+10 && getY() >= firstY-10){
             count2++;
@@ -62,9 +53,10 @@ public class FastBullet extends Actor
         if(getX() == 0 || getY() == 0){
             getWorld().removeObject(this);
         }
+    }
         
     }
-}
->>>>>>> master
+
+
 
 

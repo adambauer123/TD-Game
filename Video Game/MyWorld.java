@@ -33,6 +33,7 @@ public class MyWorld extends World
 
     boolean towerSpawned = false;
     Tower tower;
+    private int count3 = 1;
 
     int[] waves = {5,6,7,8,9,10,11,12,13,14};
     int[] waves2 = {3,4,5,6,7,7,7,8,9,10};
@@ -87,14 +88,15 @@ public class MyWorld extends World
         Enemy1 enemy = new Enemy1();
         Enemy2 enemyTwo = new Enemy2();
         
-        if(count % 50 == 0){
+        if(count % 50 == 0 || count3 == 1){
             addObject(enemy, 20, 150);
   
         }
         
-        if(count % 125 == 0){
+        if(count % 125 == 0 || count3 == 1){
           addObject(enemyTwo, 20, 150);
            //Enemy2.Enemy2health += 1;
+           count3++;
         }
     }
     
@@ -142,11 +144,9 @@ public class MyWorld extends World
             System.out.println("Tyler Broke the Code");
         }
         
-<<<<<<< HEAD
-        if (getObjectsAt(375, 550, Tower2.class).isEmpty()){
-=======
+
         if (getObjectsAt(225+200, 550, Tower2.class).isEmpty()){
->>>>>>> master
+
             Tower2 tower = new Tower2();
             addObject(tower, 225+200, 550);
             System.out.println("Tyler Broke the Code 2");
@@ -167,9 +167,9 @@ public class MyWorld extends World
         showText("Next Wave: " + timeTillNextWave, 97, 620);
         showText("Lives: " + playerLives, 70, 660);
 
-    }
- 
+         }
+    } 
 
         
-}
+
 

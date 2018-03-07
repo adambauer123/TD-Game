@@ -39,7 +39,7 @@ public class enemy extends Actor
         }
     }
    
-    public boolean checkHp(int health) {
+    public boolean checkHp(double health) {
         if(health <= 0) {
             return true;
         }
