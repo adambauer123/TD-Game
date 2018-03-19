@@ -34,7 +34,9 @@ public class MyWorld extends World
     boolean towerSpawned = false;
     Tower tower;
     
-    GreenfootImage savedBG = null;
+    GreenfootImage drawedImage = new GreenfootImage("menu.png");
+    GreenfootImage tower1menu = new GreenfootImage("green_tower.png");
+    GreenfootImage tower2menu = new GreenfootImage("blue_tower.png");
     int oldCoins, oldWaveNum, oldTimeTillNextWave, oldPlayerLives;
     
     public MyWorld()
@@ -51,7 +53,6 @@ public class MyWorld extends World
         oldWaveNum = waveNum;
         oldTimeTillNextWave = timeTillNextWave;
         oldPlayerLives = playerLives;
-        savedBG = new GreenfootImage(getBackground());
     }
     
     public void act(){
@@ -95,32 +96,9 @@ public class MyWorld extends World
     
     
     public void menu(){
-        GreenfootImage drawedImage = new GreenfootImage("menu.png");
-        getBackground().drawImage(drawedImage, 0, 485);
         getBackground().drawImage(drawedImage, 0, 480);
-        
-        GreenfootImage tower1menu = new GreenfootImage("green_tower.png");
         getBackground().drawImage(tower1menu, 149+50, 501);
-        
-        GreenfootImage tower2menu = new GreenfootImage("blue_tower.png");
         getBackground().drawImage(tower2menu, 149+200, 501);
-        
-        /*
-        GreenfootImage bg = getBackground();
-        bg.setColor(greenfoot.Color.RED);
-        bg.setFont(bg.getFont().deriveFont(18f));
-        
-        bg.drawString ("Coins: " + coins, 25, 550);
-        bg.drawString ("Wave Number: " + waveNum, 25, 580);
-        bg.drawString ("Next Wave: " + timeTillNextWave, 25, 620);
-        bg.drawString ("Lives: " + playerLives, 25, 660);
-        bg.clear();
-        */
-       showText("Coins: " + coins, 70, 540);
-        showText("Wave Number: " + waveNum, 115, 580);
-        showText("Next Wave: " + timeTillNextWave, 97, 620);
-        showText("Lives: " + playerLives, 70, 660);
-
     }
     
     public void menuUpdate(){
@@ -133,9 +111,8 @@ public class MyWorld extends World
             Tower2 tower = new Tower2();
             addObject(tower, 225+200, 550);
         }
-        
-        //drawString("hello", 1, 12);
-        /*
+       
+        menu();
         GreenfootImage bg = getBackground();
         bg.setColor(greenfoot.Color.RED);
         bg.setFont(bg.getFont().deriveFont(18f));
@@ -143,11 +120,16 @@ public class MyWorld extends World
         bg.drawString ("Wave Number: " + waveNum, 25, 580);
         bg.drawString ("Next Wave: " + timeTillNextWave, 25, 620);
         bg.drawString ("Lives: " + playerLives, 25, 660);
-        */
-       showText("Coins: " + coins, 70, 540);
+        bg.drawString ("10 Coins ", 240, 600);
+        bg.drawString ("20 Coins ", 400, 600);
+        /*
+        showText("Coins: " + coins, 70, 540);
         showText("Wave Number: " + waveNum, 115, 580);
         showText("Next Wave: " + timeTillNextWave, 97, 620);
         showText("Lives: " + playerLives, 70, 660);
+        showText("10 Coins", 285, 600);
+        showText("20 Coins", 450, 600);
+        */
 
     }
  
