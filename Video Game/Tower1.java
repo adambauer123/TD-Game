@@ -36,12 +36,8 @@ public class Tower1 extends Tower {
         
     }
 
-
-
-
     public void act() {
         if(activated == true) {
-
             if(Tower.targetX > Tower.targetX2) {
                 firstX = Tower.targetX;
                 firstY = Tower.targetY;
@@ -59,11 +55,9 @@ public class Tower1 extends Tower {
                 reloadDelayCount = 0;
             }
         }
-        dragAndActivate();
-     }
+        dragAndActivate(); 
+    }
      
-    
-    
     public void dragAndActivate(){
         if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 10){
             MouseInfo mouse = Greenfoot.getMouseInfo();
