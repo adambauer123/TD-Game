@@ -9,5 +9,5 @@ comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ dragAndActivate()
 comment4.params=
-comment4.target=void\ fire()
+comment4.target=void\ shoot()
 numComments=5

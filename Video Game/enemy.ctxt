@@ -6,5 +6,5 @@ comment1.target=void\ act()
 comment2.params=
 comment2.target=void\ MoveAroundMap()
 comment3.params=health
-comment3.target=boolean\ checkHp(int)
+comment3.target=boolean\ checkHp(double)
 numComments=4

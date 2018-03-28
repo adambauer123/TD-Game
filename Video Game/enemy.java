@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class enemy extends Actor
+public class enemy extends HealthActor
 {
     
     /**
@@ -39,7 +39,7 @@ public class enemy extends Actor
         }
     }
    
-    public boolean checkHp(int health) {
+    public boolean checkHp(double health) {
         if(health <= 0) {
             return true;
         }
