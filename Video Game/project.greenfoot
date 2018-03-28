@@ -39,15 +39,24 @@ class.move.superclass=greenfoot.Actor
 dependency1.from=Tower1
 dependency1.to=bullet
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency10.from=Tower2
 dependency10.to=enemy
 dependency10.type=UsesDependency
 dependency11.from=enemy
 dependency11.to=MyWorld
+=======
+dependency10.from=enemy
+dependency10.to=MyWorld
+dependency10.type=UsesDependency
+dependency11.from=enemy
+dependency11.to=Level2
+>>>>>>> Tylers-Branch
 dependency11.type=UsesDependency
 dependency12.from=Intro
 dependency12.to=MyWorld
 dependency12.type=UsesDependency
+<<<<<<< HEAD
 dependency13.from=Enemy1
 dependency13.to=bullet
 dependency13.type=UsesDependency
@@ -59,6 +68,19 @@ dependency15.to=MyWorld
 dependency15.type=UsesDependency
 dependency16.from=Enemy1
 dependency16.to=Enemy2
+=======
+dependency13.from=Intro
+dependency13.to=Level2
+dependency13.type=UsesDependency
+dependency14.from=Enemy1
+dependency14.to=bullet
+dependency14.type=UsesDependency
+dependency15.from=Enemy1
+dependency15.to=FastBullet
+dependency15.type=UsesDependency
+dependency16.from=Enemy1
+dependency16.to=MyWorld
+>>>>>>> Tylers-Branch
 dependency16.type=UsesDependency
 dependency17.from=Enemy2
 dependency17.to=bullet
@@ -72,6 +94,7 @@ dependency19.type=UsesDependency
 dependency2.from=Tower1
 dependency2.to=Enemy1
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Tower
 dependency20.to=MyWorld
 dependency20.type=UsesDependency
@@ -101,10 +124,42 @@ dependency28.to=Enemy1
 dependency28.type=UsesDependency
 dependency29.from=bullet
 dependency29.to=Tower
+=======
+dependency20.from=Level2
+dependency20.to=Tower1
+dependency20.type=UsesDependency
+dependency21.from=Level2
+dependency21.to=Tower2
+dependency21.type=UsesDependency
+dependency22.from=Level2
+dependency22.to=Tower
+dependency22.type=UsesDependency
+dependency23.from=Level2
+dependency23.to=Defeat
+dependency23.type=UsesDependency
+dependency24.from=Level2
+dependency24.to=Enemy1
+dependency24.type=UsesDependency
+dependency25.from=Level2
+dependency25.to=Enemy2
+dependency25.type=UsesDependency
+dependency26.from=Tower
+dependency26.to=MyWorld
+dependency26.type=UsesDependency
+dependency27.from=Tower
+dependency27.to=bullet
+dependency27.type=UsesDependency
+dependency28.from=Tower
+dependency28.to=Tower1
+dependency28.type=UsesDependency
+dependency29.from=Tower
+dependency29.to=FastBullet
+>>>>>>> Tylers-Branch
 dependency29.type=UsesDependency
 dependency3.from=Tower1
 dependency3.to=MyWorld
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency30.from=bullet
 dependency30.to=Tower1
 dependency30.type=UsesDependency
@@ -127,6 +182,30 @@ dependency36.from=FastBullet
 dependency36.to=Enemy2
 dependency36.type=UsesDependency
 dependency37.from=FastBullet
+=======
+dependency30.from=Tower
+dependency30.to=Enemy1
+dependency30.type=UsesDependency
+dependency31.from=Tower
+dependency31.to=Enemy2
+dependency31.type=UsesDependency
+dependency32.from=Tower
+dependency32.to=enemy
+dependency32.type=UsesDependency
+dependency33.from=bullet
+dependency33.to=Tower2
+dependency33.type=UsesDependency
+dependency34.from=bullet
+dependency34.to=Enemy1
+dependency34.type=UsesDependency
+dependency35.from=bullet
+dependency35.to=Tower
+dependency35.type=UsesDependency
+dependency36.from=bullet
+dependency36.to=Tower1
+dependency36.type=UsesDependency
+dependency37.from=bullet
+>>>>>>> Tylers-Branch
 dependency37.to=enemy
 dependency37.type=UsesDependency
 dependency38.from=MyWorld
@@ -136,7 +215,11 @@ dependency39.from=MyWorld
 dependency39.to=Enemy1
 dependency39.type=UsesDependency
 dependency4.from=Tower1
+<<<<<<< HEAD
 dependency4.to=enemy
+=======
+dependency4.to=Tower2
+>>>>>>> Tylers-Branch
 dependency4.type=UsesDependency
 dependency40.from=MyWorld
 dependency40.to=Tower1
@@ -153,10 +236,34 @@ dependency43.type=UsesDependency
 dependency44.from=MyWorld
 dependency44.to=Tower2
 dependency44.type=UsesDependency
+<<<<<<< HEAD
 dependency5.from=Tower2
 dependency5.to=bullet
+=======
+dependency45.from=FastBullet
+dependency45.to=Tower2
+dependency45.type=UsesDependency
+dependency46.from=FastBullet
+dependency46.to=Tower
+dependency46.type=UsesDependency
+dependency47.from=FastBullet
+dependency47.to=Tower1
+dependency47.type=UsesDependency
+dependency48.from=FastBullet
+dependency48.to=Enemy1
+dependency48.type=UsesDependency
+dependency49.from=FastBullet
+dependency49.to=Enemy2
+dependency49.type=UsesDependency
+dependency5.from=Tower1
+dependency5.to=enemy
+>>>>>>> Tylers-Branch
 dependency5.type=UsesDependency
+dependency50.from=FastBullet
+dependency50.to=enemy
+dependency50.type=UsesDependency
 dependency6.from=Tower2
+<<<<<<< HEAD
 dependency6.to=MyWorld
 dependency6.type=UsesDependency
 dependency7.from=Tower2
@@ -177,6 +284,28 @@ mainWindow.width=1616
 mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=44
+=======
+dependency6.to=bullet
+dependency6.type=UsesDependency
+dependency7.from=Tower2
+dependency7.to=MyWorld
+dependency7.type=UsesDependency
+dependency8.from=Tower2
+dependency8.to=FastBullet
+dependency8.type=UsesDependency
+dependency9.from=Tower2
+dependency9.to=enemy
+dependency9.type=UsesDependency
+editor.fx.0.height=973
+editor.fx.0.width=1127
+editor.fx.0.x=36
+editor.fx.0.y=23
+mainWindow.height=848
+mainWindow.width=881
+mainWindow.x=202
+mainWindow.y=152
+package.numDependencies=50
+>>>>>>> Tylers-Branch
 package.numTargets=14
 project.charset=UTF-8
 readme.height=58
@@ -210,7 +339,7 @@ target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
-target12.name=FastBullet
+target12.name=MyWorld
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
@@ -218,7 +347,11 @@ target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=MyWorld
+=======
+target13.name=FastBullet
+>>>>>>> Tylers-Branch
 target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
@@ -230,7 +363,11 @@ target14.name=HealthActor
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
+<<<<<<< HEAD
 target14.width=90
+=======
+target14.width=100
+>>>>>>> Tylers-Branch
 target14.x=0
 target14.y=0
 target2.height=50

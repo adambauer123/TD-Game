@@ -119,6 +119,7 @@ public class MyWorld extends World
         Enemy1 enemy = new Enemy1();
         Enemy2 enemy2 = new Enemy2();
         count++;
+<<<<<<< HEAD
 
         if(waveCount < 5 + waveNumber) {
            
@@ -143,6 +144,35 @@ public class MyWorld extends World
                 waveNum += 1;
             }
         }
+=======
+
+        if(waveCount < 5 + waveNumber) {
+           
+            
+            if(count % 133 == 0) {
+                    addObject(enemy2,20,150);
+                    enemySpawnTimer = 0;
+                    
+                
+
+                }
+                
+            if(count % 50 == 0) {
+                addObject(enemy,20,150);
+                waveCount += 1;
+            }
+            
+            } else {
+                waveCount = 0;
+                waveNumber += 1;
+                timeTillNextWave += 10;
+                waveNum += 1;
+            }
+        }
+
+
+}
+>>>>>>> Tylers-Branch
 
 
 }
