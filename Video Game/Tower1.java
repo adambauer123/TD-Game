@@ -14,7 +14,7 @@ public class Tower1 extends Tower {
     private int reloadDelayCount = 0;
     public static int targetX = 0;
     public static int targetY = 0;
-
+    private enemy enemy1;
 
     private int i = 5;
 
@@ -36,28 +36,31 @@ public class Tower1 extends Tower {
         
     }
 
+
+
+
     public void act() {
         if(activated == true) {
-            if(Tower.targetX > Tower.targetX2) {
-                firstX = Tower.targetX;
-                firstY = Tower.targetY;
-            } else {
-                firstX = Tower.targetX2;
-                firstY = Tower.targetY2;
-            }
-            turnTowards(firstX, firstY);
+            
+            enemy closestEnemy = getClosestEnemy(500);
+            if(closestEnemy!=null) {
+            this.turnTowards(closestEnemy.getX(), closestEnemy.getY());
+        }
+            
         
             reloadDelayCount++;
 
 
-            if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
-                fire();
+            if(gunReloadTime <= reloadDelayCount) {
+                shoot();
                 reloadDelayCount = 0;
             }
         }
-        dragAndActivate(); 
-    }
+        dragAndActivate();
+     }
      
+    
+    
     public void dragAndActivate(){
         if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 10){
             MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -80,9 +83,15 @@ public class Tower1 extends Tower {
     
      
     
-    public void fire() {
-        bullet Bullet = new bullet();
-        getWorld().addObject(Bullet, this.getX(), this.getY());
+    public void shoot()
+    {
+            //get the closest enemy
+            enemy closestEnemy = getClosestEnemy(500);
+            
+            if(closestEnemy!=null)
+            {
+                getWorld().addObject(new bullet(),getX(),getY());
+            }
     }
    }
 

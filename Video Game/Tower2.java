@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 import java.awt.geom.Ellipse2D;
 /**
@@ -38,30 +38,25 @@ public class Tower2 extends Tower {
 
 
 
-    public void act() {
+   public void act() {
         if(activated == true) {
-
-            if(Tower.targetX > Tower.targetX2) {
-                firstX = Tower.targetX;
-                firstY = Tower.targetY;
-            } else {
-                firstX = Tower.targetX2;
-                firstY = Tower.targetY2;
-            }
-            turnTowards(firstX, firstY);
+            
+            enemy closestEnemy = getClosestEnemy(125);
+            if(closestEnemy!=null) {
+            this.turnTowards(closestEnemy.getX(), closestEnemy.getY());
+        }
+            
         
             reloadDelayCount++;
 
 
-            if(gunReloadTime <= reloadDelayCount && Tower.canFire == true) {
-                if(getX() <= firstX+115 && getX() >= firstX-115 && getY() <= firstY+115 && getY() >= firstY-115){
-                    fire();
-                }
+            if(gunReloadTime <= reloadDelayCount) {
+                shoot();
                 reloadDelayCount = 0;
             }
         }
         dragAndActivate();
-     } 
+     }
      
     
     
@@ -87,9 +82,15 @@ public class Tower2 extends Tower {
     
      
     
-    public void fire() {
-        FastBullet bullet = new FastBullet();
-        getWorld().addObject(bullet, this.getX(), this.getY());
+   public void shoot()
+    {
+            //get the closest enemy
+            enemy closestEnemy = getClosestEnemy(100);
+            
+            if(closestEnemy!=null)
+            {
+                getWorld().addObject(new FastBullet(),getX(),getY());
+            }
     }
 }
 

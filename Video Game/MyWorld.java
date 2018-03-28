@@ -19,17 +19,22 @@ public class MyWorld extends World
      * 
      */
     private int count = 0;
-
+    
+    private int enemySpawnTimer = -1;
+    private boolean canSpawn = true;
+    private int numberSpawn = 0;
+    private int waveNumber = 0;
 
     public static int coins = 100;
     private int i = 1;
 
-    private int waveNum;
+    private int waveNum = 1;
     public int timeTillNextWave = 10;
 
     private int time = 50;
 
     public static int playerLives = 5;
+    private int waveCount = 0;
 
     boolean towerSpawned = false;
     Tower tower;
@@ -57,7 +62,8 @@ public class MyWorld extends World
     
     public void act(){
         if(timeTillNextWave <= 0){
-            SpawnEnemies();
+            //SpawnEnemies();
+            enemyWaves();
         }
 
         menuUpdate();
@@ -77,23 +83,8 @@ public class MyWorld extends World
         if(playerLives <= 0){
             Greenfoot.setWorld(new Defeat());
         }
-    }
-    
-    public void SpawnEnemies(){
-        count++;
-        Enemy1 enemy = new Enemy1();
-        Enemy2 enemyTwo = new Enemy2();
         
-        if(count % 50 == 0){
-            addObject(enemy, 20, 150);
-  
-        }
-        
-        if(count % 125 == 0){
-           addObject(enemyTwo, 20, 150);
-        }
     }
-    
     
     public void menu(){
         getBackground().drawImage(drawedImage, 0, 480);
@@ -122,18 +113,37 @@ public class MyWorld extends World
         bg.drawString ("Lives: " + playerLives, 25, 660);
         bg.drawString ("10 Coins ", 240, 600);
         bg.drawString ("20 Coins ", 400, 600);
-        /*
-        showText("Coins: " + coins, 70, 540);
-        showText("Wave Number: " + waveNum, 115, 580);
-        showText("Next Wave: " + timeTillNextWave, 97, 620);
-        showText("Lives: " + playerLives, 70, 660);
-        showText("10 Coins", 285, 600);
-        showText("20 Coins", 450, 600);
-        */
-
     }
- 
+    
+    private void enemyWaves() {
+        Enemy1 enemy = new Enemy1();
+        Enemy2 enemy2 = new Enemy2();
+        count++;
 
-        
+        if(waveCount < 5 + waveNumber) {
+           
+            
+            if(count % 133 == 0) {
+                    addObject(enemy2,20,150);
+                    enemySpawnTimer = 0;
+                    
+                
+
+                }
+                
+            if(count % 50 == 0) {
+                addObject(enemy,20,150);
+                waveCount += 1;
+            }
+            
+            } else {
+                waveCount = 0;
+                waveNumber += 1;
+                timeTillNextWave += 10;
+                waveNum += 1;
+            }
+        }
+
+
 }
 
