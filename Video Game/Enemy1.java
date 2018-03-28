@@ -11,7 +11,7 @@ public class Enemy1 extends enemy
      * Act - do whatever the Enemy1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int health = 3;
+    private double health = 3;
     public int id;
     public static int E1X = 0;
     public static int E1Y = 0;
@@ -48,8 +48,8 @@ public class Enemy1 extends enemy
             MyWorld.coins += 1;
 
 
-        }
+        } 
     }
 }
-    
+   
  

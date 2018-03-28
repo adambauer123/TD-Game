@@ -120,6 +120,7 @@ public class MyWorld extends World
         Enemy2 enemy2 = new Enemy2();
         count++;
 
+
         if(waveCount < 5 + waveNumber) {
            
             
@@ -142,8 +143,12 @@ public class MyWorld extends World
                 timeTillNextWave += 10;
                 waveNum += 1;
             }
+
+        }
         }
 
 
-}
+
+
+
 
