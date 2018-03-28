@@ -8,17 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2 extends World
 {
-<<<<<<< HEAD
 
-    /**
-     * Constructor for objects of class Level2.
-     * 
-     */
-    public Level2()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-=======
+
     private int count = 0;
 
 
@@ -79,6 +70,7 @@ public class Level2 extends World
             Greenfoot.setWorld(new Defeat());
         }
     }
+   
     
     public void SpawnEnemies(){
         count++;
@@ -123,6 +115,7 @@ public class Level2 extends World
         bg.drawString ("Lives: " + playerLives, 25, 660);
         bg.drawString ("10 Coins ", 240, 600);
         bg.drawString ("20 Coins ", 400, 600);
->>>>>>> Tylers-Branch
+
     }
-}
+    }
+
