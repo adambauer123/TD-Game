@@ -14,6 +14,7 @@ import java.util.List;
 public class MyWorld extends World
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private int count = 0;
 =======
 
@@ -133,12 +134,111 @@ public class MyWorld extends World
                 enemyWaves();
             } else if (levelID == 2) {
                 enemyWaves2();
+=======
+        private int count = 0;
+        private int enemySpawnTimer = -1;
+        private boolean canSpawn = true;
+        private int numberSpawn = 0;
+        private int waveNumber = 0;
+        public static int coins = 100;
+        private int i = 1;
+        private int waveNum = 1;
+        public int timeTillNextWave = 10;
+        private int time = 50;
+        public static int playerLives = 5;
+        private int waveCount = 0;
+        boolean towerSpawned = false;
+        int oldCoins, oldWaveNum, oldTimeTillNextWave, oldPlayerLives;
+        public static int levelID = 1;
+        
+        Tower tower;
+        enemy Enemy;
+
+        GreenfootImage bg;
+        GreenfootImage mapImage;
+        GreenfootImage menuImage;
+        GreenfootImage tower1menu = new GreenfootImage("green_tower.png");
+        GreenfootImage tower2menu = new GreenfootImage("blue_tower.png");
+        
+        public MyWorld(){
+            super(625, 700, 1);
+            levelID = 1;
+            Greenfoot.setSpeed(50);
+            reset();
+            
+        }
+        
+        public void reset(){
+            coins = 100;
+            playerLives = 5;
+            waveNumber = 0;
+            timeTillNextWave = 10;
+            waveCount = 0;
+            
+            oldCoins = coins;
+            oldWaveNum = waveNum;
+            oldTimeTillNextWave = timeTillNextWave;
+            oldPlayerLives = playerLives;
+            bg = getBackground();
+            switch(levelID){
+                case 1:
+                    mapImage = new GreenfootImage("lines.png");
+                    menuImage = new GreenfootImage("menu.png");
+                    bg.setColor(greenfoot.Color.RED);
+                    break;
+                case 2:
+                    List objects = getObjects(null);
+                    removeObjects(objects);
+                    mapImage = new GreenfootImage("lines2.png");
+                    menuImage = new GreenfootImage("menu2.png");
+                    bg.setColor(greenfoot.Color.BLACK);
+                    
+                    break;
+            }
+            menu();
+            getBackground().drawImage(mapImage, 0, 0);
+        }
+        
+        public void act(){
+            if(timeTillNextWave <= 0){
+                if(levelID == 1) {
+                    enemyWaves();
+                } else if (levelID == 2) {
+                    enemyWaves2();
+                }
+            
+            }
+            if(waveNumber >= 10) {
+                levelID = 2;
+                reset();
+            }
+            menuUpdate();
+            if(i == 1) {
+                Tower tower = new Tower();
+                enemy Enemy = new enemy();
+                addObject(tower,50,50);
+                i++;
+            }
+            time--;
+            if(time == 0){
+                if(timeTillNextWave > 0){
+                    timeTillNextWave--;
+                }
+                time = 50;
+            }
+            if(playerLives <= 0){
+                Greenfoot.setWorld(new Defeat());
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
             }
 
         }
+<<<<<<< HEAD
         if(waveNumber >= 10) {
             levelID = 2;
             reset();
+=======
+       
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
         }
         menuUpdate();
@@ -162,6 +262,7 @@ public class MyWorld extends World
         }
     }
 
+<<<<<<< HEAD
 
     public void menu(){
         getBackground().drawImage(menuImage, 0, 480);
@@ -252,6 +353,18 @@ public class MyWorld extends World
         bg.drawString ("10 Coins ", 240, 600);
         bg.drawString ("20 Coins ", 400, 600);
     }
+=======
+        private void enemyWaves() {
+            Enemy1 enemy = new Enemy1();
+            Enemy2 enemy2 = new Enemy2();
+            count++;
+
+            if(waveCount < 5 + waveNumber) {
+            
+                if(count % 133 == 0) {
+                    addObject(enemy2,20,150);
+                    enemySpawnTimer = 0;
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
     private void enemyWaves() {
         Enemy1 enemy = new Enemy1();
@@ -264,6 +377,7 @@ public class MyWorld extends World
                 addObject(enemy2,20,150);
                 enemySpawnTimer = 0;
 
+<<<<<<< HEAD
 
             }
 
@@ -290,6 +404,10 @@ public class MyWorld extends World
             }
             
             } else {
+=======
+            } else if(getObjects(enemy.class).size()== 0) {
+                
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
                 waveCount = 0;
                 waveNumber += 1;
                 timeTillNextWave += 10;
@@ -298,6 +416,14 @@ public class MyWorld extends World
 
         }
         }
+<<<<<<< HEAD
+=======
+        
+        private void enemyWaves2() {
+            Enemy1 enemy = new Enemy1();
+            Enemy2 enemy2 = new Enemy2();
+            count++;
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
 >>>>>>> parent of 9cab9ad... Changes
 
@@ -309,12 +435,16 @@ public class MyWorld extends World
 
         } else {
 
+<<<<<<< HEAD
             waveCount = 0;
             waveNumber += 1;
             timeTillNextWave += 10;
             waveNum += 1;
         }
     }
+=======
+                }
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
     private void enemyWaves2() {
         Enemy1 enemy = new Enemy1();

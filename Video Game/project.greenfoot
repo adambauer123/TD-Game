@@ -1,7 +1,11 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
+<<<<<<< HEAD
 >>>>>>>=parent\ of\ 9cab9ad...\ Changes
+=======
+>>>>>>>=Tylers-Branch
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 class.BasicTower.image=yeet.jpg
 class.BasicTower.superclass=greenfoot.Actor
 class.Defeat.image=Defeat.png
@@ -57,7 +61,11 @@ dependency14.type=UsesDependency
 dependency15.from=Enemy1
 dependency15.to=FastBullet
 dependency15.type=UsesDependency
+<<<<<<< HEAD
 dependency16.from=Enemy1
+=======
+dependency16.from=Enemy2
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 dependency16.to=MyWorld
 dependency16.type=UsesDependency
 dependency17.from=Enemy2
@@ -172,7 +180,11 @@ dependency5.from=Tower1
 dependency5.to=enemy
 dependency5.type=UsesDependency
 dependency50.from=MyWorld
+<<<<<<< HEAD
 dependency50.to=Enemy1
+=======
+dependency50.to=Tower2
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 dependency50.type=UsesDependency
 dependency6.from=Tower2
 dependency6.to=bullet

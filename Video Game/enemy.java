@@ -17,20 +17,26 @@ public class enemy extends HealthActor
     public void act() 
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         // Add your action code here.
 >>>>>>> parent of 9cab9ad... Changes
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
     }
 
     public void MoveAroundMap(){
 <<<<<<< HEAD
 
         if (MyWorld.levelID == 1) {
+<<<<<<< HEAD
 
 =======
         if (this.getWorld().getClass() == MyWorld.class) {
 >>>>>>> parent of 9cab9ad... Changes
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 175 && getY() < 360){
