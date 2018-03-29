@@ -16,10 +16,18 @@ public class enemy extends HealthActor
     private int speed = 1;
     public void act() 
     {
+<<<<<<< HEAD
     }
     public void MoveAroundMap(){
         
         if (MyWorld.levelID == 1) {
+=======
+        System.out.println(MyWorld.levelID);
+    }
+    public void MoveAroundMap(){
+        System.out.println(MyWorld.levelID);
+        if (this.getWorld().getClass() == MyWorld.class) {
+>>>>>>> Tylers-Branch
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 175 && getY() < 360){
