@@ -16,12 +16,12 @@ public class Enemy1 extends enemy
     public static int E1X = 0;
     public static int E1Y = 0;
     public static int idNumber = 0;
+    private int count3 = 0;
     
     public void act() 
     {
         E1X = getX();
         E1Y = getY();
-        
         
         if(getWorld() != null){
             MoveAroundMap();
@@ -46,6 +46,7 @@ public class Enemy1 extends enemy
         if(checkHp(health) == true) {
             getWorld().removeObject(this);
             MyWorld.coins += 1;
+            
 
 
         } 
