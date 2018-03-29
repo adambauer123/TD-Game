@@ -16,13 +16,21 @@ public class enemy extends HealthActor
     private int speed = 1;
     public void act() 
     {
+<<<<<<< HEAD
 
+=======
+        // Add your action code here.
+>>>>>>> parent of 9cab9ad... Changes
     }
 
     public void MoveAroundMap(){
+<<<<<<< HEAD
 
         if (MyWorld.levelID == 1) {
 
+=======
+        if (this.getWorld().getClass() == MyWorld.class) {
+>>>>>>> parent of 9cab9ad... Changes
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 175 && getY() < 360){
@@ -41,9 +49,13 @@ public class enemy extends HealthActor
                 getWorld().removeObject(this);
                 MyWorld.playerLives -= 1;
             }
+<<<<<<< HEAD
         }
 
         if (MyWorld.levelID == 2){
+=======
+        } else if (this.getWorld().getClass() == Level2.class){
+>>>>>>> parent of 9cab9ad... Changes
             if(getX() < 370 && getY() == 35){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 370 && getY() != 270 && getY() != 400){
@@ -60,7 +72,7 @@ public class enemy extends HealthActor
                 setLocation(getX() + speed, getY());
             } else {
                 getWorld().removeObject(this);
-                MyWorld.playerLives -= 1;
+                Level2.playerLives -= 1;
             }
         }
     }
