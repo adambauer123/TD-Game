@@ -16,9 +16,10 @@ public class enemy extends HealthActor
     private int speed = 1;
     public void act() 
     {
-        // Add your action code here.
+        System.out.println(MyWorld.levelID);
     }
     public void MoveAroundMap(){
+        System.out.println(MyWorld.levelID);
         if (this.getWorld().getClass() == MyWorld.class) {
             if(getX() < 175){
                 setLocation(getX() + speed, getY());

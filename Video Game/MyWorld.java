@@ -27,7 +27,7 @@ public class MyWorld extends World
         private int waveCount = 0;
         boolean towerSpawned = false;
         int oldCoins, oldWaveNum, oldTimeTillNextWave, oldPlayerLives;
-        int levelID = 1;
+        public static int levelID = 1;
         
         Tower tower;
 
@@ -88,49 +88,6 @@ public class MyWorld extends World
                 Greenfoot.setWorld(new Defeat());
             }
         }
-        /*
-        public MyWorld()
-        {
-            super(625, 700, 1);
-            Greenfoot.setSpeed(50);
-            GreenfootImage drawedImage = new GreenfootImage("lines.png");
-            getBackground().drawImage(drawedImage, 0, 0);
-            menu();
-            coins = 100;
-            playerLives = 5;
-
-            oldCoins = coins;
-            oldWaveNum = waveNum;
-            oldTimeTillNextWave = timeTillNextWave;
-            oldPlayerLives = playerLives;
-        }
-
-        public void act(){
-            if(timeTillNextWave <= 0){
-                //SpawnEnemies();
-                enemyWaves();
-            }
-
-            menuUpdate();
-            if(i == 1) {
-                Tower tower = new Tower();
-                addObject(tower,50,50);
-                i++;
-            }
-            time--;
-            if(time == 0){
-                if(timeTillNextWave > 0){
-                    timeTillNextWave--;
-                }
-                time = 50;
-            }
-
-            if(playerLives <= 0){
-                Greenfoot.setWorld(new Defeat());
-            }
-
-        }
-        */
        
         public void menu(){
             getBackground().drawImage(menuImage, 0, 480);
