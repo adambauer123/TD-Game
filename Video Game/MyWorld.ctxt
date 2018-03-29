@@ -1,14 +1,17 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=MyWorld()
 comment2.params=
-comment2.target=void\ act()
+comment2.target=void\ reset()
 comment3.params=
-comment3.target=void\ menu()
+comment3.target=void\ act()
 comment4.params=
-comment4.target=void\ menuUpdate()
+comment4.target=void\ menu()
+comment4.text=\n\ \ \ \ \ \ \ \ public\ MyWorld()\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ super(625,\ 700,\ 1);\n\ \ \ \ \ \ \ \ \ \ \ \ Greenfoot.setSpeed(50);\n\ \ \ \ \ \ \ \ \ \ \ \ GreenfootImage\ drawedImage\ \=\ new\ GreenfootImage("lines.png");\n\ \ \ \ \ \ \ \ \ \ \ \ getBackground().drawImage(drawedImage,\ 0,\ 0);\n\ \ \ \ \ \ \ \ \ \ \ \ menu();\n\ \ \ \ \ \ \ \ \ \ \ \ coins\ \=\ 100;\n\ \ \ \ \ \ \ \ \ \ \ \ playerLives\ \=\ 5;\n\n\ \ \ \ \ \ \ \ \ \ \ \ oldCoins\ \=\ coins;\n\ \ \ \ \ \ \ \ \ \ \ \ oldWaveNum\ \=\ waveNum;\n\ \ \ \ \ \ \ \ \ \ \ \ oldTimeTillNextWave\ \=\ timeTillNextWave;\n\ \ \ \ \ \ \ \ \ \ \ \ oldPlayerLives\ \=\ playerLives;\n\ \ \ \ \ \ \ \ }\n\n\ \ \ \ \ \ \ \ public\ void\ act(){\n\ \ \ \ \ \ \ \ \ \ \ \ if(timeTillNextWave\ <\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //SpawnEnemies();\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enemyWaves();\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\n\ \ \ \ \ \ \ \ \ \ \ \ menuUpdate();\n\ \ \ \ \ \ \ \ \ \ \ \ if(i\ \=\=\ 1)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tower\ tower\ \=\ new\ Tower();\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addObject(tower,50,50);\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ time--;\n\ \ \ \ \ \ \ \ \ \ \ \ if(time\ \=\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(timeTillNextWave\ >\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeTillNextWave--;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time\ \=\ 50;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\n\ \ \ \ \ \ \ \ \ \ \ \ if(playerLives\ <\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Greenfoot.setWorld(new\ Defeat());\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\n\ \ \ \ \ \ \ \ }\n
 comment5.params=
-comment5.target=void\ enemyWaves()
-numComments=6
+comment5.target=void\ menuUpdate()
+comment6.params=
+comment6.target=void\ enemyWaves()
+numComments=7
