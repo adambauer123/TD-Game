@@ -233,9 +233,13 @@ public class MyWorld extends World
 
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(waveNumber >= 10) {
             levelID = 2;
             reset();
+=======
+       
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 =======
        
 >>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
@@ -270,6 +274,7 @@ public class MyWorld extends World
         getBackground().drawImage(tower2menu, 149+200, 501);
     }
 
+<<<<<<< HEAD
     public void menuUpdate(){
         if (getObjectsAt(225+50, 550, Tower1.class).isEmpty()){
             Tower1 tower = new Tower1();
@@ -354,6 +359,8 @@ public class MyWorld extends World
         bg.drawString ("20 Coins ", 400, 600);
     }
 =======
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
         private void enemyWaves() {
             Enemy1 enemy = new Enemy1();
             Enemy2 enemy2 = new Enemy2();
@@ -364,12 +371,15 @@ public class MyWorld extends World
                 if(count % 133 == 0) {
                     addObject(enemy2,20,150);
                     enemySpawnTimer = 0;
+<<<<<<< HEAD
 >>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
     private void enemyWaves() {
         Enemy1 enemy = new Enemy1();
         Enemy2 enemy2 = new Enemy2();
         count++;
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
         if(waveCount < 5 + waveNumber) {
 
@@ -377,6 +387,7 @@ public class MyWorld extends World
                 addObject(enemy2,20,150);
                 enemySpawnTimer = 0;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             }
@@ -408,6 +419,10 @@ public class MyWorld extends World
             } else if(getObjects(enemy.class).size()== 0) {
                 
 >>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
+=======
+            } else if(getObjects(enemy.class).size()== 0) {
+                
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
                 waveCount = 0;
                 waveNumber += 1;
                 timeTillNextWave += 10;
@@ -417,7 +432,10 @@ public class MyWorld extends World
         }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
         
         private void enemyWaves2() {
             Enemy1 enemy = new Enemy1();
@@ -433,7 +451,11 @@ public class MyWorld extends World
                 waveCount += 1;
             }
 
+<<<<<<< HEAD
         } else {
+=======
+                }
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 
 <<<<<<< HEAD
             waveCount = 0;

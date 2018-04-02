@@ -18,10 +18,13 @@ public class enemy extends HealthActor
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         // Add your action code here.
 >>>>>>> parent of 9cab9ad... Changes
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 =======
 >>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
     }
@@ -31,10 +34,13 @@ public class enemy extends HealthActor
 
         if (MyWorld.levelID == 1) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         if (this.getWorld().getClass() == MyWorld.class) {
 >>>>>>> parent of 9cab9ad... Changes
+=======
+>>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
 =======
 >>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
             if(getX() < 175){
