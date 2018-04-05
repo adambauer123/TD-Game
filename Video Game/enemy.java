@@ -76,3 +76,7 @@ public class enemy extends HealthActor
     }
 
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/Merge!

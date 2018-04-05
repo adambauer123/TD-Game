@@ -93,6 +93,7 @@ dependency24.from=bullet
 dependency24.to=Tower2
 dependency24.type=UsesDependency
 dependency25.from=bullet
+<<<<<<< HEAD
 dependency25.to=Enemy1
 dependency25.type=UsesDependency
 dependency26.from=bullet
@@ -106,10 +107,26 @@ dependency28.to=enemy
 dependency28.type=UsesDependency
 dependency29.from=MyWorld
 dependency29.to=Tower2
+=======
+dependency25.to=Tower2
+dependency25.type=UsesDependency
+dependency26.from=bullet
+dependency26.to=Enemy1
+dependency26.type=UsesDependency
+dependency27.from=bullet
+dependency27.to=Tower
+dependency27.type=UsesDependency
+dependency28.from=bullet
+dependency28.to=Tower1
+dependency28.type=UsesDependency
+dependency29.from=bullet
+dependency29.to=enemy
+>>>>>>> origin/Merge!
 dependency29.type=UsesDependency
 dependency3.from=Tower1
 dependency3.to=MyWorld
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency30.from=MyWorld
 dependency30.to=Enemy2
 dependency30.type=UsesDependency
@@ -136,6 +153,34 @@ dependency37.to=FastBullet
 dependency37.type=UsesDependency
 dependency38.from=MyWorld
 dependency38.to=bullet
+=======
+dependency30.from=FastBullet
+dependency30.to=Tower
+dependency30.type=UsesDependency
+dependency31.from=FastBullet
+dependency31.to=Tower1
+dependency31.type=UsesDependency
+dependency32.from=FastBullet
+dependency32.to=Defeat
+dependency32.type=UsesDependency
+dependency33.from=FastBullet
+dependency33.to=Enemy2
+dependency33.type=UsesDependency
+dependency34.from=FastBullet
+dependency34.to=enemy
+dependency34.type=UsesDependency
+dependency35.from=FastBullet
+dependency35.to=bullet
+dependency35.type=UsesDependency
+dependency36.from=MyWorld
+dependency36.to=enemy
+dependency36.type=UsesDependency
+dependency37.from=MyWorld
+dependency37.to=Tower2
+dependency37.type=UsesDependency
+dependency38.from=MyWorld
+dependency38.to=Enemy2
+>>>>>>> origin/Merge!
 dependency38.type=UsesDependency
 dependency39.from=FastBullet
 dependency39.to=Tower
@@ -143,6 +188,7 @@ dependency39.type=UsesDependency
 dependency4.from=Tower1
 dependency4.to=Tower2
 dependency4.type=UsesDependency
+<<<<<<< HEAD
 dependency40.from=FastBullet
 dependency40.to=Tower1
 dependency40.type=UsesDependency
@@ -160,6 +206,25 @@ dependency44.to=bullet
 dependency44.type=UsesDependency
 dependency45.from=MyWorld
 dependency45.to=Tower2
+=======
+dependency40.from=MyWorld
+dependency40.to=Defeat
+dependency40.type=UsesDependency
+dependency41.from=MyWorld
+dependency41.to=Tower1
+dependency41.type=UsesDependency
+dependency42.from=MyWorld
+dependency42.to=Enemy1
+dependency42.type=UsesDependency
+dependency43.from=MyWorld
+dependency43.to=Transition
+dependency43.type=UsesDependency
+dependency44.from=MyWorld
+dependency44.to=Victory
+dependency44.type=UsesDependency
+dependency45.from=MyWorld
+dependency45.to=FastBullet
+>>>>>>> origin/Merge!
 dependency45.type=UsesDependency
 dependency46.from=FastBullet
 dependency46.to=bullet
@@ -191,6 +256,7 @@ dependency8.type=UsesDependency
 dependency9.from=Tower2
 dependency9.to=enemy
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=722
 editor.fx.0.width=800
 editor.fx.0.x=440
@@ -200,6 +266,17 @@ mainWindow.width=1495
 mainWindow.x=33
 mainWindow.y=23
 package.numDependencies=44
+=======
+editor.fx.0.height=738
+editor.fx.0.width=816
+editor.fx.0.x=-32000
+editor.fx.0.y=-32000
+mainWindow.height=876
+mainWindow.width=1616
+mainWindow.x=-8
+mainWindow.y=-8
+package.numDependencies=46
+>>>>>>> origin/Merge!
 package.numTargets=16
 project.charset=UTF-8
 readme.height=58
@@ -233,7 +310,7 @@ target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
-target12.name=Victory
+target12.name=bullet
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
@@ -241,7 +318,11 @@ target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=bullet
+=======
+target13.name=Victory
+>>>>>>> origin/Merge!
 target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
@@ -249,7 +330,7 @@ target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
-target14.name=MyWorld
+target14.name=FastBullet
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
@@ -257,7 +338,11 @@ target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
 target15.name=FastBullet
+=======
+target15.name=MyWorld
+>>>>>>> origin/Merge!
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
