@@ -16,18 +16,10 @@ public class MyWorld extends World
 
     private int count = 0;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> Tylers-Branch
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-<<<<<<< HEAD
-=======
-    
->>>>>>> Tylers-Branch
 
     private int enemySpawnTimer = -1;
     private boolean canSpawn = true;
@@ -127,8 +119,6 @@ public class MyWorld extends World
         if(timeTillNextWave <= 0){
 
             if(levelID == 1) {
-
-=======
         
         oldCoins = coins;
         oldWaveNum = waveNum;
