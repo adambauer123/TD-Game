@@ -22,18 +22,33 @@ public class FastBullet extends Tower
             firstX = closestEnemy.getX();
             firstY = closestEnemy.getY();
         }
+<<<<<<< HEAD
 
         if(getX() <= firstX+20 && getX() >= firstX-20 && getY() <= firstY+20 && getY() >= firstY-20){
             count2++;
         }
 
+=======
+        
+        /*
+        if(getX() <= firstX+20 && getX() >= firstX-20 && getY() <= firstY+20 && getY() >= firstY-20){
+            count2++;
+        }
+        */
+        
+>>>>>>> Tylers-Branch
         if(count2 == 0){
             turnTowards(firstX,firstY);
+            count2++;
         }
+        
         if(getX() == 0 || getY() == 0 || getX() == 624 || getY() == 699){
             getWorld().removeObject(this);
         }
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Tylers-Branch
