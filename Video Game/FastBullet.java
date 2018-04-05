@@ -1,4 +1,4 @@
-   import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class bullet here.
@@ -19,22 +19,24 @@ public class FastBullet extends Tower
         move(9);
         
         if(closestEnemy != null) {
-        firstX = closestEnemy.getX();
-        firstY = closestEnemy.getY();
-    }
+            firstX = closestEnemy.getX();
+            firstY = closestEnemy.getY();
+        }
         
+        /*
         if(getX() <= firstX+20 && getX() >= firstX-20 && getY() <= firstY+20 && getY() >= firstY-20){
             count2++;
         }
+        */
         
         if(count2 == 0){
             turnTowards(firstX,firstY);
+            count2++;
         }
+        
         if(getX() == 0 || getY() == 0 || getX() == 624 || getY() == 699){
             getWorld().removeObject(this);
         }
     }
 
 }
-
-

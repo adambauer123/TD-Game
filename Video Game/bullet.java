@@ -36,7 +36,3 @@ public class bullet extends Tower
 
 
 }
-
-
-
-

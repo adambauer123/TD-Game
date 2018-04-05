@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class enemy extends HealthActor
 {
-    
+
     /**
      * Act - do whatever the enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,11 +16,14 @@ public class enemy extends HealthActor
     private int speed = 1;
     public void act() 
     {
-        System.out.println(MyWorld.levelID);
+
     }
+
     public void MoveAroundMap(){
-        System.out.println(MyWorld.levelID);
-        if (this.getWorld().getClass() == MyWorld.class) {
+
+
+        if (MyWorld.levelID == 1) {
+
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 175 && getY() < 360){
@@ -39,7 +42,9 @@ public class enemy extends HealthActor
                 getWorld().removeObject(this);
                 MyWorld.playerLives -= 1;
             }
-        } else if (this.getWorld().getClass() == Level2.class){
+
+        }else if (MyWorld.levelID == 2) {
+        
             if(getX() < 370 && getY() == 35){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 370 && getY() != 270 && getY() != 400){
@@ -56,11 +61,12 @@ public class enemy extends HealthActor
                 setLocation(getX() + speed, getY());
             } else {
                 getWorld().removeObject(this);
-                Level2.playerLives -= 1;
+                MyWorld.playerLives -= 1;
             }
         }
     }
-   
+     
+
     public boolean checkHp(double health) {
         if(health <= 0) {
             return true;
@@ -68,5 +74,5 @@ public class enemy extends HealthActor
         else
             return false;
     }
-    
-}
+
+    }
