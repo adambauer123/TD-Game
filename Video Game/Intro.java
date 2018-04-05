@@ -22,9 +22,9 @@ public class Intro extends World
         super(625, 700, 1);
         Greenfoot.start();
     }
-    
+
     public void act(){
-        
+
         if(Greenfoot.isKeyDown("space") && count == 0){
             bg = new GreenfootImage("intro2.png");
             setBackground(bg);
@@ -32,10 +32,10 @@ public class Intro extends World
         } else if (count > 0){
             count++;
         }
-        
+
         if(Greenfoot.isKeyDown("space") && count > 50){
-            Greenfoot.setWorld(new MyWorld());
+            Greenfoot.setWorld(new MyWorld(false));
         }
-        
+
     }
 }

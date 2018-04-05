@@ -17,13 +17,16 @@ public class Enemy2 extends enemy
     public int id;
     public void act() 
     {
-        MoveAroundMap();
+        if (getWorld() != null){
+            MoveAroundMap();
+        }
         if (getWorld() != null){
             MoveAroundMap();
         }
         if(getWorld() != null){
             checkCollision();
         }
+    
     }    
     
     public void checkCollision(){

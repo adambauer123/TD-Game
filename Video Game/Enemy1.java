@@ -29,8 +29,13 @@ public class Enemy1 extends enemy
                 MoveAroundMap();
             }
             if(getWorld() != null){
+            MoveAroundMap();
+            
+            
+            if(getWorld() != null){
                 checkCollision();
             }
+        }
         }
     }
         

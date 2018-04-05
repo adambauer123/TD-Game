@@ -16,33 +16,14 @@ public class enemy extends HealthActor
     private int speed = 1;
     public void act() 
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        // Add your action code here.
->>>>>>> parent of 9cab9ad... Changes
-=======
->>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
-=======
->>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
     }
 
     public void MoveAroundMap(){
-<<<<<<< HEAD
+
 
         if (MyWorld.levelID == 1) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        if (this.getWorld().getClass() == MyWorld.class) {
->>>>>>> parent of 9cab9ad... Changes
-=======
->>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
-=======
->>>>>>> parent of 2507906... Merge branch 'Tylers-Branch' into Adam's-Working-Branch
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 175 && getY() < 360){
@@ -61,13 +42,9 @@ public class enemy extends HealthActor
                 getWorld().removeObject(this);
                 MyWorld.playerLives -= 1;
             }
-<<<<<<< HEAD
-        }
 
-        if (MyWorld.levelID == 2){
-=======
-        } else if (this.getWorld().getClass() == Level2.class){
->>>>>>> parent of 9cab9ad... Changes
+        }else if (MyWorld.levelID == 2) {
+        
             if(getX() < 370 && getY() == 35){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 370 && getY() != 270 && getY() != 400){
@@ -84,10 +61,11 @@ public class enemy extends HealthActor
                 setLocation(getX() + speed, getY());
             } else {
                 getWorld().removeObject(this);
-                Level2.playerLives -= 1;
+                MyWorld.playerLives -= 1;
             }
         }
     }
+     
 
     public boolean checkHp(double health) {
         if(health <= 0) {
@@ -97,5 +75,5 @@ public class enemy extends HealthActor
             return false;
     }
 
-}
+    }
 
