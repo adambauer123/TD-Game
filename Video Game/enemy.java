@@ -76,7 +76,4 @@ public class enemy extends HealthActor
     }
 
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> Tylers-Branch

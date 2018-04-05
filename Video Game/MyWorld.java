@@ -16,18 +16,12 @@ public class MyWorld extends World
 
     private int count = 0;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> Tylers-Branch
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-<<<<<<< HEAD
-=======
+
     
->>>>>>> Tylers-Branch
 
     private int enemySpawnTimer = -1;
     private boolean canSpawn = true;
@@ -54,7 +48,7 @@ public class MyWorld extends World
     GreenfootImage menuImage;
     GreenfootImage tower1menu = new GreenfootImage("green_tower.png");
     GreenfootImage tower2menu = new GreenfootImage("blue_tower.png");
-<<<<<<< HEAD
+    GreenfootImage transition_to_2 = new GreenfootImage("transition_to_2.png");
 
 
         
@@ -70,27 +64,15 @@ public class MyWorld extends World
         reset();
 
     }
+    
 
-=======
-    GreenfootImage transition_to_2 = new GreenfootImage("transition_to_2.png");
-    
-    public MyWorld(){
-        super(625, 700, 1);
-        levelID = 1;
-        
-        Greenfoot.setSpeed(50);
-        reset();
-        
-    }
-    
->>>>>>> Tylers-Branch
     public void reset(){
         coins = 100;
         playerLives = 5;
         waveNumber = 0;
         timeTillNextWave = 10;
         waveCount = 0;
-<<<<<<< HEAD
+
 
         oldCoins = coins;
         oldWaveNum = waveNum;
@@ -119,50 +101,16 @@ public class MyWorld extends World
     }
 
 
-    public void act(){
-        
-
-        
-        
-        if(timeTillNextWave <= 0){
-
-            if(levelID == 1) {
-
-=======
-        
-        oldCoins = coins;
-        oldWaveNum = waveNum;
-        oldTimeTillNextWave = timeTillNextWave;
-        oldPlayerLives = playerLives;
-        bg = getBackground();
-        switch(levelID){
-            case 1:
-                mapImage = new GreenfootImage("lines.png");
-                menuImage = new GreenfootImage("menu.png");
-                bg.setColor(greenfoot.Color.RED);
-                break;
-            case 2:
-                List objects = getObjects(null);
-                removeObjects(objects);
-                mapImage = new GreenfootImage("lines2.png");
-                menuImage = new GreenfootImage("menu2.png");
-                bg.setColor(greenfoot.Color.BLACK);
-                
-                break;
-        }
-        menu();
-        getBackground().drawImage(mapImage, 0, 0);
-    }
     
     public void act(){
         //Next line could cause issues
-        setPaintOrder(Tower1.class, Tower2.class, FastBullet.class, bullet.class);
+        //setPaintOrder(Tower1.class, Tower2.class, FastBullet.class, bullet.class);
         if(Greenfoot.isKeyDown("p")) {
             waveNum = 9;
         }
         if(timeTillNextWave <= 0){
             if(levelID == 1) {
->>>>>>> Tylers-Branch
+
                 enemyWaves1();
             } else if (levelID == 2) {
                 enemyWaves2();
@@ -181,11 +129,7 @@ public class MyWorld extends World
             }
             time = 50;
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> Tylers-Branch
         if(playerLives <= 0){
             Greenfoot.setWorld(new Defeat());
         }
@@ -200,52 +144,6 @@ public class MyWorld extends World
         getBackground().drawImage(tower2menu, 149+200, 501);
     }
     
-    public void menuUpdate(){
-        if (getObjectsAt(225+50, 550, Tower1.class).isEmpty()){
-            Tower1 tower = new Tower1();
-            addObject(tower, 225+50, 550);
-        }
-        
-        if (getObjectsAt(225+200, 550, Tower2.class).isEmpty()){
-            Tower2 tower = new Tower2();
-            addObject(tower, 225+200, 550);
-
-        }
-       
-        menu();
-        bg.setFont(bg.getFont().deriveFont(18f));
-        bg.drawString ("Coins: " + coins, 25, 540);
-        bg.drawString ("Wave Number: " + waveNum, 25, 580);
-        bg.drawString ("Next Wave: " + timeTillNextWave, 25, 620);
-        bg.drawString ("Lives: " + playerLives, 25, 660);
-        bg.drawString ("10 Coins ", 240, 600);
-        bg.drawString ("20 Coins ", 400, 600);
-    }
-    
-    
-    private void enemyWaves1() {
-
-        Enemy1 enemy = new Enemy1();
-        Enemy2 enemy2 = new Enemy2();
-        count++;
-
-
-        if(waveCount < 5 + waveNumber) {
-
-            if(count % 133 == 0) {
-
-                addObject(enemy2,20,150);
-                enemySpawnTimer = 0;
-
-<<<<<<< HEAD
-        
-    }
-
-    public void menu(){
-        getBackground().drawImage(menuImage, 0, 480);
-        getBackground().drawImage(tower1menu, 149+50, 501);
-        getBackground().drawImage(tower2menu, 149+200, 501);
-    }
 
     public void menuUpdate(){
         if (getObjectsAt(225+50, 550, Tower1.class).isEmpty()){
@@ -278,7 +176,7 @@ public class MyWorld extends World
             if(count % 133 == 0) {
                 addObject(enemy2,20,150);
                 enemySpawnTimer = 0;
-=======
+
             }
         
 
@@ -301,34 +199,10 @@ public class MyWorld extends World
         }
         }
     }
+    
+    
               
-    private void enemyWaves2() {
-        Enemy1 enemy = new Enemy1();
-        Enemy2 enemy2 = new Enemy2();
-        count++;
->>>>>>> Tylers-Branch
-
-            }
-
-<<<<<<< HEAD
-            if(count % 50 == 0) {
-                addObject(enemy,20,150);
-                waveCount += 1;
-            }
-
-        }else if( (getObjects(enemy.class).size() == 0)) {
-
-            waveCount = 0;
-            waveNumber += 1;
-            timeTillNextWave += 10;
-            waveNum += 1;
-            if(waveNum == 10) {
-                levelID = 2;
-                waveNum = 0;
-                reset();
-            }
-        }
-    }
+    
 
     private void enemyWaves2() {
         Enemy1 enemy = new Enemy1();
@@ -358,29 +232,6 @@ public class MyWorld extends World
         }
     }
 }
-=======
-        if(waveCount < 5 + waveNumber) {
 
-            if(count % 133 == 0) {
-                addObject(enemy2,20,35);
-                enemySpawnTimer = 0;
 
-            }
-        
 
-        if(count % 50 == 0) {
-            addObject(enemy,20,35);
-            waveCount += 1;
-        }
-        
-
-        }else if( (getObjects(enemy.class).size() == 0)) {
->>>>>>> Tylers-Branch
-
-            waveCount = 0;
-            waveNumber += 1;
-            timeTillNextWave += 10;
-            waveNum += 1;
-        }
-    }
-}
