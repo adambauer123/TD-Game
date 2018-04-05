@@ -20,11 +20,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-<<<<<<< HEAD
-=======
 
-    
->>>>>>> origin/Merge!
 
     private int enemySpawnTimer = -1;
     private boolean canSpawn = true;
@@ -104,45 +100,11 @@ public class MyWorld extends World
     }
 
 
-<<<<<<< HEAD
-    public void act(){
-        
-
-        
-        
-        if(timeTillNextWave <= 0){
-
-            if(levelID == 1) {
-        
-        oldCoins = coins;
-        oldWaveNum = waveNum;
-        oldTimeTillNextWave = timeTillNextWave;
-        oldPlayerLives = playerLives;
-        bg = getBackground();
-        switch(levelID){
-            case 1:
-                mapImage = new GreenfootImage("lines.png");
-                menuImage = new GreenfootImage("menu.png");
-                bg.setColor(greenfoot.Color.RED);
-                break;
-            case 2:
-                List objects = getObjects(null);
-                removeObjects(objects);
-                mapImage = new GreenfootImage("lines2.png");
-                menuImage = new GreenfootImage("menu2.png");
-                bg.setColor(greenfoot.Color.BLACK);
-                
-                break;
-        }
-        menu();
-        getBackground().drawImage(mapImage, 0, 0);
-    }
-=======
->>>>>>> origin/Merge!
+   
     
     public void act(){
         //Next line could cause issues
-        //setPaintOrder(Tower1.class, Tower2.class, FastBullet.class, bullet.class);
+        setPaintOrder(Tower1.class, Tower2.class, FastBullet.class, bullet.class);
         if(Greenfoot.isKeyDown("p")) {
             waveNum = 9;
         }
