@@ -15,27 +15,47 @@ public class Intro extends World
      */
     GreenfootImage bg;
     boolean continued = false;
-    int count = 0;
+    int count = 0, time = 0;
+    ButtonEasy buttonEasy;
+    ButtonHard buttonHard;
     public Intro()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 625,700 cells with a cell size of 
         super(625, 700, 1);
         Greenfoot.start();
+        
     }
 
     public void act(){
+        Greenfoot.start();
 
+        time++;
+        //Moves to next intro screen when space is pressed and enough time has passed
         if(Greenfoot.isKeyDown("space") && count == 0){
             bg = new GreenfootImage("intro2.png");
             setBackground(bg);
             count++;
-        } else if (count > 0){
+            time = 0;
+        }
+        
+        //Moves to third intro screen when space is pressed and enough time has passed
+        if(Greenfoot.isKeyDown("space") && time > 30 && count == 1){
+            bg = new GreenfootImage("intro3.png");
+            setBackground(bg);
             count++;
+            time = 0;
         }
-
-        if(Greenfoot.isKeyDown("space") && count > 50){
-            Greenfoot.setWorld(new MyWorld(false));
+        //Moves to fourth intro screen when space is pressed and enough time has passed
+        if(Greenfoot.isKeyDown("space") && time > 30 && count == 2){
+            bg = new GreenfootImage("intro4.png");
+            setBackground(bg);
+            buttonEasy = new ButtonEasy();
+            buttonHard = new ButtonHard();
+            addObject(buttonEasy,130,230);
+            addObject(buttonHard,130,530);
+            count++;
+            time = 0;
         }
-
+      
     }
 }

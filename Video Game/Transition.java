@@ -21,7 +21,7 @@ public class Transition extends World
 
     public void act(){
 
-
+        //Moves onto the second level
         if(Greenfoot.isKeyDown("space")){
             Greenfoot.setWorld(new MyWorld(true));
         }
