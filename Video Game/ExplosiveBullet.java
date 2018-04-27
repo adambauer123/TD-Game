@@ -11,6 +11,10 @@ public class ExplosiveBullet extends Tower
     private int firstX = 0;
     private int firstY = 0;
     private int count2 = 0;
+<<<<<<< HEAD
+=======
+    //moves the bullet in the direction of the enemy
+>>>>>>> Tylers-Branch
     public void act() 
     {
         enemy closestEnemy = getClosestEnemy(500);

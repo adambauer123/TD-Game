@@ -12,6 +12,7 @@ public class FastBullet extends Tower
     private int firstX = 0;
     private int firstY = 0;
     private int count2 = 0;
+    //moves the bullet in the direction of the enemy
     public void act() 
     {
 
@@ -27,14 +28,6 @@ public class FastBullet extends Tower
         if(getX() <= firstX+20 && getX() >= firstX-20 && getY() <= firstY+20 && getY() >= firstY-20){
             count2++;
         }
-
-
-        
-        /*
-        if(getX() <= firstX+20 && getX() >= firstX-20 && getY() <= firstY+20 && getY() >= firstY-20){
-            count2++;
-        }
-        */
         
 
         if(count2 == 0){

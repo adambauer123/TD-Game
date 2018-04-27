@@ -15,18 +15,28 @@ public class ButtonEasy extends Actor
      */
     GreenfootImage bg;
     public ButtonEasy(){
+<<<<<<< HEAD
         //Draws the easy button
+=======
+>>>>>>> Tylers-Branch
         setImage(new GreenfootImage(" Easy mode ", 45, Color.BLACK, Color.ORANGE));
     }
         
     public void act() 
     {
+<<<<<<< HEAD
         //Removes easy button if hard one is pressed
         if(ButtonHard.removeThis == true) {
             getWorld().removeObject(this);
         }
         
         //Constructs the world with the easy difficulty
+=======
+        
+        if(ButtonHard.removeThis == true) {
+            getWorld().removeObject(this);
+        }
+>>>>>>> Tylers-Branch
         if (Greenfoot.mouseClicked(this)) {
             MyWorld.isEasy = true;
             getWorld().removeObject(this);

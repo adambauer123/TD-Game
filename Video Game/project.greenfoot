@@ -197,6 +197,7 @@ dependency52.type=UsesDependency
 dependency53.from=Defeat
 dependency53.to=DefeatButton
 dependency53.type=UsesDependency
+<<<<<<< HEAD
 dependency54.from=bullet
 dependency54.to=Tower2
 dependency54.type=UsesDependency
@@ -214,10 +215,30 @@ dependency58.to=enemy
 dependency58.type=UsesDependency
 dependency59.from=DefeatButton
 dependency59.to=MyWorld
+=======
+dependency54.from=DefeatButton
+dependency54.to=MyWorld
+dependency54.type=UsesDependency
+dependency55.from=DefeatButton
+dependency55.to=Intro
+dependency55.type=UsesDependency
+dependency56.from=Victory
+dependency56.to=MyWorld
+dependency56.type=UsesDependency
+dependency57.from=Victory
+dependency57.to=VictoryButton
+dependency57.type=UsesDependency
+dependency58.from=bullet
+dependency58.to=Tower2
+dependency58.type=UsesDependency
+dependency59.from=bullet
+dependency59.to=Enemy1
+>>>>>>> Tylers-Branch
 dependency59.type=UsesDependency
 dependency6.from=Tower3
 dependency6.to=Circle
 dependency6.type=UsesDependency
+<<<<<<< HEAD
 dependency60.from=DefeatButton
 dependency60.to=Intro
 dependency60.type=UsesDependency
@@ -226,6 +247,16 @@ dependency61.to=MyWorld
 dependency61.type=UsesDependency
 dependency62.from=Victory
 dependency62.to=VictoryButton
+=======
+dependency60.from=bullet
+dependency60.to=Tower
+dependency60.type=UsesDependency
+dependency61.from=bullet
+dependency61.to=Tower1
+dependency61.type=UsesDependency
+dependency62.from=bullet
+dependency62.to=enemy
+>>>>>>> Tylers-Branch
 dependency62.type=UsesDependency
 dependency63.from=ButtonEasy
 dependency63.to=MyWorld
@@ -236,6 +267,7 @@ dependency64.type=UsesDependency
 dependency65.from=ExplosiveBullet
 dependency65.to=enemy
 dependency65.type=UsesDependency
+<<<<<<< HEAD
 dependency66.from=FastBullet
 dependency66.to=Tower
 dependency66.type=UsesDependency
@@ -247,10 +279,24 @@ dependency68.to=Defeat
 dependency68.type=UsesDependency
 dependency69.from=FastBullet
 dependency69.to=Enemy2
+=======
+dependency66.from=MyWorld
+dependency66.to=enemy
+dependency66.type=UsesDependency
+dependency67.from=MyWorld
+dependency67.to=Tower2
+dependency67.type=UsesDependency
+dependency68.from=MyWorld
+dependency68.to=Enemy2
+dependency68.type=UsesDependency
+dependency69.from=MyWorld
+dependency69.to=Defeat
+>>>>>>> Tylers-Branch
 dependency69.type=UsesDependency
 dependency7.from=VictoryButton
 dependency7.to=MyWorld
 dependency7.type=UsesDependency
+<<<<<<< HEAD
 dependency70.from=FastBullet
 dependency70.to=enemy
 dependency70.type=UsesDependency
@@ -280,11 +326,43 @@ dependency78.to=Transition
 dependency78.type=UsesDependency
 dependency79.from=MyWorld
 dependency79.to=Victory
+=======
+dependency70.from=MyWorld
+dependency70.to=Tower1
+dependency70.type=UsesDependency
+dependency71.from=MyWorld
+dependency71.to=Enemy1
+dependency71.type=UsesDependency
+dependency72.from=MyWorld
+dependency72.to=Transition
+dependency72.type=UsesDependency
+dependency73.from=MyWorld
+dependency73.to=Victory
+dependency73.type=UsesDependency
+dependency74.from=MyWorld
+dependency74.to=FastBullet
+dependency74.type=UsesDependency
+dependency75.from=MyWorld
+dependency75.to=Tower
+dependency75.type=UsesDependency
+dependency76.from=MyWorld
+dependency76.to=bullet
+dependency76.type=UsesDependency
+dependency77.from=MyWorld
+dependency77.to=Tower3
+dependency77.type=UsesDependency
+dependency78.from=MyWorld
+dependency78.to=ExplosiveBullet
+dependency78.type=UsesDependency
+dependency79.from=MyWorld
+dependency79.to=Enemy3
+>>>>>>> Tylers-Branch
 dependency79.type=UsesDependency
 dependency8.from=VictoryButton
 dependency8.to=Intro
 dependency8.type=UsesDependency
 dependency80.from=MyWorld
+<<<<<<< HEAD
 dependency80.to=FastBullet
 dependency80.type=UsesDependency
 dependency81.from=MyWorld
@@ -307,6 +385,30 @@ dependency86.to=Circle
 dependency86.type=UsesDependency
 dependency87.from=MyWorld
 dependency87.to=ButtonHard
+=======
+dependency80.to=Circle
+dependency80.type=UsesDependency
+dependency81.from=MyWorld
+dependency81.to=ButtonHard
+dependency81.type=UsesDependency
+dependency82.from=FastBullet
+dependency82.to=Tower
+dependency82.type=UsesDependency
+dependency83.from=FastBullet
+dependency83.to=Tower1
+dependency83.type=UsesDependency
+dependency84.from=FastBullet
+dependency84.to=Defeat
+dependency84.type=UsesDependency
+dependency85.from=FastBullet
+dependency85.to=Enemy2
+dependency85.type=UsesDependency
+dependency86.from=FastBullet
+dependency86.to=enemy
+dependency86.type=UsesDependency
+dependency87.from=FastBullet
+dependency87.to=bullet
+>>>>>>> Tylers-Branch
 dependency87.type=UsesDependency
 dependency9.from=Tower1
 dependency9.to=bullet
@@ -315,10 +417,17 @@ editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 mainWindow.height=876
 mainWindow.width=1616
 mainWindow.x=-8
 mainWindow.y=-8
+=======
+mainWindow.height=975
+mainWindow.width=941
+mainWindow.x=486
+mainWindow.y=23
+>>>>>>> Tylers-Branch
 package.numDependencies=87
 package.numTargets=22
 project.charset=UTF-8
@@ -377,14 +486,19 @@ target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
 target15.name=bullet
+=======
+target15.name=DefeatButton
+>>>>>>> Tylers-Branch
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
-target15.width=80
+target15.width=110
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
 target16.name=DefeatButton
 target16.showInterface=false
 target16.type=ClassTarget
@@ -394,6 +508,17 @@ target16.x=0
 target16.y=0
 target17.height=50
 target17.name=Victory
+=======
+target16.name=Victory
+target16.showInterface=false
+target16.type=ClassTarget
+target16.typeParameters=
+target16.width=80
+target16.x=0
+target16.y=0
+target17.height=50
+target17.name=bullet
+>>>>>>> Tylers-Branch
 target17.showInterface=false
 target17.type=ClassTarget
 target17.typeParameters=
@@ -425,7 +550,11 @@ target2.width=110
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< HEAD
 target20.name=FastBullet
+=======
+target20.name=MyWorld
+>>>>>>> Tylers-Branch
 target20.showInterface=false
 target20.type=ClassTarget
 target20.typeParameters=
@@ -433,7 +562,11 @@ target20.width=80
 target20.x=0
 target20.y=0
 target21.height=50
+<<<<<<< HEAD
 target21.name=MyWorld
+=======
+target21.name=FastBullet
+>>>>>>> Tylers-Branch
 target21.showInterface=false
 target21.type=ClassTarget
 target21.typeParameters=

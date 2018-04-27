@@ -24,7 +24,12 @@ public class Tower extends HealthActor
    
     public void act() {
     }
+<<<<<<< HEAD
 
+=======
+    
+    //Gets the closest enemy to the tower within a range
+>>>>>>> Tylers-Branch
     protected enemy getClosestEnemy(int range) {
         List<enemy> enemies = getWorld().getObjects(enemy.class); //get all the enemies
 

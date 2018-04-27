@@ -11,6 +11,7 @@ import java.awt.geom.Ellipse2D;
 public class Tower2 extends Tower {
 
     private int gunReloadTime = 2;
+    private int shootcount = 0;
     private int reloadDelayCount = 0;
     public static int targetX = 0;
     public static int targetY = 0;
@@ -25,7 +26,10 @@ public class Tower2 extends Tower {
     private int firstY = 0;
     private int radius = 125;
     Circle circle = new Circle();
+<<<<<<< HEAD
     
+=======
+>>>>>>> Tylers-Branch
 
 
     /**
@@ -54,27 +58,47 @@ public class Tower2 extends Tower {
         dragAndActivate();
     }
 
+<<<<<<< HEAD
+=======
+    //allows you to drag the tower from the menu onto the map
+>>>>>>> Tylers-Branch
     public void dragAndActivate(){
         if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 50){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             setLocation(mouse.getX() + 1, mouse.getY());
             if(c == 0) {
+<<<<<<< HEAD
             getWorld().addObject(circle, this.getX(), this.getY());
             c++;
         }
             circle.setLocation(this.getX(), this.getY());
   
             
+=======
+                getWorld().addObject(circle, this.getX(), this.getY());
+                c++;
+            }
+            circle.setLocation(this.getX(), this.getY());
+
+>>>>>>> Tylers-Branch
         }
         if (Greenfoot.mouseClicked(null)){
             circle.setLocation(this.getX(), this.getY());
             if(getY() < 473 && MyWorld.coins >= 50){
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> Tylers-Branch
                 activated = true;
                 placed = true;
                 getWorld().removeObject(circle);
                 if(isPayed != true){
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> Tylers-Branch
                     MyWorld.coins -= 50;
                     isPayed = true;
                 }
@@ -86,6 +110,10 @@ public class Tower2 extends Tower {
         }
     }
 
+<<<<<<< HEAD
+=======
+    //shoots the specified bullet at the enemy
+>>>>>>> Tylers-Branch
     public void shoot()
     {
         //get the closest enemy
@@ -94,12 +122,28 @@ public class Tower2 extends Tower {
         if(closestEnemy!=null)
         {
             getWorld().addObject(new FastBullet(),getX(),getY());
+<<<<<<< HEAD
         }
     }
     
+=======
+            shootcount++;
+        }
+        if(shootcount == 7){
+            GreenfootSound song1 = new GreenfootSound("pow.wav");
+            song1.setVolume(75);
+            song1.play();
+            shootcount = 0;
+        }
+    }
+
+>>>>>>> Tylers-Branch
     public int getRadius() {
         return radius;
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Tylers-Branch

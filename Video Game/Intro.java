@@ -30,7 +30,11 @@ public class Intro extends World
         Greenfoot.start();
 
         time++;
+<<<<<<< HEAD
         //Moves to next intro screen when space is pressed and enough time has passed
+=======
+        
+>>>>>>> Tylers-Branch
         if(Greenfoot.isKeyDown("space") && count == 0){
             bg = new GreenfootImage("intro2.png");
             setBackground(bg);
@@ -38,14 +42,21 @@ public class Intro extends World
             time = 0;
         }
         
+<<<<<<< HEAD
         //Moves to third intro screen when space is pressed and enough time has passed
+=======
+>>>>>>> Tylers-Branch
         if(Greenfoot.isKeyDown("space") && time > 30 && count == 1){
             bg = new GreenfootImage("intro3.png");
             setBackground(bg);
             count++;
             time = 0;
         }
+<<<<<<< HEAD
         //Moves to fourth intro screen when space is pressed and enough time has passed
+=======
+        
+>>>>>>> Tylers-Branch
         if(Greenfoot.isKeyDown("space") && time > 30 && count == 2){
             bg = new GreenfootImage("intro4.png");
             setBackground(bg);
@@ -55,7 +66,16 @@ public class Intro extends World
             addObject(buttonHard,130,530);
             count++;
             time = 0;
+<<<<<<< HEAD
         }
       
+=======
+        }
+        
+        if(Greenfoot.isKeyDown("l")){
+            MyWorld.isEasy = false;
+            Greenfoot.setWorld(new MyWorld(false));
+        }
+>>>>>>> Tylers-Branch
     }
 }

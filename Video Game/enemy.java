@@ -18,9 +18,14 @@ public class enemy extends HealthActor
     {
 
     }
-
+    
+    //Moves the enemies around the map, removes life from player once they reach the end
     public void MoveAroundMap(){
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> Tylers-Branch
         if (MyWorld.levelID == 1) {
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
@@ -63,7 +68,12 @@ public class enemy extends HealthActor
             }
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+    //Check if the HP of the enemy is 0, if it is, it returns true
+>>>>>>> Tylers-Branch
     public boolean checkHp(double health) {
         if(health <= 0) {
             return true;

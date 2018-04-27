@@ -16,17 +16,26 @@ public class ButtonHard extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public ButtonHard(){
+<<<<<<< HEAD
         //Draws the button
+=======
+>>>>>>> Tylers-Branch
         setImage(new GreenfootImage(" Hard mode ", 45, Color.BLACK, Color.ORANGE));
     }
     
     public void act() 
     {
+<<<<<<< HEAD
         //Removes hard button if small button is pressed
         if(removeThis == true) {
             getWorld().removeObject(this);
         }
         //Constructs the new world with hard difficulty
+=======
+        if(removeThis == true) {
+            getWorld().removeObject(this);
+        }
+>>>>>>> Tylers-Branch
         if (Greenfoot.mouseClicked(this)) {
             MyWorld.isEasy = false;
             getWorld().removeObject(this);

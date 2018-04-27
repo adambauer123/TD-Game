@@ -12,6 +12,7 @@ public class bullet extends Tower
     private int firstX = 0;
     private int firstY = 0;
     private int count2 = 0;
+    //moves the bullet in the direction of the enemy to hit it
     public void act() 
     {
         enemy closestEnemy = getClosestEnemy(500);

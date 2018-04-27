@@ -51,11 +51,15 @@ public class MyWorld extends World
     GreenfootImage tower3menu = new GreenfootImage("purple_tower.png");
     GreenfootImage transition_to_2 = new GreenfootImage("transition_to_2.png");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Tylers-Branch
     public MyWorld(boolean level){
         super(625, 700, 1);
         
         Greenfoot.setSpeed(50);
+<<<<<<< HEAD
         
         //Makes the game faster if it is hard mode
         if(isEasy == false){
@@ -63,6 +67,12 @@ public class MyWorld extends World
         }
         
         //Determins which level it is
+=======
+        if(isEasy == false){
+            Greenfoot.setSpeed(55);
+        }
+
+>>>>>>> Tylers-Branch
         if(level == true) {
             levelID = 2;
         } else {
@@ -74,7 +84,10 @@ public class MyWorld extends World
     }
 
     public void reset(){
+<<<<<<< HEAD
         //Resets the static variables
+=======
+>>>>>>> Tylers-Branch
         ButtonHard.removeThis = false;
         coins = 100;
         playerLives = 5;
@@ -111,10 +124,17 @@ public class MyWorld extends World
     }
 
     public void act(){
+<<<<<<< HEAD
         //Sets which objects goes on top
         setPaintOrder(Circle.class,Tower1.class, Tower2.class, Tower3.class, FastBullet.class, bullet.class);
         
         //Checks difficulty, if easy runs this set of methods
+=======
+        setPaintOrder(Circle.class,Tower1.class, Tower2.class, Tower3.class, FastBullet.class, bullet.class);
+        if(Greenfoot.isKeyDown("p")) {
+            waveNum = 9;
+        }
+>>>>>>> Tylers-Branch
         if(isEasy){
             if(timeTillNextWave <= 0){
                 if(levelID == 1) {
@@ -124,7 +144,10 @@ public class MyWorld extends World
                 }
             }
         }else{
+<<<<<<< HEAD
             //Runs this set of methods if hard difficulty.
+=======
+>>>>>>> Tylers-Branch
             if(timeTillNextWave <= 0){
                 if(levelID == 1) {
                     hardEnemyWaves1();
@@ -191,7 +214,11 @@ public class MyWorld extends World
         bg.drawString ("50 Coins ", 400, 600);
         bg.drawString ("75 Coins ", 240, 699);
     }
+<<<<<<< HEAD
     //Hard difficulty waves for level 1
+=======
+    
+>>>>>>> Tylers-Branch
     private void hardEnemyWaves1() {
         Enemy1 enemy = new Enemy1();
         Enemy2 enemy2 = new Enemy2();
@@ -223,6 +250,7 @@ public class MyWorld extends World
             }
         }
     }
+<<<<<<< HEAD
     //Hard difficulty wave for level 2
     private void hardEnemyWaves2() {
         Enemy1 enemy = new Enemy1();
@@ -231,6 +259,16 @@ public class MyWorld extends World
         int enemy1ran = getRandomNumber(30,50);
         int enemy2ran = getRandomNumber(50,133);
 
+=======
+
+    private void hardEnemyWaves2() {
+        Enemy1 enemy = new Enemy1();
+        Enemy2 enemy2 = new Enemy2();
+        Enemy3 enemy3 = new Enemy3();
+        int enemy1ran = getRandomNumber(30,50);
+        int enemy2ran = getRandomNumber(50,133);
+
+>>>>>>> Tylers-Branch
         if(waveCount < 5 + waveNumber) {
             if(count2 % enemy2ran == 0) {
                 addObject(enemy2,20,35);
@@ -257,7 +295,11 @@ public class MyWorld extends World
             }
         }
     }
+<<<<<<< HEAD
     //Easy difficulty wave for level 1
+=======
+    
+>>>>>>> Tylers-Branch
     private void easyEnemyWaves1() {
         
         //Creates enemy objects so we can spawn them to screen
@@ -293,7 +335,11 @@ public class MyWorld extends World
     }
 
               
+<<<<<<< HEAD
     //Easy difficulty wave for level 2
+=======
+
+>>>>>>> Tylers-Branch
     private void easyEnemyWaves2() {
         Enemy1 enemy1 = new Enemy1();
         Enemy2 enemy02 = new Enemy2();
@@ -329,6 +375,13 @@ public class MyWorld extends World
 
 
     //Generates a random number and returns it
+    public int getRandomNumber(int start,int end)
+    {
+        int normal = Greenfoot.getRandomNumber(end-start+1);
+        return normal+start;
+    }
+}
+
     public int getRandomNumber(int start,int end)
     {
         int normal = Greenfoot.getRandomNumber(end-start+1);

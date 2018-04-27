@@ -29,16 +29,27 @@ public class Enemy2 extends enemy
         }
 
     }    
+<<<<<<< HEAD
 
+=======
+    //removes a certain amount of health if hit by a bullet
+>>>>>>> Tylers-Branch
     public void checkCollision(){
+        //if the bullet hits it it removes help and removes bullet
         if(isTouching(bullet.class)){
             health -= 1;
             removeTouching(bullet.class);
         }
+        //if the fast bullet hits it it removes health and removes bullet
         if(isTouching(FastBullet.class)){
             health -= .15;
             removeTouching(FastBullet.class);
         }
+<<<<<<< HEAD
+=======
+        //if explosive bullet hits it, it causes damage to itself and other enemies around it
+        //then removes the bullet itself
+>>>>>>> Tylers-Branch
         if(isTouching(ExplosiveBullet.class)){
             List<Enemy1> enemies1 = getObjectsInRange(100, Enemy1.class);
             List<Enemy2> enemies2 = getObjectsInRange(100, Enemy2.class);
@@ -57,18 +68,36 @@ public class Enemy2 extends enemy
             for (int j = 0; j < enemies3.size(); j++) {
             ((Enemy3)enemies3.get(j)).explosiveLoseHP();
             }
+<<<<<<< HEAD
             removeTouching(ExplosiveBullet.class);
         }
+=======
+            Greenfoot.playSound("boom.wav");
+            removeTouching(ExplosiveBullet.class);
+        }
+        
+        //if enemy dies, plays sound and gives coins to the player
+>>>>>>> Tylers-Branch
         if(checkHp(health) == true) {
             Greenfoot.playSound("enemy2ded.wav");
             getWorld().removeObject(this);
             MyWorld.coins += 2;
         }    
     }
+<<<<<<< HEAD
 
     public void explosiveLoseHP(){
         health -= 1.5;
     }
 }
 
+=======
+    
+    //the amount of damage to deal if hit with explosive damage
+    public void explosiveLoseHP(){
+        health -= 1.5;
+    }
+}
+
+>>>>>>> Tylers-Branch
         

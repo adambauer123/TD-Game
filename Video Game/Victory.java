@@ -21,6 +21,10 @@ public class Victory extends World
         //Creates and adds a play again button to the screen
         VictoryButton button = new VictoryButton();
         addObject(button,312,550);
+<<<<<<< HEAD
+=======
+        Greenfoot.playSound("victory.wav");
+>>>>>>> Tylers-Branch
     }
 }
 

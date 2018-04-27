@@ -53,7 +53,11 @@ public class Tower1 extends Tower {
         dragAndActivate();
     }
 
+<<<<<<< HEAD
     
+=======
+    //allows you to drag the tower from the menu onto the map
+>>>>>>> Tylers-Branch
     public void dragAndActivate(){
         if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 25){
             MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -73,8 +77,13 @@ public class Tower1 extends Tower {
             }
         }
     }
+<<<<<<< HEAD
 
     
+=======
+    
+    //shoots the specified bullet at the enemy
+>>>>>>> Tylers-Branch
     public void shoot()
     {
         //get the closest enemy
