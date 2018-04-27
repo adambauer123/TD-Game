@@ -17,5 +17,12 @@ public class Victory extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(625, 700, 1);
+
+        //Creates and adds a play again button to the screen
+        VictoryButton button = new VictoryButton();
+        addObject(button,312,550);
+        Greenfoot.playSound("victory.wav");
     }
 }
+
+

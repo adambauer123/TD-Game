@@ -18,12 +18,11 @@ public class enemy extends HealthActor
     {
 
     }
-
+    
+    //Moves the enemies around the map, removes life from player once they reach the end
     public void MoveAroundMap(){
-
-
+        
         if (MyWorld.levelID == 1) {
-
             if(getX() < 175){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 175 && getY() < 360){
@@ -44,7 +43,7 @@ public class enemy extends HealthActor
             }
 
         }else if (MyWorld.levelID == 2) {
-        
+
             if(getX() < 370 && getY() == 35){
                 setLocation(getX() + speed, getY());
             } else if (getX() == 370 && getY() != 270 && getY() != 400){
@@ -65,8 +64,8 @@ public class enemy extends HealthActor
             }
         }
     }
-     
-
+    
+    //Check if the HP of the enemy is 0, if it is, it returns true
     public boolean checkHp(double health) {
         if(health <= 0) {
             return true;
@@ -74,5 +73,4 @@ public class enemy extends HealthActor
         else
             return false;
     }
-
-    }
+}

@@ -1,10 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.util.List;
-
 /**
  * Write a description of class MyWorld here.
  * 
@@ -15,12 +13,12 @@ public class MyWorld extends World
 {
 
     private int count = 0;
+    private int count2 = 0;
 
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-
 
     private int enemySpawnTimer = -1;
     private boolean canSpawn = true;
@@ -37,8 +35,11 @@ public class MyWorld extends World
     boolean towerSpawned = false;
     int oldCoins, oldWaveNum, oldTimeTillNextWave, oldPlayerLives;
     public static int levelID = 1;
+    public static boolean isEasy;
 
     Tower tower;
+    Tower2 tower2;
+    Tower3 tower3;
 
     enemy Enemy;
 
@@ -47,14 +48,16 @@ public class MyWorld extends World
     GreenfootImage menuImage;
     GreenfootImage tower1menu = new GreenfootImage("green_tower.png");
     GreenfootImage tower2menu = new GreenfootImage("blue_tower.png");
+    GreenfootImage tower3menu = new GreenfootImage("purple_tower.png");
     GreenfootImage transition_to_2 = new GreenfootImage("transition_to_2.png");
 
-
-        
     public MyWorld(boolean level){
         super(625, 700, 1);
         Greenfoot.setSpeed(50);
-        
+        if(isEasy == false){
+            Greenfoot.setSpeed(55);
+        }
+
         if(level == true) {
             levelID = 2;
         } else {
@@ -63,15 +66,14 @@ public class MyWorld extends World
         reset();
 
     }
-    
 
     public void reset(){
+        ButtonHard.removeThis = false;
         coins = 100;
         playerLives = 5;
         waveNumber = 0;
         timeTillNextWave = 10;
         waveCount = 0;
-
 
         oldCoins = coins;
         oldWaveNum = waveNum;
@@ -84,9 +86,9 @@ public class MyWorld extends World
             menuImage = new GreenfootImage("menu.png");
             bg.setColor(greenfoot.Color.RED);
             break;
+            
             case 2:
             Greenfoot.setWorld(new Transition());
-
             List objects = getObjects(null);
             removeObjects(objects);
             mapImage = new GreenfootImage("lines2.png");
@@ -99,21 +101,26 @@ public class MyWorld extends World
         getBackground().drawImage(mapImage, 0, 0);
     }
 
-
-   
-    
     public void act(){
-        //Next line could cause issues
-        setPaintOrder(Tower1.class, Tower2.class, FastBullet.class, bullet.class);
+        setPaintOrder(Circle.class,Tower1.class, Tower2.class, Tower3.class, FastBullet.class, bullet.class);
         if(Greenfoot.isKeyDown("p")) {
             waveNum = 9;
         }
-        if(timeTillNextWave <= 0){
-            if(levelID == 1) {
-
-                enemyWaves1();
-            } else if (levelID == 2) {
-                enemyWaves2();
+        if(isEasy){
+            if(timeTillNextWave <= 0){
+                if(levelID == 1) {
+                    easyEnemyWaves1();
+                } else if (levelID == 2) {
+                    easyEnemyWaves2();
+                }
+            }
+        }else{
+            if(timeTillNextWave <= 0){
+                if(levelID == 1) {
+                    hardEnemyWaves1();
+                } else if (levelID == 2) {
+                    hardEnemyWaves2();
+                }
             }
         }
         menuUpdate();
@@ -134,16 +141,15 @@ public class MyWorld extends World
             Greenfoot.setWorld(new Defeat());
         }
         
-        
+        count2++;
     }
-    
-    
+
     public void menu(){
         getBackground().drawImage(menuImage, 0, 480);
         getBackground().drawImage(tower1menu, 149+50, 501);
         getBackground().drawImage(tower2menu, 149+200, 501);
+        getBackground().drawImage(tower3menu, 149+50, 501+100);
     }
-    
 
     public void menuUpdate(){
         if (getObjectsAt(225+50, 550, Tower1.class).isEmpty()){
@@ -154,37 +160,108 @@ public class MyWorld extends World
         if (getObjectsAt(225+200, 550, Tower2.class).isEmpty()){
             Tower2 tower = new Tower2();
             addObject(tower, 225+200, 550);
-
         }
 
+        if (getObjectsAt(225+50, 550+100, Tower3.class).isEmpty()){
+            Tower3 tower = new Tower3();
+            addObject(tower, 225+50, 550+100);
+        }
         menu();
         bg.setFont(bg.getFont().deriveFont(18f));
         bg.drawString ("Coins: " + coins, 25, 540);
         bg.drawString ("Wave Number: " + waveNum, 25, 580);
         bg.drawString ("Next Wave: " + timeTillNextWave, 25, 620);
         bg.drawString ("Lives: " + playerLives, 25, 660);
-        bg.drawString ("10 Coins ", 240, 600);
-        bg.drawString ("20 Coins ", 400, 600);
+        bg.drawString ("25 Coins ", 240, 600);
+        bg.drawString ("50 Coins ", 400, 600);
+        bg.drawString ("75 Coins ", 240, 699);
+    }
+    
+    private void hardEnemyWaves1() {
+        Enemy1 enemy = new Enemy1();
+        Enemy2 enemy2 = new Enemy2();
+        int enemy1ran = getRandomNumber(30,50);
+        int enemy2ran = getRandomNumber(50,133);
+
+        if(waveCount < 5 + waveNumber) {
+            if(count2 % enemy2ran == 0) {
+                addObject(enemy2,20,150);
+                enemySpawnTimer = 0;
+
+            }
+
+            if(count2 % enemy1ran == 0) {
+                addObject(enemy,20,150);
+                waveCount += 1;
+            }
+
+        }else if((getObjects(enemy.class).size() == 0)) {
+
+            waveCount = 0;
+            waveNumber += 1;
+            timeTillNextWave += 10;
+            waveNum += 1;
+            if(waveNum == 11) {
+                levelID++;
+                waveNum = 0;
+                reset();
+            }
+        }
     }
 
-    private void enemyWaves1() {
+    private void hardEnemyWaves2() {
+        Enemy1 enemy = new Enemy1();
+        Enemy2 enemy2 = new Enemy2();
+        Enemy3 enemy3 = new Enemy3();
+        int enemy1ran = getRandomNumber(30,50);
+        int enemy2ran = getRandomNumber(50,133);
+
+        if(waveCount < 5 + waveNumber) {
+            if(count2 % enemy2ran == 0) {
+                addObject(enemy2,20,35);
+                enemySpawnTimer = 0;
+
+            }
+
+            if(count2 % enemy1ran == 0) {
+                addObject(enemy,20,35);
+                waveCount += 1;
+            }
+
+            if(count2 % 200 == 0) {
+                addObject(enemy3, 20,35);
+            }
+
+        }else if( (getObjects(enemy.class).size() == 0)) {
+            waveCount = 0;
+            waveNumber += 1;
+            timeTillNextWave += 10;
+            waveNum += 1;
+            if(waveNum == 11) {
+                Greenfoot.setWorld(new Victory());
+            }
+        }
+    }
+    
+    private void easyEnemyWaves1() {
+        
+        //Creates enemy objects so we can spawn them to screen
         Enemy1 enemy = new Enemy1();
         Enemy2 enemy2 = new Enemy2();
         count++;
-
+        
+        
         if(waveCount < 5 + waveNumber) {
             if(count % 133 == 0) {
                 addObject(enemy2,20,150);
                 enemySpawnTimer = 0;
 
             }
-        
 
-        if(count % 50 == 0) {
-
-            addObject(enemy,20,150);
-            waveCount += 1;
-        }
+            if(count % 50 == 0) {
+                addObject(enemy,20,150);
+                waveCount += 1;
+            }
 
         }else if( (getObjects(enemy.class).size() == 0)) {
 
@@ -192,33 +269,36 @@ public class MyWorld extends World
             waveNumber += 1;
             timeTillNextWave += 10;
             waveNum += 1;
-            if(waveNum == 10) {
-            levelID++;
-            waveNum = 0;
-            reset();
-        }
+            if(waveNum == 11) {
+                levelID++;
+                waveNum = 0;
+                reset();
+            }
         }
     }
-    
-    
-              
-    
 
-    private void enemyWaves2() {
-        Enemy1 enemy = new Enemy1();
-        Enemy2 enemy2 = new Enemy2();
+              
+
+    private void easyEnemyWaves2() {
+        Enemy1 enemy1 = new Enemy1();
+        Enemy2 enemy02 = new Enemy2();
+        Enemy3 enemy03 = new Enemy3();
         count++;
 
         if(waveCount < 5 + waveNumber) {
             if(count % 133 == 0) {
-                addObject(enemy2,20,35);
+                addObject(enemy02,20,35);
                 enemySpawnTimer = 0;
 
             }
 
             if(count % 50 == 0) {
-                addObject(enemy,20,35);
+                addObject(enemy1,20,35);
                 waveCount += 1;
+            }
+
+            if(count % 250 == 0) {
+                addObject(enemy03, 20,35);
             }
 
         }else if( (getObjects(enemy.class).size() == 0)) {
@@ -226,12 +306,18 @@ public class MyWorld extends World
             waveNumber += 1;
             timeTillNextWave += 10;
             waveNum += 1;
-        if(waveNum == 10) {
+            if(waveNum == 11) {
                 Greenfoot.setWorld(new Victory());
             }
         }
     }
+
+
+
+    public int getRandomNumber(int start,int end)
+    {
+        int normal = Greenfoot.getRandomNumber(end-start+1);
+        return normal+start;
+    }
 }
-
-
 

@@ -9,7 +9,7 @@ import java.awt.geom.Ellipse2D;
  */
 
 public class Tower1 extends Tower {
-    
+
     private int gunReloadTime = 75;
     private int reloadDelayCount = 0;
     public static int targetX = 0;
@@ -24,7 +24,6 @@ public class Tower1 extends Tower {
     boolean placed = false;
     private int firstX = 0;
     private int firstY = 0;
-    
 
 
     /**
@@ -33,23 +32,18 @@ public class Tower1 extends Tower {
      */
     public Tower1() {
         super();
-        
     }
-
-
 
 
     public void act() {
         if(activated == true) {
-            
+
             enemy closestEnemy = getClosestEnemy(500);
             if(closestEnemy!=null) {
-            this.turnTowards(closestEnemy.getX(), closestEnemy.getY());
-        }
-            
-        
-            reloadDelayCount++;
+                this.turnTowards(closestEnemy.getX(), closestEnemy.getY());
+            }
 
+            reloadDelayCount++;
 
             if(gunReloadTime <= reloadDelayCount) {
                 shoot();
@@ -57,40 +51,42 @@ public class Tower1 extends Tower {
             }
         }
         dragAndActivate();
-     }
-     
-    
-    
+    }
+
+    //allows you to drag the tower from the menu onto the map
     public void dragAndActivate(){
-        if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 10){
+        if (Greenfoot.mouseDragged(this) && placed == false && MyWorld.coins >= 25){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             setLocation(mouse.getX(), mouse.getY());
         }
         if (Greenfoot.mouseClicked(null)){
-            if(getY() < 473 && MyWorld.coins >= 10){
+            if(getY() < 473 && MyWorld.coins >= 25){
                 activated = true;
                 placed = true;
                 if(isPayed != true){
-                    MyWorld.coins -= 10;
+                    MyWorld.coins -= 25;
                     isPayed = true;
                 }
-           } else if(getY() >= 473){
-               getWorld().removeObject(this);
+            } else if(getY() >= 473){
+                getWorld().removeObject(this);
 
-           }
+            }
         }
     }
     
-     
-    
+    //shoots the specified bullet at the enemy
     public void shoot()
     {
-            //get the closest enemy
-            enemy closestEnemy = getClosestEnemy(500);
-            
-            if(closestEnemy!=null)
-            {
-                getWorld().addObject(new bullet(),getX(),getY());
-            }
+        //get the closest enemy
+        enemy closestEnemy = getClosestEnemy(500);
+
+        if(closestEnemy!=null)
+        {
+            int x = getX(), y = getY()-10;
+            getWorld().addObject(new bullet(),x,y);
+            GreenfootSound song = new GreenfootSound("pew.wav");
+            song.setVolume(75);
+            song.play();
+        }
     }
-   }
+}

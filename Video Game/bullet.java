@@ -12,20 +12,20 @@ public class bullet extends Tower
     private int firstX = 0;
     private int firstY = 0;
     private int count2 = 0;
+    //moves the bullet in the direction of the enemy to hit it
     public void act() 
     {
-
         enemy closestEnemy = getClosestEnemy(500);
         move(7);
         if(closestEnemy != null) {
-        firstX = closestEnemy.getX();
-        firstY = closestEnemy.getY();
-    }
-        
+            firstX = closestEnemy.getX();
+            firstY = closestEnemy.getY();
+        }
+
         if(getX() <= firstX+10 && getX() >= firstX-10 && getY() <= firstY+10 && getY() >= firstY-10){
             count2++;
         }
-        
+
         if(count2 == 0){
             turnTowards(firstX,firstY);
         }
@@ -33,6 +33,5 @@ public class bullet extends Tower
             getWorld().removeObject(this);
         }
     }
-
 
 }

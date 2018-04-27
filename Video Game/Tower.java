@@ -15,27 +15,27 @@ public class Tower extends HealthActor
 
     public static Enemy1 target;
     public static Enemy2 target2;
-    
+
     public Tower()
     {
         
     }
-    
 
    
     public void act() {
     }
     
+    //Gets the closest enemy to the tower within a range
     protected enemy getClosestEnemy(int range) {
-    List<enemy> enemies = getWorld().getObjects(enemy.class); //get all the enemies
-         
+        List<enemy> enemies = getWorld().getObjects(enemy.class); //get all the enemies
+
         enemy closestEnemy = null; //the closest enemy at the moment is null
         double closestDistance = range; //and the closest distance at the moment is whatever range they passed us.
-        
+
         for(int i=0; i<enemies.size(); i++)
         {
             enemy Enemy = enemies.get(i); //loop through all the enemies
-            
+
             double distance = Math.sqrt((double)(Math.pow(Enemy.getX()-getX(),2)+Math.pow(Enemy.getY()-getY(),2)));
             //distance formula -- check if their distance is lower that the closest distance so far
             if(distance < closestDistance)
@@ -45,12 +45,8 @@ public class Tower extends HealthActor
             }
 
         }
-        
+
         return closestEnemy; //return the closest enemy. if there were none, we'll get null.
     }
-    
 
-    
-    
-    
 }

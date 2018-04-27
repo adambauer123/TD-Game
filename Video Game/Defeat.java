@@ -15,7 +15,12 @@ public class Defeat extends World
      */
     public Defeat()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(625, 700, 1); 
+        super(625, 700, 1);
+        
+        //Creates and adds a try again button to the screen
+        DefeatButton button = new DefeatButton();
+        addObject(button,312,550);
     }
 }
+
+
